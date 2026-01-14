@@ -1,0 +1,106 @@
+[131月2026 15:23:13.666] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher running: args [--launchTarget, forgeclientuserdev, --version, MOD_DEV, --assetIndex, 5, --assetsDir, C:\Users\23829\.gradle\caches\forge_gradle\assets, --gameDir, ., --fml.forgeVersion, 47.4.13, --fml.mcVersion, 1.20.1, --fml.forgeGroup, net.minecraftforge, --fml.mcpVersion, 20230612.114412, --mixin.config, delta_delight.mixins.json]
+[131月2026 15:23:13.670] [main/INFO] [cpw.mods.modlauncher.Launcher/MODLAUNCHER]: ModLauncher 10.0.9+10.0.9+main.dcd20f30 starting: java version 17.0.16 by Oracle Corporation; OS Windows 11 arch amd64 version 10.0
+[131月2026 15:23:13.767] [main/INFO] [net.minecraftforge.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[131月2026 15:23:13.831] [main/INFO] [EARLYDISPLAY/]: Trying GL version 4.6
+[131月2026 15:23:14.217] [main/INFO] [EARLYDISPLAY/]: Requested GL version 4.6 got version 4.6
+[131月2026 15:23:14.304] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.5 Source=union:/C:/Users/23829/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5/9d1c0c3a304ae6697ecd477218fa61b850bf57fc/mixin-0.8.5.jar%23128!/ Service=ModLauncher Env=CLIENT
+[131月2026 15:23:14.357] [pool-2-thread-1/INFO] [EARLYDISPLAY/]: GL info: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2 GL version 4.6.0 NVIDIA 577.09, NVIDIA Corporation
+[131月2026 15:23:14.570] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\23829\.gradle\caches\modules-2\files-2.1\net.minecraftforge\javafmllanguage\1.20.1-47.4.13\cf01e2179f72bd2829c65f5226d7dd0cfb6c686\javafmllanguage-1.20.1-47.4.13.jar is missing mods.toml file
+[131月2026 15:23:14.573] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\23829\.gradle\caches\modules-2\files-2.1\net.minecraftforge\lowcodelanguage\1.20.1-47.4.13\e3f96129ea14eba84316f2d69816253e228e6e4c\lowcodelanguage-1.20.1-47.4.13.jar is missing mods.toml file
+[131月2026 15:23:14.579] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\23829\.gradle\caches\modules-2\files-2.1\net.minecraftforge\mclanguage\1.20.1-47.4.13\85796906112d9b621a7b2996f8bfda49da991ef0\mclanguage-1.20.1-47.4.13.jar is missing mods.toml file
+[131月2026 15:23:14.582] [main/WARN] [net.minecraftforge.fml.loading.moddiscovery.ModFileParser/LOADING]: Mod file C:\Users\23829\.gradle\caches\modules-2\files-2.1\net.minecraftforge\fmlcore\1.20.1-47.4.13\f77e3021d1eb31d61f8d1b92d18ed4fb3c2806e5\fmlcore-1.20.1-47.4.13.jar is missing mods.toml file
+[131月2026 15:23:14.720] [main/INFO] [net.minecraftforge.fml.loading.moddiscovery.JarInJarDependencyLocator/]: No dependencies to load found. Skipping!
+[131月2026 15:23:15.672] [main/INFO] [mixin/]: Compatibility level set to JAVA_17
+[131月2026 15:23:15.676] [main/INFO] [cpw.mods.modlauncher.LaunchServiceHandler/MODLAUNCHER]: Launching target 'forgeclientuserdev' with arguments [--version, MOD_DEV, --gameDir, ., --assetsDir, C:\Users\23829\.gradle\caches\forge_gradle\assets, --assetIndex, 5]
+[131月2026 15:23:15.802] [main/WARN] [mixin/]: Reference map 'delta_delight.refmap.json' for delta_delight.mixins.json could not be read. If this is a development environment you can ignore this message
+[131月2026 15:23:15.976] [main/INFO] [mixin/]: Remapping refMap farmersdelight.refmap.json using D:\delta_delight\build\createSrgToMcp\output.srg
+[131月2026 15:23:21.404] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 188 Datafixer optimizations took 291 milliseconds
+[131月2026 15:23:24.725] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/23829/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.13_mapped_official_1.20.1/forge-1.20.1-47.4.13_mapped_official_1.20.1.jar%23191!/assets/.mcassetsroot' uses unexpected schema
+[131月2026 15:23:24.726] [Render thread/WARN] [net.minecraft.server.packs.VanillaPackResourcesBuilder/]: Assets URL 'union:/C:/Users/23829/.gradle/caches/forge_gradle/minecraft_user_repo/net/minecraftforge/forge/1.20.1-47.4.13_mapped_official_1.20.1/forge-1.20.1-47.4.13_mapped_official_1.20.1.jar%23191!/data/.mcassetsroot' uses unexpected schema
+[131月2026 15:23:24.764] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: authHost='https://authserver.mojang.com', accountsHost='https://api.mojang.com', sessionHost='https://sessionserver.mojang.com', servicesHost='https://api.minecraftservices.com', name='PROD'
+[131月2026 15:23:24.778] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[131月2026 15:23:25.008] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.3.1 build 7
+[131月2026 15:23:25.612] [modloading-worker-0/INFO] [net.minecraftforge.common.ForgeMod/FORGEMOD]: Forge mod loading, version 47.4.13, for MC 1.20.1 with MCP 20230612.114412
+[131月2026 15:23:25.612] [modloading-worker-0/INFO] [net.minecraftforge.common.MinecraftForge/FORGE]: MinecraftForge v47.4.13 Initialized
+[131月2026 15:23:27.237] [Render thread/INFO] [net.minecraftforge.gametest.ForgeGameTestHooks/]: Enabled Gametest Namespaces: [delta_delight]
+[131月2026 15:23:27.749] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources
+[131月2026 15:23:27.834] [Worker-Main-5/INFO] [com.candle.delta_delight.Delta_delight/]: HELLO FROM COMMON SETUP
+[131月2026 15:23:27.835] [Worker-Main-5/INFO] [com.candle.delta_delight.Delta_delight/]: DIRT BLOCK >> minecraft:dirt
+[131月2026 15:23:27.835] [Worker-Main-5/INFO] [com.candle.delta_delight.Delta_delight/]: DIRT BLOCK >> minecraft:dirt
+[131月2026 15:23:27.836] [Worker-Main-5/INFO] [com.candle.delta_delight.Delta_delight/]: The magic number is... 42
+[131月2026 15:23:27.837] [Worker-Main-5/INFO] [com.candle.delta_delight.Delta_delight/]: ITEM >> iron_ingot
+[131月2026 15:23:27.966] [Worker-Main-4/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-15.0.06.hex, loading
+[131月2026 15:23:28.110] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Starting version check at https://files.minecraftforge.net/net/minecraftforge/forge/promotions_slim.json
+[131月2026 15:23:28.170] [Worker-Main-8/INFO] [com.candle.delta_delight.Delta_delight/]: HELLO FROM CLIENT SETUP
+[131月2026 15:23:28.170] [Worker-Main-8/INFO] [com.candle.delta_delight.Delta_delight/]: MINECRAFT NAME >> Dev
+[131月2026 15:23:29.226] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Exception loading blockstate definition: 'delta_delight:blockstates/example_block.json' missing model for variant: 'delta_delight:example_block#'
+[131月2026 15:23:29.236] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'delta_delight:example_block#inventory' referenced from: delta_delight:example_block#inventory: java.io.FileNotFoundException: delta_delight:models/item/example_block.json
+[131月2026 15:23:29.236] [Worker-Main-3/WARN] [net.minecraft.client.resources.model.ModelBakery/]: Unable to load model: 'delta_delight:example_item#inventory' referenced from: delta_delight:example_item#inventory: java.io.FileNotFoundException: delta_delight:models/item/example_item.json
+[131月2026 15:23:29.417] [Forge Version Check/INFO] [net.minecraftforge.fml.VersionChecker/]: [forge] Found status: AHEAD Current: 47.4.13 Target: null
+[131月2026 15:23:31.931] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:item.goat_horn.play
+[131月2026 15:23:31.932] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/]: Missing sound for event: minecraft:entity.goat.screaming.horn_break
+[131月2026 15:23:32.225] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on 耳机 (OPPO Enco X3)
+[131月2026 15:23:32.225] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[131月2026 15:23:32.295] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x4 minecraft:textures/atlas/blocks.png-atlas
+[131月2026 15:23:32.302] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/signs.png-atlas
+[131月2026 15:23:32.302] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/banner_patterns.png-atlas
+[131月2026 15:23:32.303] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x4 minecraft:textures/atlas/shield_patterns.png-atlas
+[131月2026 15:23:32.303] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x4 minecraft:textures/atlas/armor_trims.png-atlas
+[131月2026 15:23:32.305] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x4 minecraft:textures/atlas/chest.png-atlas
+[131月2026 15:23:32.306] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x4 minecraft:textures/atlas/decorated_pot.png-atlas
+[131月2026 15:23:32.306] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/beds.png-atlas
+[131月2026 15:23:32.306] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x4 minecraft:textures/atlas/shulker_boxes.png-atlas
+[131月2026 15:23:32.394] [Render thread/WARN] [net.minecraft.client.renderer.ShaderInstance/]: Shader rendertype_entity_translucent_emissive could not find sampler named Sampler2 in the specified shader program.
+[131月2026 15:23:32.435] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[131月2026 15:23:32.436] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x256x0 minecraft:textures/atlas/paintings.png-atlas
+[131月2026 15:23:32.436] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/mob_effects.png-atlas
+[131月2026 15:23:32.992] [Realms Notification Availability checker #1/INFO] [com.mojang.realmsclient.client.RealmsClient/]: Could not authorize you against Realms server: java.lang.RuntimeException: Failed to parse into SignedJWT: 0
+[131月2026 15:23:51.058] [Render thread/INFO] [net.minecraftforge.registries.GameData/REGISTRIES]: Injecting existing registry data into this CLIENT instance
+[131月2026 15:23:52.088] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 9 recipes
+[131月2026 15:23:52.139] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 1480 advancements
+[131月2026 15:23:52.398] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 1.20.1
+[131月2026 15:23:52.398] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[131月2026 15:23:53.065] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Preparing start region for dimension minecraft:overworld
+[131月2026 15:23:54.473] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: 准备生成区域中：0%
+[131月2026 15:23:54.473] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: 准备生成区域中：0%
+[131月2026 15:23:54.494] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: 准备生成区域中：0%
+[131月2026 15:23:54.605] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: 准备生成区域中：0%
+[131月2026 15:23:55.098] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: 准备生成区域中：71%
+[131月2026 15:23:55.149] [Server thread/INFO] [net.minecraftforge.server.permission.PermissionAPI/]: Successfully initialized permission handler forge:default_handler
+[131月2026 15:23:55.149] [Server thread/INFO] [com.candle.delta_delight.Delta_delight/]: HELLO from server starting
+[131月2026 15:23:55.154] [Render thread/INFO] [net.minecraft.server.level.progress.LoggerChunkProgressListener/]: Time elapsed: 2061 ms
+[131月2026 15:23:55.267] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 12, from 10
+[131月2026 15:23:55.268] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[131月2026 15:23:55.337] [Render thread/WARN] [io.netty.util.internal.SystemPropertyUtil/]: Unable to parse the boolean system property 'java.net.preferIPv6Addresses':system - using the default value: false
+[131月2026 15:23:55.767] [Netty Local Client IO #0/INFO] [net.minecraftforge.network.NetworkHooks/]: Connected to a modded server.
+[131月2026 15:23:55.800] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:92372502] logged in with entity id 138 at (-184.0162446232384, 64.0, 28.323504658719475)
+[131月2026 15:23:55.842] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev加入了游戏
+[131月2026 15:23:56.162] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 2 advancements
+[131月2026 15:24:02.860] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 14 advancements
+[131月2026 15:24:03.368] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev取得了进度[一顿盛宴]
+[131月2026 15:24:03.376] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Dev取得了进度[一顿盛宴]
+[131月2026 15:24:03.408] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 18 advancements
+[131月2026 15:24:52.504] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 35 advancements
+[131月2026 15:25:11.204] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 44 advancements
+[131月2026 15:25:11.204] [Render thread/WARN] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Unable to play empty soundEvent: minecraft:entity.salmon.ambient
+[131月2026 15:25:47.258] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 45 advancements
+[131月2026 15:26:31.004] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 46 advancements
+[131月2026 15:26:32.156] [Render thread/INFO] [net.minecraft.advancements.AdvancementList/]: Loaded 49 advancements
+[131月2026 15:27:09.399] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[131月2026 15:27:09.406] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[新的世界]'/minecraft:overworld
+[131月2026 15:27:09.414] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[新的世界]'/minecraft:the_end
+[131月2026 15:27:09.415] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[新的世界]'/minecraft:the_nether
+[131月2026 15:27:09.805] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: 连接中断
+[131月2026 15:27:09.805] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev退出了游戏
+[131月2026 15:27:09.809] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Stopping singleplayer server as player logged out
+[131月2026 15:27:09.849] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[131月2026 15:27:09.849] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[131月2026 15:27:09.849] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[131月2026 15:27:10.141] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[新的世界]'/minecraft:overworld
+[131月2026 15:27:10.605] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[新的世界]'/minecraft:the_end
+[131月2026 15:27:10.605] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[新的世界]'/minecraft:the_nether
+[131月2026 15:27:10.616] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (新的世界): All chunks are saved
+[131月2026 15:27:10.617] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[131月2026 15:27:10.617] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[131月2026 15:27:10.617] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[131月2026 15:27:11.544] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!
