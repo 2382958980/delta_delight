@@ -1,6 +1,6 @@
 package com.candle.delta_delight;
 
-import com.candle.delta_delight.item.ModCreativeModeTabs;
+
 import com.candle.delta_delight.registry.ModBlocks;
 import com.candle.delta_delight.registry.ModCreativeTabs;
 import com.candle.delta_delight.registry.ModItems;
@@ -67,8 +67,6 @@ public class Delta_delight {
 
         // 全局事件
         MinecraftForge.EVENT_BUS.register(this);
-
-        ModCreativeModeTabs.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
