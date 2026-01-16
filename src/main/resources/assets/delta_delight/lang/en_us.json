@@ -1,3 +1,5 @@
 {
-  "itemGroup.delta_food_tab": "delta_food"
+  "itemGroup.delta_delight": "Delta Delight",
+  "item.delta_delight.champagne": "Champagne",
+  "block.delta_delight.champagne_block": "Champagne"
 }
