@@ -19,19 +19,19 @@ import net.minecraft.world.entity.player.Player;
 
 import java.util.List;
 
-public class ChampagneBlock extends Block {
+public class TequilaBlock extends Block {
 
     // 方块中心 0.5×0.5×0.8 转换成 16px 坐标
     private static final VoxelShape SHAPE = Block.box(
-            6,     // minX
+            5,     // minX
             0,     // minY
-            6,     // minZ
-            10,    // maxX
-            12,  // maxY
-            10     // maxZ
+            5,     // minZ
+            11,    // maxX
+            14,  // maxY
+            11     // maxZ
     );
 
-    public ChampagneBlock(Properties properties) {
+    public TequilaBlock(Properties properties) {
         super(properties);
     }
 

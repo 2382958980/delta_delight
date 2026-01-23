@@ -21,11 +21,11 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
-public class ChampagneItem extends Item {
+public class TequilaItem extends Item {
 
     private final Block placeBlock;
 
-    public ChampagneItem(Block block, Properties props) {
+    public TequilaItem(Block block, Properties props) {
         super(props
                 .stacksTo(16));
         this.placeBlock = block;
@@ -38,14 +38,11 @@ public class ChampagneItem extends Item {
         Player player = ctx.getPlayer();
         ItemStack stack = ctx.getItemInHand();
 
-        // 尝试放置
         if (!level.getBlockState(pos).canBeReplaced(new net.minecraft.world.item.context.BlockPlaceContext(ctx))) {
-            return InteractionResult.PASS;//尝试其他交互（例如下面的屯屯屯
+            return InteractionResult.PASS;
         }
-
         BlockState state = placeBlock.defaultBlockState();
         level.setBlock(pos, state, 3);
-
         if (!player.isCreative()) {
             stack.shrink(1);
         }
@@ -58,7 +55,6 @@ public class ChampagneItem extends Item {
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
 
-        // 如果能吃（ModFoods定义了都能吃）
         if (player.canEat(true)) {
             player.startUsingItem(hand); // 开始“使用”动画（喝的动作）
             return InteractionResultHolder.consume(stack);
@@ -67,13 +63,12 @@ public class ChampagneItem extends Item {
         return InteractionResultHolder.pass(stack);
     }
 
-    // 喝完那一刻触发
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
         if (entity instanceof Player player) {
             if (!level.isClientSide) {
-                player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE, 3000, 0));
-                player.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 3000, 0));
+                player.addEffect(new MobEffectInstance(MobEffects.WATER_BREATHING, 3000, 0));
+                player.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 3000, 0));
                 player.addEffect(new MobEffectInstance(ModEffects.COMFORT.get(), 3000, 0));
                 // 播放喝饮料的声音
                 level.playSound(null, player.blockPosition(), SoundEvents.GENERIC_DRINK,

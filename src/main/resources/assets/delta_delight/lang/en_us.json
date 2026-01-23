@@ -1,5 +1,18 @@
 {
   "itemGroup.fdadditions": "Delta Delight",
   "item.delta_delight.champagne": "Champagne",
-  "block.delta_delight.champagne_block": "Champagne"
+  "block.delta_delight.champagne_block": "Champagne",
+  "item.delta_delight.tequila": "Tequila",
+  "block.delta_delight.tequila_block": "Tequila",
+  "item.delta_delight.caviar": "Caviar",
+  "block.delta_delight.caviar_block": "Caviar",
+  "item.delta_delight.coffee": "Coffee",
+  "item.delta_delight.seafoodcan": "seafood can",
+  "item.delta_delight.nourishcan": "nourish can",
+  "item.delta_delight.lemontea": "lemon tea",
+  "item.delta_delight.gingerbreadman": "gingerbread man",
+  "item.delta_delight.orangel": "orangel",
+  "item.delta_delight.englishtea": "english tea",
+  "item.delta_delight.armycan": "armycan",
+  "item.delta_delight.africaheart": "africa heart"
 }

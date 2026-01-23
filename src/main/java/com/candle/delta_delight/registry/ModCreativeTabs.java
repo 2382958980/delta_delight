@@ -20,9 +20,20 @@ public class ModCreativeTabs {
             "fdadditions",
             () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.fdadditions"))
-                    .icon(() -> new ItemStack(ModItems.CHAMPAGNE.get()))
+                    .icon(() -> new ItemStack(ModItems.AFRICAHEART.get()))
                     .displayItems((params, output) -> {
+                        output.accept(ModItems.AFRICAHEART.get());
                         output.accept(ModItems.CHAMPAGNE.get());
+                        output.accept(ModItems.CAVIAR.get());
+                        output.accept(ModItems.TEQUILA.get());
+                        output.accept(ModItems.COFFEE.get());
+                        output.accept(ModItems.SEAFOODCAN.get());
+                        output.accept(ModItems.NOURISHCAN.get());
+                        output.accept(ModItems.LEMONTEA.get());
+                        output.accept(ModItems.GINGERBREADMAN.get());
+                        output.accept(ModItems.ORANGEL.get());
+                        output.accept(ModItems.ENGLISHTEA.get());
+                        output.accept(ModItems.ARMYCAN.get());
                     })
                     .build()
     );
