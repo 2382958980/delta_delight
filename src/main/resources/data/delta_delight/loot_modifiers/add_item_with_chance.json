@@ -2,8 +2,17 @@
   "type": "delta_delight:add_item_with_chance",
   "conditions": [
     {
-      "condition": "forge:loot_table_id",
-      "loot_table_id": "minecraft:blocks/diamond_ore"
+      "condition": "forge:or",
+      "terms": [
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "minecraft:blocks/diamond_ore"
+        },
+        {
+          "condition": "forge:loot_table_id",
+          "loot_table_id": "minecraft:blocks/deepslate_diamond_ore"
+        }
+      ]
     }
   ],
   "item": {

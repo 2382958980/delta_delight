@@ -80,6 +80,18 @@ public final class ModItems {
     public static final RegistryObject<Item> AFRICAHEART = ITEMS.register("africaheart",
             () -> new Item((new Item.Properties()
                     .rarity(Rarity.EPIC))));
+    public static final RegistryObject<Item> YUMMYNOODLES = ITEMS.register("yummynoodles",
+            () -> new Item((new Item.Properties()
+                    .food(ModFoods.NOURISHCAN))));
+    public static final RegistryObject<Item> VITABLETS = ITEMS.register("vitablets",
+            () -> new Item((new Item.Properties()
+                    .food(ModFoods.NOURISHCAN))));
+    public static final RegistryObject<Item> YOGURT = ITEMS.register("yogurt",
+            () -> new Item((new Item.Properties()
+                    .food(ModFoods.NOURISHCAN))));
+    public static final RegistryObject<Item> FASTNOODLES = ITEMS.register("fastnoodles",
+            () -> new Item((new Item.Properties()
+                    .food(ModFoods.NOURISHCAN))));
 
 
     private ModItems() { /* no instantiation */ }
