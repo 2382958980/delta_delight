@@ -2,6 +2,8 @@
   "itemGroup.fdadditions": "Delta Delight",
   "item.delta_delight.champagne": "Champagne",
   "block.delta_delight.champagne_block": "Champagne",
+  "item.delta_delight.champagne.tooltip": "A bottle of sparkling champagne",
+  "item.delta_delight.champagne.tooltip.shift": "Don't drink too much in a short time",
   "item.delta_delight.tequila": "Tequila",
   "block.delta_delight.tequila_block": "Tequila",
   "item.delta_delight.caviar": "Caviar",

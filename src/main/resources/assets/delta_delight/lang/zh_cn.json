@@ -2,6 +2,8 @@
   "itemGroup.fdadditions": "三角洲乐事",
   "item.delta_delight.champagne": "奥莉薇娅香槟",
   "block.delta_delight.champagne_block": "奥莉薇娅香槟",
+  "item.delta_delight.champagne.tooltip": "一瓶香槟",
+  "item.delta_delight.champagne.tooltip.shift": "短时间别喝太多",
   "item.delta_delight.tequila": "蓝宝石龙舌兰",
   "block.delta_delight.tequila_block": "蓝宝石龙舌兰",
   "item.delta_delight.caviar": "钻石鱼子酱",

@@ -1,0 +1,25 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "tag": "forge:crops/tomato"
+    },
+    {
+      "tag": "forge:crops/onion"
+    },
+    {
+      "item": "minecraft:carrot"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:armycan",
+    "count": 1
+  },
+  "cookingtime": 400,
+  "container": {
+    "item": "minecraft:iron_ingot"
+  }
+}

@@ -1,17 +1,17 @@
 package com.candle.delta_delight.content;
 
+import net.minecraft.ChatFormatting;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.core.BlockPos;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -20,6 +20,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import vectorwing.farmersdelight.common.registry.ModEffects;
+
+import javax.annotation.Nullable;
+import java.util.List;
 
 public class ChampagneItem extends Item {
 
@@ -92,6 +95,19 @@ public class ChampagneItem extends Item {
         }
 
         return stack;
+    }
+    //增加文本
+    @Override
+    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
+
+        // 普通提示（总是显示）
+        tooltip.add(Component.translatable("item.delta_delight.champagne.tooltip").withStyle(ChatFormatting.GRAY));
+
+        // 按住 Shift 显示更多
+        if (Screen.hasShiftDown()) {
+            tooltip.add(Component.translatable("item.delta_delight.champagne.tooltip.shift").withStyle(ChatFormatting.RED));
+        }
+        super.appendHoverText(stack, level, tooltip, flag);
     }
 
     // 使用时间

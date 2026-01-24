@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:milk"
+    },
+    {
+      "item": "minecraft:bread"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:gingerbreadman",
+    "count": 1
+  },
+  "cookingtime": 300,
+  "experience": 2.0,
+  "container": {
+    "item": "minecraft:bowl"
+  }
+}
