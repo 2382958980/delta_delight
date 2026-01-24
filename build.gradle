@@ -79,8 +79,11 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
-    // 使用一个确实存在的 FD 版本（示例：1.20.1-1.2.9）
     implementation fg.deobf("curse.maven:farmers-delight-398521:6917255")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-common-api:${jei_version}")
+    compileOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge-api:${jei_version}")
+    runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_version}-forge:${jei_version}")
+
 
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 }
