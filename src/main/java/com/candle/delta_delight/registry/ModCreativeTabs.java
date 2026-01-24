@@ -36,6 +36,8 @@ public class ModCreativeTabs {
                         output.accept(ModItems.ARMYCAN.get());
                         output.accept(ModItems.YUMMYNOODLES.get());
                         output.accept(ModItems.VITABLETS.get());
+                        output.accept(ModItems.NOSUGARBAR.get());
+                        output.accept(ModItems.WILDBAR.get());
                         output.accept(ModItems.YOGURT.get());
                         output.accept(ModItems.FASTNOODLES.get());
                     })

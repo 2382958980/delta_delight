@@ -92,6 +92,12 @@ public final class ModItems {
     public static final RegistryObject<Item> FASTNOODLES = ITEMS.register("fastnoodles",
             () -> new Item((new Item.Properties()
                     .food(ModFoods.NOURISHCAN))));
+    public static final RegistryObject<Item> WILDBAR = ITEMS.register("wildbar",
+            () -> new Item((new Item.Properties()
+                    .food(ModFoods.NOURISHCAN))));
+    public static final RegistryObject<Item> NOSUGARBAR = ITEMS.register("nosugarbar",
+            () -> new Item((new Item.Properties()
+                    .food(ModFoods.NOURISHCAN))));
 
 
     private ModItems() { /* no instantiation */ }
