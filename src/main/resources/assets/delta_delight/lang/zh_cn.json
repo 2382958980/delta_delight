@@ -9,6 +9,7 @@
   "item.delta_delight.caviar": "钻石鱼子酱",
   "block.delta_delight.caviar_block": "钻石鱼子酱",
   "item.delta_delight.coffee": "咖啡",
+  "block.delta_delight.coffee_block": "咖啡",
   "item.delta_delight.seafoodcan": "海鲜粥罐头",
   "item.delta_delight.nourishcan": "营养粥罐头",
   "item.delta_delight.lemontea": "生津柠檬茶",
@@ -22,5 +23,6 @@
   "item.delta_delight.yogurt": "酸奶",
   "item.delta_delight.fastnoodles": "昴星方便面",
   "item.delta_delight.wildbar": "野外能量棒",
-  "item.delta_delight.nosugarbar": "无糖缓释能量棒"
+  "item.delta_delight.nosugarbar": "无糖缓释能量棒",
+  "item.delta_delight.sugartriangle": "糖三角"
 }

@@ -52,9 +52,14 @@ public final class ModItems {
                                     .rarity(Rarity.UNCOMMON)
                     )
             );
-    public static final RegistryObject<Item> COFFEE = ITEMS.register("coffee",
-            () -> new DrinkItem((new Item.Properties()
-                    .food(ModFoods.COFFEE))));
+    public static final RegistryObject<Item> COFFEE =
+            ITEMS.register("coffee",
+                    () -> new TequilaItem(ModBlocks.COFFEE_BLOCK.get(),
+                            new Item.Properties()
+                                    .food(ModFoods.TEQUILA)
+                                    .rarity(Rarity.UNCOMMON)
+                    )
+            );
 
     public static final RegistryObject<Item> SEAFOODCAN = ITEMS.register("seafoodcan",
             () -> new Item((new Item.Properties()
@@ -96,6 +101,9 @@ public final class ModItems {
             () -> new Item((new Item.Properties()
                     .food(ModFoods.NOURISHCAN))));
     public static final RegistryObject<Item> NOSUGARBAR = ITEMS.register("nosugarbar",
+            () -> new Item((new Item.Properties()
+                    .food(ModFoods.NOURISHCAN))));
+    public static final RegistryObject<Item> SUGARTRIANGLE = ITEMS.register("sugartriangle",
             () -> new Item((new Item.Properties()
                     .food(ModFoods.NOURISHCAN))));
 

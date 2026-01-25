@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "delta_delight:block/coffee_block" }
+  }
+}

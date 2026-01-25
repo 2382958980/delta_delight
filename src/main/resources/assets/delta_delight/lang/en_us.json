@@ -9,6 +9,7 @@
   "item.delta_delight.caviar": "Caviar",
   "block.delta_delight.caviar_block": "Caviar",
   "item.delta_delight.coffee": "Coffee",
+  "block.delta_delight.coffee_block": "Coffee",
   "item.delta_delight.seafoodcan": "seafood can",
   "item.delta_delight.nourishcan": "nourish can",
   "item.delta_delight.lemontea": "lemon tea",
@@ -22,5 +23,6 @@
   "item.delta_delight.yogurt": "yogurt",
   "item.delta_delight.fastnoodles": "fastnoodles",
   "item.delta_delight.wildbar": "wild bar",
-  "item.delta_delight.nosugarbar": "no sugar bar"
+  "item.delta_delight.nosugarbar": "no sugar bar",
+  "item.delta_delight.sugartriangle": "sugar triangle"
 }
