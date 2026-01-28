@@ -1,15 +1,11 @@
 package com.candle.delta_delight.registry;
 
-import com.candle.delta_delight.content.CaviarItem;
-import com.candle.delta_delight.content.ChampagneItem;
-import com.candle.delta_delight.content.DrinkItem;
-import com.candle.delta_delight.content.TequilaItem;
+
+import com.candle.delta_delight.content.GeneralFoodItem;
+
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
-import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -30,45 +26,65 @@ public final class ModItems {
 
     public static final RegistryObject<Item> CHAMPAGNE =
             ITEMS.register("champagne",
-                    () -> new ChampagneItem(ModBlocks.CHAMPAGNE_BLOCK.get(),
+                    () -> new GeneralFoodItem(ModBlocks.CHAMPAGNE_BLOCK.get(),
                             new Item.Properties()
                                     .food(ModFoods.CHAMPAGNE)
-                                    .rarity(Rarity.EPIC)
+                                    .rarity(Rarity.EPIC),
+                            Items.GLASS_BOTTLE,
+                            40,
+                            UseAnim.DRINK
                     )
             );
     public static final RegistryObject<Item> CAVIAR =
             ITEMS.register("caviar",
-                    () -> new CaviarItem(ModBlocks.CAVIAR_BLOCK.get(),
+                    () -> new GeneralFoodItem(ModBlocks.CAVIAR_BLOCK.get(),
                             new Item.Properties()
                                     .food(ModFoods.CAVIAR)
-                                    .rarity(Rarity.EPIC)
+                                    .rarity(Rarity.EPIC),
+                            Items.GLASS_BOTTLE,
+                            40,
+                            UseAnim.DRINK
                     )
             );
     public static final RegistryObject<Item> TEQUILA =
             ITEMS.register("tequila",
-                    () -> new TequilaItem(ModBlocks.TEQUILA_BLOCK.get(),
+                    () -> new GeneralFoodItem(ModBlocks.TEQUILA_BLOCK.get(),
                             new Item.Properties()
                                     .food(ModFoods.TEQUILA)
-                                    .rarity(Rarity.UNCOMMON)
+                                    .rarity(Rarity.UNCOMMON),
+                            Items.GLASS_BOTTLE,
+                            40,
+                            UseAnim.DRINK
                     )
             );
     public static final RegistryObject<Item> COFFEE =
             ITEMS.register("coffee",
-                    () -> new TequilaItem(ModBlocks.COFFEE_BLOCK.get(),
+                    () -> new GeneralFoodItem(ModBlocks.COFFEE_BLOCK.get(),
                             new Item.Properties()
                                     .food(ModFoods.TEQUILA)
-                                    .rarity(Rarity.UNCOMMON)
+                                    .rarity(Rarity.UNCOMMON),
+                            Items.GLASS_BOTTLE,
+                            40,
+                            UseAnim.DRINK
                     )
             );
 
-    public static final RegistryObject<Item> SEAFOODCAN = ITEMS.register("seafoodcan",
-            () -> new Item((new Item.Properties()
-                    .food(ModFoods.SEAFOODCAN))));
+    public static final RegistryObject<Item> SEAFOODCAN =
+            ITEMS.register("seafoodcan",
+                    () -> new GeneralFoodItem(ModBlocks.SEAFOODCAN_BLOCK.get(),
+                            new Item.Properties()
+                                    .food(ModFoods.SEAFOODCAN)
+                                    .rarity(Rarity.UNCOMMON),
+                            null,
+                            32,
+                            UseAnim.EAT
+                    )
+            );
     public static final RegistryObject<Item> NOURISHCAN = ITEMS.register("nourishcan",
             () -> new Item((new Item.Properties()
                     .food(ModFoods.NOURISHCAN))));
     public static final RegistryObject<Item> LEMONTEA = ITEMS.register("lemontea",
-            () -> new DrinkItem((new Item.Properties()
+            () -> new Item((new Item.Properties()
                     .food(ModFoods.NOURISHCAN))));
     public static final RegistryObject<Item> GINGERBREADMAN = ITEMS.register("gingerbreadman",
             () -> new Item((new Item.Properties()
