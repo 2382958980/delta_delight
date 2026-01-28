@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:pasta"
+    },
+    {
+      "tag": "forge:pasta"
+    },
+    {
+      "tag": "forge:mushrooms"
+    },
+    {
+      "tag": "forge:crops"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:yummynoodles",
+    "count": 1
+  },
+  "cookingtime": 400
+}

@@ -5,21 +5,18 @@
       "tag": "forge:milk"
     },
     {
-      "tag": "forge:crops/wheat"
-    },
-    {
-      "tag": "forge:crops/wheat"
-    },
-    {
-      "tag": "forge:crops/wheat"
+      "item": "minecraft:cocoa_beans"
     },
     {
       "item": "minecraft:sugar"
     }
   ],
   "result": {
-    "item": "delta_delight:gingerbreadman",
+    "item": "delta_delight:coffee",
     "count": 1
   },
-  "cookingtime": 300
+  "cookingtime": 300,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
 }

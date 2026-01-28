@@ -1,0 +1,22 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:raw_fishes/salmon"
+    },
+    {
+      "item": "minecraft:dragon_breath"
+    },
+    {
+      "item": "minecraft:popped_chorus_fruit"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:caviar",
+    "count": 1
+  },
+  "cookingtime": 400,
+  "container": {
+    "item": "minecraft:gold_ingot"
+  }
+}

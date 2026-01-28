@@ -1,0 +1,19 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "minecraft:leaves"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:englishtea",
+    "count": 1
+  },
+  "cookingtime": 200,
+  "container": {
+    "item": "minecraft:iron_ingot"
+  }
+}
