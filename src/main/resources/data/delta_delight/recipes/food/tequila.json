@@ -13,12 +13,11 @@
       { "item": "minecraft:sweet_berries" },
       { "tag": "vinery:red_grape" }
     ],
-    { "item": "minecraft:ghast_tear" },
-    { "item": "minecraft:ghast_tear" },
-    { "item": "minecraft:golden_apple" }
+    { "item": "minecraft:blue_orchid" },
+    { "item": "minecraft:sea_pickle" }
   ],
   "result": {
-    "item": "delta_delight:champagne",
+    "item": "delta_delight:tequila",
     "count": 1
   },
   "cookingtime": 400,

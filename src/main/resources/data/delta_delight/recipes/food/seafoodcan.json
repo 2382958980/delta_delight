@@ -2,20 +2,20 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "item": "minecraft:beef"
+      "tag": "forge:grain/rice"
     },
     {
-      "item": "minecraft:beef"
+      "tag": "forge:grain/rice"
     },
     {
-      "tag": "forge:crops/tomato"
+      "tag": "minecraft:fishes"
     },
     {
-      "item": "minecraft:potato"
+      "tag": "minecraft:fishes"
     }
   ],
   "result": {
-    "item": "delta_delight:armycan",
+    "item": "delta_delight:seafoodcan",
     "count": 1
   },
   "cookingtime": 400,
