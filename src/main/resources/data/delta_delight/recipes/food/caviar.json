@@ -2,7 +2,7 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "forge:raw_fishes/salmon"
+      "item": "farmersdelight:salmon_slice"
     },
     {
       "item": "minecraft:dragon_breath"

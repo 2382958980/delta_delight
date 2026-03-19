@@ -6,16 +6,18 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.item.*;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.food.FoodProperties;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemUtils;
+import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.item.context.UseOnContext;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.phys.Vec3;
 
 public class GeneralFoodItem extends Item {
 
@@ -36,33 +38,35 @@ public class GeneralFoodItem extends Item {
         this.useAnim = useAnim;
     }
 
-    // 自定义食用时间
     @Override
     public int getUseDuration(ItemStack stack) {
         return useDuration;
     }
 
-    // 自定义动画（吃 / 喝）
     @Override
     public UseAnim getUseAnimation(ItemStack stack) {
         return useAnim;
     }
 
-    // 右键开始使用
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
-        player.startUsingItem(hand);
-        return InteractionResultHolder.consume(player.getItemInHand(hand));
+        ItemStack stack = player.getItemInHand(hand);
+        FoodProperties foodProperties = this.getFoodProperties();
+        if (foodProperties != null && player.canEat(foodProperties.canAlwaysEat())) {
+            return ItemUtils.startUsingInstantly(level, player, hand);
+        }
+        return InteractionResultHolder.fail(stack);
     }
 
-    // 食用完成逻辑
     @Override
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
         ItemStack result = super.finishUsingItem(stack, level, entity);
 
-        if (entity instanceof Player player && !player.isCreative()) {
+        if (returnItem != null && entity instanceof Player player && !player.isCreative()) {
             ItemStack container = new ItemStack(returnItem);
-
+            if (result.isEmpty()) {
+                return container;
+            }
             if (!player.getInventory().add(container)) {
                 player.drop(container, false);
             }
@@ -71,10 +75,11 @@ public class GeneralFoodItem extends Item {
         return result;
     }
 
-    // 可选：右键方块时放置对应方块（例如酒瓶放桌面）
     @Override
     public InteractionResult useOn(UseOnContext context) {
-        if (linkedBlock == null) return InteractionResult.PASS;
+        if (linkedBlock == null) {
+            return InteractionResult.PASS;
+        }
 
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos().relative(context.getClickedFace());
@@ -85,7 +90,6 @@ public class GeneralFoodItem extends Item {
 
             level.setBlock(pos, state, 3);
 
-            // 播放放置声音（关键）
             SoundType sound = state.getSoundType();
             level.playSound(
                     null,
@@ -96,7 +100,6 @@ public class GeneralFoodItem extends Item {
                     sound.getPitch() * 0.8F
             );
 
-            // 触发游戏事件（兼容振动/监听系统）
             level.gameEvent(player, GameEvent.BLOCK_PLACE, pos);
 
             if (player != null && !player.isCreative()) {
@@ -108,5 +111,4 @@ public class GeneralFoodItem extends Item {
 
         return InteractionResult.PASS;
     }
-
 }

@@ -2,7 +2,7 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "forge:milk"
+      "tag": "forge:milk/milk_bottle"
     },
     {
       "tag": "forge:crops/wheat"

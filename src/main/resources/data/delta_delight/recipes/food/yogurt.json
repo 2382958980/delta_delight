@@ -2,10 +2,10 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "forge:milk"
+      "tag": "forge:milk/milk_bottle"
     },
     {
-      "tag": "forge:milk"
+      "tag": "forge:milk/milk_bottle"
     },
     {
       "tag": "forge:mushrooms"
