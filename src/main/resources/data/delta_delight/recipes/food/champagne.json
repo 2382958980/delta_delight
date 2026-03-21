@@ -22,6 +22,7 @@
     "count": 1
   },
   "cookingtime": 400,
+  "experience": 10.0,
   "container": {
     "item": "minecraft:glass_bottle"
   }

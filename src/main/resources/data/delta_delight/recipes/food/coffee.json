@@ -15,7 +15,8 @@
     "item": "delta_delight:coffee",
     "count": 1
   },
-  "cookingtime": 300,
+  "cookingtime": 200,
+  "experience": 3.0,
   "container": {
     "item": "minecraft:glass_bottle"
   }

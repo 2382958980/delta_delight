@@ -18,7 +18,8 @@
     "item": "delta_delight:armycan",
     "count": 1
   },
-  "cookingtime": 400,
+  "cookingtime": 200,
+  "experience": 1.0,
   "container": {
     "item": "minecraft:iron_ingot"
   }

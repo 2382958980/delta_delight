@@ -83,26 +83,26 @@ public final class ModFoods {
 
     public static final FoodProperties ARMYCAN = new FoodProperties.Builder()
             .nutrition(12)
-            .saturationMod(1F)
+            .saturationMod(0.5F)
             .effect(() -> new MobEffectInstance(ModEffects.COMFORT.get(), 6000, 0), 1.0F)
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000, 0), 1.0F)
             .build();
 
     public static final FoodProperties YUMMYNOODLES = new FoodProperties.Builder()
             .nutrition(9)
-            .saturationMod(1.0F)
+            .saturationMod(0.5F)
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3000, 0), 1.0F)
             .build();
 
     public static final FoodProperties VITABLETS = new FoodProperties.Builder()
             .nutrition(1)
-            .saturationMod(2.0F)
+            .saturationMod(1.0F)
             .effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 200, 0), 1.0F)
             .build();
 
     public static final FoodProperties YOGURT = new FoodProperties.Builder()
             .nutrition(4)
-            .saturationMod(1F)
+            .saturationMod(0.5F)
             .build();
 
     public static final FoodProperties FASTNOODLES = new FoodProperties.Builder()

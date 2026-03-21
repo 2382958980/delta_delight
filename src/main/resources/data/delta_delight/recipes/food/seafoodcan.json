@@ -19,6 +19,7 @@
     "count": 1
   },
   "cookingtime": 400,
+  "experience": 3.0,
   "container": {
     "item": "minecraft:iron_ingot"
   }

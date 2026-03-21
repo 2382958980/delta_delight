@@ -21,5 +21,6 @@
     "item": "delta_delight:gingerbreadman",
     "count": 1
   },
-  "cookingtime": 300
+  "cookingtime": 200,
+  "experience": 1.0
 }

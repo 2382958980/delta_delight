@@ -18,5 +18,6 @@
     "item": "delta_delight:yummynoodles",
     "count": 1
   },
-  "cookingtime": 400
+  "cookingtime": 200,
+  "experience": 1.0
 }

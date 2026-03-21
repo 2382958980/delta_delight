@@ -12,5 +12,6 @@
     "item": "delta_delight:vitablets",
     "count": 2
   },
-  "cookingtime": 400
+  "cookingtime": 200,
+  "experience": 1.0
 }
