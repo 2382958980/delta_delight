@@ -33,6 +33,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.GINGERBREADMAN.get());
                         output.accept(ModItems.ORANGEL.get());
                         output.accept(ModItems.ENGLISHTEA.get());
+                        output.accept(ModItems.COLA.get());
                         output.accept(ModItems.ARMYCAN.get());
                         output.accept(ModItems.SUGARTRIANGLE.get());
                         output.accept(ModItems.YUMMYNOODLES.get());

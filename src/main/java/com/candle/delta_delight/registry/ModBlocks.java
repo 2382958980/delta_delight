@@ -60,4 +60,13 @@ public class ModBlocks {
                     5,0,6.5,11,6,9.5
             )
     );
+    public static final RegistryObject<Block> NOURISHCAN_BLOCK = BLOCKS.register(
+            "nourishcan_block",
+            () -> new GeneralBlock(BlockBehaviour.Properties
+                    .of().strength(0.2f)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.NORMAL),
+                    4.5,0,6,11.5,3.25,10
+            )
+    );
 }
