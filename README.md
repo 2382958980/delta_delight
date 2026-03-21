@@ -1,7 +1,7 @@
 <h1 align="center">三角洲乐事</h1>
 <p align="center">
   <img src="https://img.shields.io/badge/Minecraft-Java%20Edition-brightgreen">
-  <img src="https://img.shields.io/badge/Forge-1.20.1">
+  <img src="https://img.shields.io/badge/Forge-1.20.1-orange">
 </p>
 
 **Q:此模组用途?**
