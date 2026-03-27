@@ -1,4 +1,4 @@
-<p align="center"><img src=""></p>
+<p align="center"><img width="70%" src="src/main/resources/logo.png"></p>
 <h1 align="center">三角洲乐事
     <br><img src="https://img.shields.io/badge/Minecraft-Java%20Edition-brightgreen">
     <img src="https://img.shields.io/badge/Forge-1.20.1-orange">
