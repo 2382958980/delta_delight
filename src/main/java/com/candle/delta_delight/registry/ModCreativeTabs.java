@@ -29,6 +29,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.COFFEE.get());
                         output.accept(ModItems.SEAFOODCAN.get());
                         output.accept(ModItems.NOURISHCAN.get());
+                        output.accept(ModItems.PORRIDGE.get());
                         output.accept(ModItems.LEMONTEA.get());
                         output.accept(ModItems.GINGERBREADMAN.get());
                         output.accept(ModItems.ORANGEL.get());
@@ -42,6 +43,7 @@ public class ModCreativeTabs {
                         output.accept(ModItems.WILDBAR.get());
                         output.accept(ModItems.YOGURT.get());
                         output.accept(ModItems.FASTNOODLES.get());
+
                     })
                     .build()
     );

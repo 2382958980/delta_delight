@@ -1,6 +1,7 @@
 package com.candle.delta_delight.content;
 
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
@@ -43,7 +44,7 @@ public class GeneralBlock extends Block {
         BlockPos below = pos.below();
         BlockState support = level.getBlockState(below);
 
-        return support.isSolidRender(level, below);
+        return support.canOcclude() && support.isFaceSturdy(level, below, Direction.UP);
     }
     @Override
     public void neighborChanged(BlockState state, Level level, BlockPos pos,

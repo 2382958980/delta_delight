@@ -20,27 +20,27 @@ public final class ModItems {
     public static final RegistryObject<Item> CHAMPAGNE = registerPlacedFood(
             "champagne", ModBlocks.CHAMPAGNE_BLOCK, ModFoods.CHAMPAGNE, Rarity.EPIC, Items.GLASS_BOTTLE, 32, UseAnim.DRINK);
     public static final RegistryObject<Item> CAVIAR = registerPlacedFood(
-            "caviar", ModBlocks.CAVIAR_BLOCK, ModFoods.CAVIAR, Rarity.EPIC, null, 16, UseAnim.EAT);
+            "caviar", ModBlocks.CAVIAR_BLOCK, ModFoods.CAVIAR, Rarity.EPIC, Items.GOLD_INGOT, 16, UseAnim.EAT);
     public static final RegistryObject<Item> TEQUILA = registerPlacedFood(
             "tequila", ModBlocks.TEQUILA_BLOCK, ModFoods.TEQUILA, Rarity.UNCOMMON, Items.GLASS_BOTTLE, 32, UseAnim.DRINK);
     public static final RegistryObject<Item> COFFEE = registerPlacedFood(
             "coffee", ModBlocks.COFFEE_BLOCK, ModFoods.COFFEE, Rarity.UNCOMMON, Items.GLASS_BOTTLE, 16, UseAnim.DRINK);
     public static final RegistryObject<Item> SEAFOODCAN = registerPlacedFood(
-            "seafoodcan", ModBlocks.SEAFOODCAN_BLOCK, ModFoods.SEAFOODCAN, Rarity.UNCOMMON, null, 32, UseAnim.EAT);
+            "seafoodcan", ModBlocks.SEAFOODCAN_BLOCK, ModFoods.SEAFOODCAN, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.EAT);
     public static final RegistryObject<Item> NOURISHCAN = registerPlacedFood(
-            "nourishcan", ModBlocks.NOURISHCAN_BLOCK, ModFoods.NOURISHCAN, Rarity.UNCOMMON, null, 32, UseAnim.EAT);
+            "nourishcan", ModBlocks.NOURISHCAN_BLOCK, ModFoods.NOURISHCAN, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.EAT);
     public static final RegistryObject<Item> LEMONTEA = registerFood(
-            "lemontea", ModFoods.LEMONTEA, null, 24, UseAnim.DRINK);
+            "lemontea", ModFoods.LEMONTEA, Items.IRON_INGOT, 24, UseAnim.DRINK);
     public static final RegistryObject<Item> GINGERBREADMAN = registerFood(
             "gingerbreadman", ModFoods.GINGERBREADMAN, null, 32, UseAnim.EAT);
     public static final RegistryObject<Item> ORANGEL = registerFood(
             "orangel", ModFoods.ORANGEL, null, 16, UseAnim.EAT);
     public static final RegistryObject<Item> ENGLISHTEA = registerFood(
-            "englishtea", ModFoods.ENGLISHTEA, null, 32, UseAnim.DRINK);
+            "englishtea", ModFoods.ENGLISHTEA, Items.IRON_INGOT, 32, UseAnim.EAT);
     public static final RegistryObject<Item> COLA = registerFood(
-            "cola", ModFoods.COLA, Items.GLASS_BOTTLE, 32, UseAnim.DRINK);
+            "cola", ModFoods.COLA, Items.IRON_INGOT, 32, UseAnim.DRINK);
     public static final RegistryObject<Item> ARMYCAN = registerFood(
-            "armycan", ModFoods.ARMYCAN, null, 32, UseAnim.EAT);
+            "armycan", ModFoods.ARMYCAN, Items.IRON_INGOT, 32, UseAnim.EAT);
     public static final RegistryObject<Item> AFRICAHEART = ITEMS.register(
             "africaheart", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> YUMMYNOODLES = registerFood(
@@ -57,6 +57,8 @@ public final class ModItems {
             "nosugarbar", ModFoods.NOSUGARBAR, null, 16, UseAnim.EAT);
     public static final RegistryObject<Item> SUGARTRIANGLE = registerFood(
             "sugartriangle", ModFoods.SUGARTRIANGLE, null, 24, UseAnim.EAT);
+    public static final RegistryObject<Item> PORRIDGE = registerFood(
+            "porridge", ModFoods.PORRIDGE, null, 32, UseAnim.EAT);
 
     private static RegistryObject<Item> registerFood(String name, FoodProperties food,
                                                      Item returnItem, int useDuration, UseAnim useAnim) {

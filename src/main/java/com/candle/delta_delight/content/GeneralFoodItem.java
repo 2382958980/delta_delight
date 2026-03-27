@@ -12,6 +12,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemUtils;
 import net.minecraft.world.item.UseAnim;
+import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -84,9 +85,12 @@ public class GeneralFoodItem extends Item {
         Level level = context.getLevel();
         BlockPos pos = context.getClickedPos().relative(context.getClickedFace());
         Player player = context.getPlayer();
+        BlockState state = linkedBlock.defaultBlockState();
+        BlockPlaceContext placeContext = new BlockPlaceContext(context);
 
-        if (!level.isClientSide && level.isEmptyBlock(pos)) {
-            BlockState state = linkedBlock.defaultBlockState();
+        if (!level.isClientSide
+                && level.getBlockState(pos).canBeReplaced(placeContext)
+                && state.canSurvive(level, pos)) {
 
             level.setBlock(pos, state, 3);
 

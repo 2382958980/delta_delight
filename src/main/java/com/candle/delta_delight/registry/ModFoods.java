@@ -58,7 +58,7 @@ public final class ModFoods {
             .build();
 
     public static final FoodProperties GINGERBREADMAN = new FoodProperties.Builder()
-            .nutrition(5)
+            .nutrition(7)
             .saturationMod(1F)
             .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 3600, 0), 1.0F)
             .build();
@@ -70,7 +70,7 @@ public final class ModFoods {
             .build();
 
     public static final FoodProperties ENGLISHTEA = new FoodProperties.Builder()
-            .nutrition(2)
+            .nutrition(3)
             .saturationMod(0F)
             .build();
 
@@ -123,6 +123,11 @@ public final class ModFoods {
     public static final FoodProperties SUGARTRIANGLE = new FoodProperties.Builder()
             .nutrition(4)
             .saturationMod(1F)
+            .build();
+
+    public static final FoodProperties PORRIDGE = new FoodProperties.Builder()
+            .nutrition(8)
+            .saturationMod(0.75F)
             .build();
 
     private ModFoods() {
