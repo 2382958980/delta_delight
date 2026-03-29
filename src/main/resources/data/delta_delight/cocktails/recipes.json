@@ -1,0 +1,224 @@
+{
+  "recipes": [
+    {
+      "id": "delta_delight:long_farewell",
+      "name_key": "cocktail.delta_delight.long_farewell",
+      "quality": "epic",
+      "base": "dusongling",
+      "ingredients": ["lemontea", "honey_bottle"],
+      "min_shake_seconds": 8.0,
+      "max_shake_seconds": 8.5
+    },
+    {
+      "id": "delta_delight:mountain_rain",
+      "name_key": "cocktail.delta_delight.mountain_rain",
+      "quality": "epic",
+      "base": "dusongling",
+      "ingredients": ["apple_cider", "sea_pickle"],
+      "min_shake_seconds": 7.5,
+      "max_shake_seconds": 8.0
+    },
+    {
+      "id": "delta_delight:tulip",
+      "name_key": "cocktail.delta_delight.tulip",
+      "quality": "epic",
+      "base": "dusongling",
+      "ingredients": ["watermelon_juice", "milk_bottle"],
+      "min_shake_seconds": 8.5,
+      "max_shake_seconds": 9.0
+    },
+    {
+      "id": "delta_delight:sky_island",
+      "name_key": "cocktail.delta_delight.sky_island",
+      "quality": "epic",
+      "base": "qingyiyin",
+      "ingredients": ["glow_berries", "dragon_breath"],
+      "min_shake_seconds": 8.0,
+      "max_shake_seconds": 8.5
+    },
+    {
+      "id": "delta_delight:starlight",
+      "name_key": "cocktail.delta_delight.starlight",
+      "quality": "epic",
+      "base": "qingyiyin",
+      "ingredients": ["cola", "glowstone_dust"],
+      "min_shake_seconds": 9.5,
+      "max_shake_seconds": 10.0
+    },
+    {
+      "id": "delta_delight:heartbeat",
+      "name_key": "cocktail.delta_delight.heartbeat",
+      "quality": "epic",
+      "base": "qingyiyin",
+      "ingredients": ["lemontea", "gunpowder"],
+      "min_shake_seconds": 9.5,
+      "max_shake_seconds": 10.0
+    },
+    {
+      "id": "delta_delight:highball",
+      "name_key": "cocktail.delta_delight.highball",
+      "quality": "epic",
+      "base": "hupolu",
+      "ingredients": ["apple_cider", "watermelon_juice"],
+      "min_shake_seconds": 4.0,
+      "max_shake_seconds": 4.5
+    },
+    {
+      "id": "delta_delight:wild_rose",
+      "name_key": "cocktail.delta_delight.wild_rose",
+      "quality": "epic",
+      "base": "hupolu",
+      "ingredients": ["dragon_breath", "ender_pearl"],
+      "min_shake_seconds": 4.0,
+      "max_shake_seconds": 4.5
+    },
+    {
+      "id": "delta_delight:impassable_mountains",
+      "name_key": "cocktail.delta_delight.impassable_mountains",
+      "quality": "epic",
+      "base": "hupolu",
+      "ingredients": ["lemontea", "blaze_powder"],
+      "min_shake_seconds": 5.0,
+      "max_shake_seconds": 5.5
+    },
+    {
+      "id": "delta_delight:misty_morning",
+      "name_key": "cocktail.delta_delight.misty_morning",
+      "quality": "epic",
+      "base": "tangmizhi",
+      "ingredients": ["glow_berries", "golden_carrot"],
+      "min_shake_seconds": 2.5,
+      "max_shake_seconds": 3.0
+    },
+    {
+      "id": "delta_delight:asara_style",
+      "name_key": "cocktail.delta_delight.asara_style",
+      "quality": "epic",
+      "base": "tangmizhi",
+      "ingredients": ["cola", "redstone"],
+      "min_shake_seconds": 2.5,
+      "max_shake_seconds": 3.0
+    },
+    {
+      "id": "delta_delight:thunder_step",
+      "name_key": "cocktail.delta_delight.thunder_step",
+      "quality": "epic",
+      "base": "tangmizhi",
+      "ingredients": ["cola", "gunpowder"],
+      "min_shake_seconds": 2.5,
+      "max_shake_seconds": 3.0
+    },
+    {
+      "id": "delta_delight:golden_fresh",
+      "name_key": "cocktail.delta_delight.golden_fresh",
+      "quality": "uncommon",
+      "base": "dusongling",
+      "ingredients": ["glow_berries", "golden_carrot"]
+    },
+    {
+      "id": "delta_delight:elegant_citrus",
+      "name_key": "cocktail.delta_delight.elegant_citrus",
+      "quality": "uncommon",
+      "base": "dusongling",
+      "ingredients": ["watermelon_juice", "dragon_breath"]
+    },
+    {
+      "id": "delta_delight:sweet_symphony",
+      "name_key": "cocktail.delta_delight.sweet_symphony",
+      "quality": "uncommon",
+      "base": "dusongling",
+      "ingredients": ["honey_bottle", "blaze_powder"]
+    },
+    {
+      "id": "delta_delight:clear_breeze",
+      "name_key": "cocktail.delta_delight.clear_breeze",
+      "quality": "uncommon",
+      "base": "dusongling",
+      "ingredients": ["ender_pearl", "sea_pickle"]
+    },
+    {
+      "id": "delta_delight:cola_storm",
+      "name_key": "cocktail.delta_delight.cola_storm",
+      "quality": "uncommon",
+      "base": "qingyiyin",
+      "ingredients": ["cola", "gunpowder"]
+    },
+    {
+      "id": "delta_delight:countless_stars",
+      "name_key": "cocktail.delta_delight.countless_stars",
+      "quality": "uncommon",
+      "base": "qingyiyin",
+      "ingredients": ["glowstone_dust", "ender_pearl"]
+    },
+    {
+      "id": "delta_delight:red_carnival",
+      "name_key": "cocktail.delta_delight.red_carnival",
+      "quality": "uncommon",
+      "base": "qingyiyin",
+      "ingredients": ["redstone", "blaze_powder"]
+    },
+    {
+      "id": "delta_delight:sweet_melody",
+      "name_key": "cocktail.delta_delight.sweet_melody",
+      "quality": "uncommon",
+      "base": "qingyiyin",
+      "ingredients": ["honey_bottle", "milk_bottle"]
+    },
+    {
+      "id": "delta_delight:departure",
+      "name_key": "cocktail.delta_delight.departure",
+      "quality": "uncommon",
+      "base": "hupolu",
+      "ingredients": ["lemontea", "chorus_fruit"]
+    },
+    {
+      "id": "delta_delight:scarlet_flame",
+      "name_key": "cocktail.delta_delight.scarlet_flame",
+      "quality": "uncommon",
+      "base": "hupolu",
+      "ingredients": ["blaze_powder", "gunpowder"]
+    },
+    {
+      "id": "delta_delight:dawnlight",
+      "name_key": "cocktail.delta_delight.dawnlight",
+      "quality": "uncommon",
+      "base": "hupolu",
+      "ingredients": ["golden_carrot", "apple_cider"]
+    },
+    {
+      "id": "delta_delight:bubble_shadow",
+      "name_key": "cocktail.delta_delight.bubble_shadow",
+      "quality": "uncommon",
+      "base": "hupolu",
+      "ingredients": ["sea_pickle", "dragon_breath"]
+    },
+    {
+      "id": "delta_delight:tender_years",
+      "name_key": "cocktail.delta_delight.tender_years",
+      "quality": "uncommon",
+      "base": "tangmizhi",
+      "ingredients": ["redstone", "apple_cider"]
+    },
+    {
+      "id": "delta_delight:classic_symphony",
+      "name_key": "cocktail.delta_delight.classic_symphony",
+      "quality": "uncommon",
+      "base": "tangmizhi",
+      "ingredients": ["cola", "glow_berries"]
+    },
+    {
+      "id": "delta_delight:bursting_vitality",
+      "name_key": "cocktail.delta_delight.bursting_vitality",
+      "quality": "uncommon",
+      "base": "tangmizhi",
+      "ingredients": ["blaze_powder", "honey_bottle"]
+    },
+    {
+      "id": "delta_delight:summer_rhyme",
+      "name_key": "cocktail.delta_delight.summer_rhyme",
+      "quality": "uncommon",
+      "base": "tangmizhi",
+      "ingredients": ["sea_pickle", "chorus_fruit"]
+    }
+  ]
+}

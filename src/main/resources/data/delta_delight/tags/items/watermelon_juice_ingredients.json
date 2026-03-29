@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    { "id": "fruitsdelight:melon_juice", "required": false },
+    { "id": "delightful:melon_juice", "required": false },
+    { "id": "candlelight:melon_juice", "required": false }
+  ]
+}

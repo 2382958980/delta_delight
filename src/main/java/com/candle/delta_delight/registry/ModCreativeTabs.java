@@ -43,6 +43,11 @@ public class ModCreativeTabs {
                         output.accept(ModItems.WILDBAR.get());
                         output.accept(ModItems.YOGURT.get());
                         output.accept(ModItems.FASTNOODLES.get());
+                        output.accept(ModItems.SHAKER.get());
+                        output.accept(ModItems.DUSONGLING.get());
+                        output.accept(ModItems.QINGYIYIN.get());
+                        output.accept(ModItems.HUPOLU.get());
+                        output.accept(ModItems.TANGMIZHI.get());
 
                     })
                     .build()

@@ -1,6 +1,9 @@
 package com.candle.delta_delight.registry;
 
+import com.candle.delta_delight.cocktail.CocktailItem;
 import com.candle.delta_delight.content.GeneralFoodItem;
+import com.candle.delta_delight.content.ShakerItem;
+import com.candle.delta_delight.content.TooltipItem;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -59,6 +62,18 @@ public final class ModItems {
             "sugartriangle", ModFoods.SUGARTRIANGLE, null, 24, UseAnim.EAT);
     public static final RegistryObject<Item> PORRIDGE = registerFood(
             "porridge", ModFoods.PORRIDGE, null, 32, UseAnim.EAT);
+    public static final RegistryObject<Item> QINGYIYIN = ITEMS.register(
+            "qingyiyin", () -> new TooltipItem(new Item.Properties()));
+    public static final RegistryObject<Item> TANGMIZHI = ITEMS.register(
+            "tangmizhi", () -> new TooltipItem(new Item.Properties()));
+    public static final RegistryObject<Item> DUSONGLING = ITEMS.register(
+            "dusongling", () -> new TooltipItem(new Item.Properties()));
+    public static final RegistryObject<Item> HUPOLU = ITEMS.register(
+            "hupolu", () -> new TooltipItem(new Item.Properties()));
+    public static final RegistryObject<Item> MIXED_COCKTAIL = ITEMS.register(
+            "mixed_cocktail", () -> new CocktailItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> SHAKER = ITEMS.register(
+            "shaker", () -> new ShakerItem(new Item.Properties().stacksTo(1)));
 
     private static RegistryObject<Item> registerFood(String name, FoodProperties food,
                                                      Item returnItem, int useDuration, UseAnim useAnim) {

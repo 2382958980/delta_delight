@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "type": "forge:nbt",
+      "item": "minecraft:potion",
+      "count": 1,
+      "nbt": "{Potion:\"minecraft:water\"}"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:honey_bottle"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:hupolu",
+    "count": 1
+  },
+  "cookingtime": 240,
+  "experience": 1.0,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
+}

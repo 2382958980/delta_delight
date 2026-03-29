@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "delta_delight:africaheart"
+    },
+    "title": {
+      "translate": "advancement.delta_delight.africaheart.title"
+    },
+    "description": {
+      "translate": "advancement.delta_delight.africaheart.description"
+    },
+    "background": "minecraft:textures/block/dark_oak_planks.png",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_africaheart": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delta_delight:africaheart"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain_africaheart"
+    ]
+  ]
+}
+

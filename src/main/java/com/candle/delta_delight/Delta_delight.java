@@ -1,11 +1,15 @@
 package com.candle.delta_delight;
 
+import com.candle.delta_delight.client.screen.ShakerScreen;
+import com.candle.delta_delight.network.ModMessages;
 import com.candle.delta_delight.registry.ModBlocks;
 import com.candle.delta_delight.registry.ModCreativeTabs;
 import com.candle.delta_delight.registry.ModItems;
 import com.candle.delta_delight.registry.ModLootModifiers;
+import com.candle.delta_delight.registry.ModMenuTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -24,7 +28,7 @@ import org.slf4j.Logger;
 @Mod(Delta_delight.MODID)
 public class Delta_delight {
     public static final String MODID = "delta_delight";
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public Delta_delight() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -32,6 +36,8 @@ public class Delta_delight {
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.TABS.register(modEventBus);
         ModLootModifiers.LOOT_MODIFIERS.register(modEventBus);
+        ModMenuTypes.MENU_TYPES.register(modEventBus);
+        ModMessages.register();
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
@@ -53,6 +59,7 @@ public class Delta_delight {
 
     private void clientSetup(FMLClientSetupEvent event) {
         LOGGER.info("DELTA DELIGHT Client Setup");
+        event.enqueueWork(() -> MenuScreens.register(ModMenuTypes.SHAKER.get(), ShakerScreen::new));
     }
 
     @SubscribeEvent
