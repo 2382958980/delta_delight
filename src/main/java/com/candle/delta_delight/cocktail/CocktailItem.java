@@ -31,6 +31,7 @@ public class CocktailItem extends Item {
     public static final String NAME_KEY_TAG = "CocktailNameKey";
     public static final String QUALITY_TAG = "CocktailQuality";
     public static final String EFFECTS_TAG = "CocktailEffects";
+    public static final String INGREDIENT_KEYS_TAG = "CocktailIngredientKeys";
     private static final String EFFECT_ID_TAG = "Id";
     private static final String DURATION_TAG = "Duration";
     private static final String AMPLIFIER_TAG = "Amplifier";
@@ -116,7 +117,8 @@ public class CocktailItem extends Item {
         }
     }
 
-    public static ItemStack create(String nameKey, CocktailQuality quality, List<MobEffectInstance> effects, Item item) {
+    public static ItemStack create(String nameKey, CocktailQuality quality, List<MobEffectInstance> effects,
+                                   List<String> ingredientKeys, Item item) {
         ItemStack stack = new ItemStack(item);
         CompoundTag tag = stack.getOrCreateTag();
         tag.putString(NAME_KEY_TAG, nameKey);
@@ -131,6 +133,12 @@ public class CocktailItem extends Item {
             effectList.add(effectTag);
         }
         tag.put(EFFECTS_TAG, effectList);
+
+        ListTag ingredientList = new ListTag();
+        for (String ingredientKey : ingredientKeys) {
+            ingredientList.add(StringTag.valueOf(ingredientKey));
+        }
+        tag.put(INGREDIENT_KEYS_TAG, ingredientList);
         return stack;
     }
 
@@ -154,5 +162,19 @@ public class CocktailItem extends Item {
             }
         }
         return effects;
+    }
+
+    public static List<String> getStoredIngredientKeys(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if (tag == null || !tag.contains(INGREDIENT_KEYS_TAG, Tag.TAG_LIST)) {
+            return List.of();
+        }
+
+        List<String> ingredientKeys = new ArrayList<>();
+        ListTag ingredientList = tag.getList(INGREDIENT_KEYS_TAG, Tag.TAG_STRING);
+        for (Tag tagElement : ingredientList) {
+            ingredientKeys.add(tagElement.getAsString());
+        }
+        return ingredientKeys;
     }
 }

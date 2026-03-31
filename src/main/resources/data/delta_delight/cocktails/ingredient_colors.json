@@ -1,0 +1,68 @@
+{
+  "ingredients": [
+    {
+      "key": "cola",
+      "color": "#6B3A24"
+    },
+    {
+      "key": "lemontea",
+      "color": "#E8D66A"
+    },
+    {
+      "key": "apple_cider",
+      "color": "#D98E39"
+    },
+    {
+      "key": "watermelon_juice",
+      "color": "#F06A7E"
+    },
+    {
+      "key": "honey_bottle",
+      "color": "#F2BE45"
+    },
+    {
+      "key": "milk_bottle",
+      "color": "#F3EEE3"
+    },
+    {
+      "key": "dragon_breath",
+      "color": "#B26DFF"
+    },
+    {
+      "key": "glow_berries",
+      "color": "#C96ACF"
+    },
+    {
+      "key": "golden_carrot",
+      "color": "#F0A126"
+    },
+    {
+      "key": "sea_pickle",
+      "color": "#52BF70"
+    },
+    {
+      "key": "ender_pearl",
+      "color": "#64D0D8"
+    },
+    {
+      "key": "chorus_fruit",
+      "color": "#7A58A8"
+    },
+    {
+      "key": "gunpowder",
+      "color": "#8F8F95"
+    },
+    {
+      "key": "redstone",
+      "color": "#D63C32"
+    },
+    {
+      "key": "glowstone_dust",
+      "color": "#F6E27A"
+    },
+    {
+      "key": "blaze_powder",
+      "color": "#F08A21"
+    }
+  ]
+}

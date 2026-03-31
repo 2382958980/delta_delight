@@ -1,6 +1,7 @@
 package com.candle.delta_delight;
 
 import com.candle.delta_delight.client.screen.ShakerScreen;
+import com.candle.delta_delight.cocktail.CocktailAppearanceManager;
 import com.candle.delta_delight.network.ModMessages;
 import com.candle.delta_delight.registry.ModBlocks;
 import com.candle.delta_delight.registry.ModCreativeTabs;
@@ -13,6 +14,7 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.client.event.RegisterColorHandlersEvent;
 import net.minecraftforge.event.server.ServerStartingEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -59,7 +61,10 @@ public class Delta_delight {
 
     private void clientSetup(FMLClientSetupEvent event) {
         LOGGER.info("DELTA DELIGHT Client Setup");
-        event.enqueueWork(() -> MenuScreens.register(ModMenuTypes.SHAKER.get(), ShakerScreen::new));
+        event.enqueueWork(() -> {
+            MenuScreens.register(ModMenuTypes.SHAKER.get(), ShakerScreen::new);
+            CocktailAppearanceManager.ensureLoaded();
+        });
     }
 
     @SubscribeEvent
@@ -73,6 +78,15 @@ public class Delta_delight {
         public static void onClientSetup(FMLClientSetupEvent event) {
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        }
+
+        @SubscribeEvent
+        public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
+            CocktailAppearanceManager.ensureLoaded();
+            event.register(
+                    (stack, tintIndex) -> CocktailAppearanceManager.getTintColor(stack, tintIndex),
+                    ModItems.MIXED_COCKTAIL.get()
+            );
         }
     }
 }

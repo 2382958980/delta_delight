@@ -85,6 +85,9 @@ public final class CocktailBrewer {
             effects.add(new MobEffectInstance(effect, actualDuration, amplifier));
         }
 
-        return CocktailItem.create(nameKey, quality, effects, ModItems.MIXED_COCKTAIL.get());
+        List<String> ingredientKeys = ingredients.stream()
+                .map(CocktailIngredient::getKey)
+                .toList();
+        return CocktailItem.create(nameKey, quality, effects, ingredientKeys, ModItems.MIXED_COCKTAIL.get());
     }
 }
