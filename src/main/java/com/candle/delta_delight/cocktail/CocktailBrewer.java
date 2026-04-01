@@ -74,20 +74,44 @@ public final class CocktailBrewer {
         List<MobEffectInstance> effects = new ArrayList<>();
         if (quality != CocktailQuality.EPIC) {
             int negativeDuration = quality == CocktailQuality.COMMON ? COMMON_NEGATIVE_DURATION : UNCOMMON_NEGATIVE_DURATION;
-            effects.add(new MobEffectInstance(base.getNegativeEffect(), negativeDuration, 0));
+            addOrMergeEffect(effects, new MobEffectInstance(base.getNegativeEffect(), negativeDuration, 0));
         }
 
-        int amplifier = quality == CocktailQuality.EPIC ? 1 : 0;
+        boolean sameIngredients = ingredients.size() == 2
+                && ingredients.get(0).getKey().equals(ingredients.get(1).getKey());
+        int amplifier = (quality == CocktailQuality.EPIC ? 1 : 0) + (sameIngredients ? 1 : 0);
         int duration = quality == CocktailQuality.COMMON ? COMMON_BUFF_DURATION : RARE_BUFF_DURATION;
-        for (CocktailIngredient ingredient : ingredients) {
+        List<CocktailIngredient> appliedIngredients = sameIngredients
+                ? List.of(ingredients.get(0))
+                : ingredients;
+        for (CocktailIngredient ingredient : appliedIngredients) {
             MobEffect effect = ingredient.getEffect();
+            int actualAmplifier = Math.min(amplifier, CocktailEffectRules.getMaxAmplifier(effect));
             int actualDuration = effect.isInstantenous() ? 1 : duration;
-            effects.add(new MobEffectInstance(effect, actualDuration, amplifier));
+            if (sameIngredients && actualAmplifier == 0 && !effect.isInstantenous()) {
+                actualDuration *= 2;
+            }
+            addOrMergeEffect(effects, new MobEffectInstance(effect, actualDuration, actualAmplifier));
         }
 
         List<String> ingredientKeys = ingredients.stream()
                 .map(CocktailIngredient::getKey)
                 .toList();
-        return CocktailItem.create(nameKey, quality, effects, ingredientKeys, ModItems.MIXED_COCKTAIL.get());
+        return CocktailItem.create(nameKey, quality, base.getKey(), effects, ingredientKeys, ModItems.MIXED_COCKTAIL.get());
+    }
+
+    private static void addOrMergeEffect(List<MobEffectInstance> effects, MobEffectInstance candidate) {
+        for (int i = 0; i < effects.size(); i++) {
+            MobEffectInstance existing = effects.get(i);
+            if (existing.getEffect() == candidate.getEffect()) {
+                effects.set(i, new MobEffectInstance(
+                        candidate.getEffect(),
+                        Math.max(existing.getDuration(), candidate.getDuration()),
+                        Math.max(existing.getAmplifier(), candidate.getAmplifier())
+                ));
+                return;
+            }
+        }
+        effects.add(candidate);
     }
 }

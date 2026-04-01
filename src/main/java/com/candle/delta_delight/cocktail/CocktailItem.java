@@ -1,18 +1,19 @@
 package com.candle.delta_delight.cocktail;
 
-import net.minecraft.ChatFormatting;
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.Tag;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -30,6 +31,7 @@ import java.util.List;
 public class CocktailItem extends Item {
     public static final String NAME_KEY_TAG = "CocktailNameKey";
     public static final String QUALITY_TAG = "CocktailQuality";
+    public static final String BASE_KEY_TAG = "CocktailBaseKey";
     public static final String EFFECTS_TAG = "CocktailEffects";
     public static final String INGREDIENT_KEYS_TAG = "CocktailIngredientKeys";
     private static final String EFFECT_ID_TAG = "Id";
@@ -61,6 +63,16 @@ public class CocktailItem extends Item {
             case UNCOMMON -> Rarity.UNCOMMON;
             case EPIC -> Rarity.EPIC;
         };
+    }
+
+    @Override
+    public boolean isFoil(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if (tag == null || !tag.contains(QUALITY_TAG, Tag.TAG_STRING)) {
+            return super.isFoil(stack);
+        }
+
+        return CocktailQuality.valueOf(tag.getString(QUALITY_TAG)) == CocktailQuality.EPIC || super.isFoil(stack);
     }
 
     @Override
@@ -106,23 +118,42 @@ public class CocktailItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
-        CompoundTag tag = stack.getTag();
-        if (tag != null && tag.contains(QUALITY_TAG, Tag.TAG_STRING)) {
-            String qualityName = tag.getString(QUALITY_TAG).toLowerCase();
-            tooltip.add(Component.translatable("cocktail.delta_delight.quality." + qualityName).withStyle(ChatFormatting.GRAY));
-        }
-
         for (MobEffectInstance effectInstance : getStoredEffects(stack)) {
-            tooltip.add(Component.translatable(effectInstance.getDescriptionId()).withStyle(ChatFormatting.BLUE));
+            tooltip.add(formatEffectLine(effectInstance));
         }
     }
 
-    public static ItemStack create(String nameKey, CocktailQuality quality, List<MobEffectInstance> effects,
+    private static Component formatEffectLine(MobEffectInstance effectInstance) {
+        MutableComponent effectName = Component.translatable(effectInstance.getDescriptionId());
+        MutableComponent line = Component.empty().append(effectName);
+        if (CocktailEffectRules.showsAmplifier(effectInstance.getEffect())) {
+            line = line.append(" ")
+                    .append(Component.literal(toRoman(effectInstance.getAmplifier() + 1)));
+        }
+        line = line.append(" (")
+                .append(MobEffectUtil.formatDuration(effectInstance, 1.0F))
+                .append(")");
+        return line.withStyle(effectInstance.getEffect().getCategory().getTooltipFormatting());
+    }
+
+    private static String toRoman(int value) {
+        return switch (value) {
+            case 1 -> "I";
+            case 2 -> "II";
+            case 3 -> "III";
+            case 4 -> "IV";
+            case 5 -> "V";
+            default -> Integer.toString(value);
+        };
+    }
+
+    public static ItemStack create(String nameKey, CocktailQuality quality, String baseKey, List<MobEffectInstance> effects,
                                    List<String> ingredientKeys, Item item) {
         ItemStack stack = new ItemStack(item);
         CompoundTag tag = stack.getOrCreateTag();
         tag.putString(NAME_KEY_TAG, nameKey);
         tag.putString(QUALITY_TAG, quality.name());
+        tag.putString(BASE_KEY_TAG, baseKey);
 
         ListTag effectList = new ListTag();
         for (MobEffectInstance effectInstance : effects) {
@@ -140,6 +171,14 @@ public class CocktailItem extends Item {
         }
         tag.put(INGREDIENT_KEYS_TAG, ingredientList);
         return stack;
+    }
+
+    public static String getStoredBaseKey(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if (tag == null || !tag.contains(BASE_KEY_TAG, Tag.TAG_STRING)) {
+            return "";
+        }
+        return tag.getString(BASE_KEY_TAG);
     }
 
     public static List<MobEffectInstance> getStoredEffects(ItemStack stack) {

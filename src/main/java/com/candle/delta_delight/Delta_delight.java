@@ -2,6 +2,7 @@ package com.candle.delta_delight;
 
 import com.candle.delta_delight.client.screen.ShakerScreen;
 import com.candle.delta_delight.cocktail.CocktailAppearanceManager;
+import com.candle.delta_delight.cocktail.CocktailItem;
 import com.candle.delta_delight.network.ModMessages;
 import com.candle.delta_delight.registry.ModBlocks;
 import com.candle.delta_delight.registry.ModCreativeTabs;
@@ -11,6 +12,8 @@ import com.candle.delta_delight.registry.ModMenuTypes;
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraft.client.renderer.item.ItemProperties;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -63,6 +66,16 @@ public class Delta_delight {
         LOGGER.info("DELTA DELIGHT Client Setup");
         event.enqueueWork(() -> {
             MenuScreens.register(ModMenuTypes.SHAKER.get(), ShakerScreen::new);
+            ItemProperties.register(
+                    ModItems.MIXED_COCKTAIL.get(),
+                    ResourceLocation.fromNamespaceAndPath(MODID, "cocktail_base_style"),
+                    (stack, level, entity, seed) -> switch (CocktailItem.getStoredBaseKey(stack)) {
+                        case "qingyiyin" -> 1.0F;
+                        case "hupolu" -> 2.0F;
+                        case "tangmizhi" -> 3.0F;
+                        default -> 0.0F;
+                    }
+            );
             CocktailAppearanceManager.ensureLoaded();
         });
     }

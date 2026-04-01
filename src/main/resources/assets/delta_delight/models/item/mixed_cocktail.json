@@ -4,5 +4,25 @@
     "layer0": "delta_delight:item/wines/layer2_bottom",
     "layer1": "delta_delight:item/wines/layer2_top",
     "layer2": "delta_delight:item/wines/layer1"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "delta_delight:cocktail_base_style": 1.0
+      },
+      "model": "delta_delight:item/mixed_cocktail_qingyiyin"
+    },
+    {
+      "predicate": {
+        "delta_delight:cocktail_base_style": 2.0
+      },
+      "model": "delta_delight:item/mixed_cocktail_hupolu"
+    },
+    {
+      "predicate": {
+        "delta_delight:cocktail_base_style": 3.0
+      },
+      "model": "delta_delight:item/mixed_cocktail_tangmizhi"
+    }
+  ]
 }
