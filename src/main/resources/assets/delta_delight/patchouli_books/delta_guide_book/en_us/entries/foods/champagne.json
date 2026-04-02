@@ -1,0 +1,11 @@
+{
+  "name": "香槟",
+  "icon": "delta_delight:champagne",
+  "category": "delta_delight:delta_food",
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "香槟！"
+    }
+  ]
+}
