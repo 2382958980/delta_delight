@@ -2,55 +2,55 @@
   "ingredients": [
     {
       "key": "cola",
-      "color": "#6B3A24"
+      "color": "#4A1212"
     },
     {
       "key": "lemontea",
-      "color": "#E8D66A"
+      "color": "#FFCA4C"
     },
     {
       "key": "apple_cider",
-      "color": "#D98E39"
+      "color": "#F48124"
     },
     {
       "key": "watermelon_juice",
-      "color": "#F06A7E"
+      "color": "#FF304F"
     },
     {
       "key": "honey_bottle",
-      "color": "#F2BE45"
+      "color": "#FFBF2A"
     },
     {
       "key": "milk_bottle",
-      "color": "#F3EEE3"
+      "color": "#FFFFFF"
     },
     {
       "key": "dragon_breath",
-      "color": "#B26DFF"
+      "color": "#B910FF"
     },
     {
       "key": "glow_berries",
-      "color": "#C96ACF"
+      "color": "#FFC000"
     },
     {
       "key": "golden_carrot",
-      "color": "#F0A126"
+      "color": "#FFF600"
     },
     {
       "key": "sea_pickle",
-      "color": "#52BF70"
+      "color": "#00BD81"
     },
     {
       "key": "ender_pearl",
-      "color": "#64D0D8"
+      "color": "#0C475D"
     },
     {
       "key": "chorus_fruit",
-      "color": "#7A58A8"
+      "color": "#5F3697"
     },
     {
       "key": "gunpowder",
-      "color": "#8F8F95"
+      "color": "#797979"
     },
     {
       "key": "redstone",
@@ -58,11 +58,11 @@
     },
     {
       "key": "glowstone_dust",
-      "color": "#F6E27A"
+      "color": "#C50C00"
     },
     {
       "key": "blaze_powder",
-      "color": "#F08A21"
+      "color": "#FFB400"
     }
   ]
 }
