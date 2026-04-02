@@ -7,19 +7,18 @@
 </h1>
 
 <h3>简介</h3>
-<p style="text-indent: 2em">三角洲乐事是基于农夫乐事的扩展Mod，将三角洲游戏行动中的食物复现到我的世界之中去！</p>
+<p style="text-indent: 2em">三角洲乐事是面向 Minecraft 1.20.1 Forge 的农夫乐事附属Mod，将三角洲行动中的食物、饮品和（曾经的）调酒活动带入Minecraft。</p>
 <ul>
-    <li><img style="margin: -0.3em 0.1em" src="src/main/resources/assets/delta_delight/textures/item/caviar.png"> 包括更多的食物，许多食物有着精致的模型。</li>
-    <li><img style="margin: -0.3em 0.1em" src="src/main/resources/assets/delta_delight/textures/item/champagne.png"> 全新的调酒系统，具有较高自由度以自定义自己想要的酒。(开发中)</li>
-    <li><img style="margin: -0.3em 0.1em" src="src/main/resources/assets/delta_delight/textures/item/gingerbreadman.png"> 更多模组内容持续更新中...</li>
+    <li><img style="margin: -0.3em 0.1em" src="src/main/resources/assets/delta_delight/textures/item/cola.png"> 多种特色食品与饮料，包括奥莉薇娅香槟、“钻石”鱼子酱、香喷喷炒面等，一些高品质食物有着精致的模型。</li>
+    <li><img style="margin: -0.3em 0.1em" src="src/main/resources/assets/delta_delight/textures/item/champagne.png"> 全新的调酒系统，玩家根据可不同基底、配料与摇晃时间定制完全独一无二的鸡尾酒结果。</li>
+    <li><img style="margin: -0.3em 0.1em" src="src/main/resources/assets/delta_delight/textures/item/africaheart.png"> 非洲之心！你能从钻石矿中找到它吗？或许一些村民会出高价收购它（真的很高！）</li>
 </ul>
 
 <h3>画廊</h3>
 <p style="text-indent: 2em">银烛自己贴图</p>
 
 <h3>作者的话</h3>
-<p style="text-indent: 2em">银烛自己写</p>
-<p style="text-indent: 2em">如果遇到bug或者有什么问题可以提交issue！</p>
+<p style="text-indent: 2em">不是，怎么普弓还有蹲撤离点的</p>
 
 <h3>更多信息</h3>
 <p style="text-indent: 2em">查看三角洲乐事的<a href="">CurseForge</a>或是<a href="">Modrinth</a>界面以看到更多内容！</p>
