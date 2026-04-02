@@ -27,6 +27,16 @@ java {
     toolchain.languageVersion = JavaLanguageVersion.of(17)
 }
 
+repositories {
+    maven { url = 'https://maven.blamejared.com' }
+    mavenCentral()
+}
+
+dependencies {
+    compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-85-FORGE:api")
+    runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-85-FORGE")
+}
+
 minecraft {
     mappings channel: mapping_channel, version: mapping_version
     copyIdeResources = true

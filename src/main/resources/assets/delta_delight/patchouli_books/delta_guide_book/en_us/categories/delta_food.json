@@ -1,0 +1,7 @@
+{
+  "name": "食物",
+  "description": "查看三角洲乐事加入的食物。",
+  "icon": "delta_delight:coffee",
+  "sortnum": 10,
+  "secret": false
+}

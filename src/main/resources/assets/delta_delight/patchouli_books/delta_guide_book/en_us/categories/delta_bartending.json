@@ -1,0 +1,7 @@
+{
+  "name": "调酒",
+  "description": "查看三角洲乐事独特的调酒系统！",
+  "icon": "delta_delight:shaker",
+  "sortnum": 20,
+  "secret": false
+}
