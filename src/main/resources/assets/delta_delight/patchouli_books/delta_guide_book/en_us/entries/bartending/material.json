@@ -1,0 +1,22 @@
+{
+  "name": "基底配料",
+  "icon": "delta_delight:dusongling",
+  "category": "delta_delight:delta_bartending",
+  "sortnum": 20,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "基底配料",
+      "text": "调制出的酒的种类取决于加入的基底和配料！共添加了四种基底，每一种对应了一种负面效果，分别为：$(li)杜松灵,效果为虚弱$(li)琥珀露，效果为缓慢$(li)清逸饮，效果为反胃$(li)糖蜜汁，效果为挖掘疲劳"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "配料槽允许放入1到2种配料，每种配料有着不同的效果！$(li)可乐：迅捷$(li)生津柠檬茶：生命恢复$(li)苹果酒：伤害吸收$(li)西瓜汁：瞬间治疗$(li)蜂蜜瓶：滋养$(li)奶瓶：舒适$(li)龙息：隐身$(li)发光浆果：幸运$(li)金胡萝卜：跳跃提升$(li)海泡菜：水下呼吸$(li)末影珍珠：夜视$(li)紫颂果：缓降"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)火药：力量$(li)红石粉：急迫$(li)萤石粉：发光$(li)烈焰粉：抗火"
+    }
+  ]
+}

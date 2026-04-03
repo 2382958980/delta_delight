@@ -2,6 +2,8 @@
   "name": "调酒指南",
   "icon": "delta_delight:shaker",
   "category": "delta_delight:delta_bartending",
+  "sortnum": 10,
+  "secret": false,
   "pages": [
     {
       "type": "patchouli:text",
@@ -10,7 +12,7 @@
     },
     {
       "type": "patchouli:text",
-      "text": "注意事项：$(li)手持调酒壶时无法进行正常的左键攻击和右键交互，请不要用调酒壶砸你的敌人！$(li)进行调酒时切记长按左键摇晃，松开即会调出成品酒，无法继续摇晃！"
+      "text": "注意事项：$(li)手持调酒壶时无法进行正常的左键攻击和右键交互，请不要用调酒壶砸你的敌人！$(li)进行调酒时切记长按左键摇晃，松开即会调出成品酒，无法继续摇晃！$(li)调酒的最终结果不受两种配料的先后顺序影响！"
     }
   ]
 }
