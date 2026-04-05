@@ -2,6 +2,7 @@ package com.candle.delta_delight.registry;
 
 import com.candle.delta_delight.cocktail.CocktailItem;
 import com.candle.delta_delight.content.DDFoodItem;
+import com.candle.delta_delight.content.DDPlaceableFoodBlockItem;
 import com.candle.delta_delight.content.ShakerItem;
 import com.candle.delta_delight.content.TooltipItem;
 import net.minecraft.world.food.FoodProperties;
@@ -75,22 +76,19 @@ public final class ModItems {
 
     private static RegistryObject<Item> registerFood(String name, FoodProperties food,
                                                      Item returnItem, int useDuration, UseAnim useAnim) {
-        return registerPlaceableFood(
-                name,
-                null,
-                food,
-                Rarity.COMMON,
+        return ITEMS.register(name, () -> new DDFoodItem(
+                new Item.Properties().food(food).rarity(Rarity.COMMON),
                 returnItem,
                 useDuration,
                 useAnim
-        );
+        ));
     }
 
     private static RegistryObject<Item> registerPlaceableFood(String name, RegistryObject<Block> block,
                                                               FoodProperties food, Rarity rarity,
                                                               Item returnItem, int useDuration, UseAnim useAnim) {
-        return ITEMS.register(name, () -> new DDFoodItem(
-                block != null ? block.get() : null,
+        return ITEMS.register(name, () -> new DDPlaceableFoodBlockItem(
+                block.get(),
                 new Item.Properties().food(food).rarity(rarity),
                 returnItem,
                 useDuration,

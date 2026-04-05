@@ -1,6 +1,7 @@
 package com.candle.delta_delight.content;
 
 import com.candle.delta_delight.util.VoxelShapeHelper;
+import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -16,6 +17,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.EnumMap;
 import java.util.Map;
+import java.util.function.Function;
 
 public class DDPlaceableFoodBlock extends HorizontalDirectionalBlock {
 
@@ -43,6 +45,11 @@ public class DDPlaceableFoodBlock extends HorizontalDirectionalBlock {
     @Override
     public VoxelShape getShape(BlockState state, BlockGetter getter, BlockPos pos, CollisionContext context) {
         return SHAPES.get(state.getValue(FACING));
+    }
+
+    @Override
+    protected ImmutableMap<BlockState, VoxelShape> getShapeForEachState(Function<BlockState, VoxelShape> p_152459_) {
+        return super.getShapeForEachState(p_152459_);
     }
 
     @Override

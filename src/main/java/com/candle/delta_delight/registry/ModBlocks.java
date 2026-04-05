@@ -38,5 +38,5 @@ public class ModBlocks {
     public static final RegistryObject<Block> SEAFOOD_CANNED_PORRIDGE_BLOCK =
             registerPlaceableFoodBlock("seafood_canned_porridge_block", 5, 0, 6.5, 11, 6, 9.5);
     public static final RegistryObject<Block> NUTRITIOUS_CANNED_PORRIDGE_BLOCK =
-            registerPlaceableFoodBlock("nouritous_canned_porridge_block", 4.5, 0, 6, 11.5, 3.25, 10);
+            registerPlaceableFoodBlock("nutritous_canned_porridge_block", 4.5, 0, 6, 11.5, 3.25, 10);
 }
