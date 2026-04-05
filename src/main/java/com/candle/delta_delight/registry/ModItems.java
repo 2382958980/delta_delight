@@ -10,66 +10,64 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
 public final class ModItems {
-
     public static final String MODID = "delta_delight";
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
-    public static final RegistryObject<Item> CHAMPAGNE = registerPlacedFood(
-            "champagne", ModBlocks.CHAMPAGNE_BLOCK, ModFoods.CHAMPAGNE, Rarity.EPIC, Items.GLASS_BOTTLE, 32, UseAnim.DRINK);
-    public static final RegistryObject<Item> CAVIAR = registerPlacedFood(
-            "caviar", ModBlocks.CAVIAR_BLOCK, ModFoods.CAVIAR, Rarity.EPIC, Items.GOLD_INGOT, 16, UseAnim.EAT);
-    public static final RegistryObject<Item> TEQUILA = registerPlacedFood(
-            "tequila", ModBlocks.TEQUILA_BLOCK, ModFoods.TEQUILA, Rarity.UNCOMMON, Items.GLASS_BOTTLE, 32, UseAnim.DRINK);
+    public static final RegistryObject<Item> OLIVIA_CHAMPAGNE = registerPlacedFood(
+            "olivia_champagne", ModBlocks.OLIVIA_CHAMPAGNE_BLOCK, ModFoods.OLIVIA_CHAMPAGNE, Rarity.EPIC, Items.GLASS_BOTTLE, 32, UseAnim.DRINK);
+    public static final RegistryObject<Item> DIAMOND_CAVIAR = registerPlacedFood(
+            "diamond_caviar", ModBlocks.DIAMOND_CAVIAR_BLOCK, ModFoods.DIAMOND_CAVIAR, Rarity.EPIC, Items.GOLD_INGOT, 16, UseAnim.EAT);
+    public static final RegistryObject<Item> BLUE_SAPPHIRE_TEQUILA = registerPlacedFood(
+            "blue_sapphire_tequila", ModBlocks.BLUE_SAPPHIRE_TEQUILA_BLOCK, ModFoods.BLUE_SAPPHIRE_TEQUILA, Rarity.UNCOMMON, Items.GLASS_BOTTLE, 32, UseAnim.DRINK);
     public static final RegistryObject<Item> COFFEE = registerPlacedFood(
             "coffee", ModBlocks.COFFEE_BLOCK, ModFoods.COFFEE, Rarity.UNCOMMON, Items.GLASS_BOTTLE, 16, UseAnim.DRINK);
-    public static final RegistryObject<Item> SEAFOODCAN = registerPlacedFood(
-            "seafoodcan", ModBlocks.SEAFOODCAN_BLOCK, ModFoods.SEAFOODCAN, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.EAT);
-    public static final RegistryObject<Item> NOURISHCAN = registerPlacedFood(
-            "nourishcan", ModBlocks.NOURISHCAN_BLOCK, ModFoods.NOURISHCAN, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.EAT);
-    public static final RegistryObject<Item> LEMONTEA = registerFood(
-            "lemontea", ModFoods.LEMONTEA, Items.IRON_INGOT, 24, UseAnim.DRINK);
-    public static final RegistryObject<Item> GINGERBREADMAN = registerFood(
-            "gingerbreadman", ModFoods.GINGERBREADMAN, null, 32, UseAnim.EAT);
-    public static final RegistryObject<Item> ORANGEL = registerFood(
-            "orangel", ModFoods.ORANGEL, null, 16, UseAnim.EAT);
-    public static final RegistryObject<Item> ENGLISHTEA = registerFood(
-            "englishtea", ModFoods.ENGLISHTEA, Items.IRON_INGOT, 32, UseAnim.EAT);
-    public static final RegistryObject<Item> COLA = registerFood(
-            "cola", ModFoods.COLA, Items.IRON_INGOT, 32, UseAnim.DRINK);
-    public static final RegistryObject<Item> ARMYCAN = registerFood(
-            "armycan", ModFoods.ARMYCAN, Items.IRON_INGOT, 32, UseAnim.EAT);
-    public static final RegistryObject<Item> AFRICAHEART = ITEMS.register(
-            "africaheart", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
-    public static final RegistryObject<Item> YUMMYNOODLES = registerFood(
-            "yummynoodles", ModFoods.YUMMYNOODLES, null, 32, UseAnim.EAT);
-    public static final RegistryObject<Item> VITABLETS = registerFood(
-            "vitablets", ModFoods.VITABLETS, null, 16, UseAnim.EAT);
+    public static final RegistryObject<Item> SEAFOOD_CANNED_PORRIDGE = registerPlacedFood(
+            "seafood_canned_porridge", ModBlocks.SEAFOOD_CANNED_PORRIDGE_BLOCK, ModFoods.SEAFOOD_CANNED_PORRIDGE, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.EAT);
+    public static final RegistryObject<Item> NUTRITIOUS_CANNED_PORRIDGE = registerPlacedFood(
+            "nutritious_canned_porridge", ModBlocks.NUTRITIOUS_CANNED_PORRIDGE_BLOCK, ModFoods.NUTRITIOUS_CANNED_PORRIDGE, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.EAT);
+    public static final RegistryObject<Item> LEMON_TEA = registerFood(
+            "lemon_tea", ModFoods.LEMON_TEA, Items.IRON_INGOT, 24, UseAnim.DRINK);
+    public static final RegistryObject<Item> GINGERBREAD_MAN = registerFood(
+            "gingerbread_man", ModFoods.GINGERBREAD_MAN, null, 32, UseAnim.EAT);
+    public static final RegistryObject<Item> ORANGE_ENERGY_GEL = registerFood(
+            "orange_energy_gel", ModFoods.ORANGE_ENERGY_GEL, null, 16, UseAnim.EAT);
+    public static final RegistryObject<Item> ENGLISH_TEA_BAG = registerFood(
+            "english_tea_bag", ModFoods.ENGLISH_TEA_BAG, Items.IRON_INGOT, 32, UseAnim.EAT);
+    public static final RegistryObject<Item> COKE = registerFood(
+            "coke", ModFoods.COKE, Items.IRON_INGOT, 32, UseAnim.DRINK);
+    public static final RegistryObject<Item> CANNED_RATION = registerFood(
+            "canned_ration", ModFoods.CANNED_RATION, Items.IRON_INGOT, 32, UseAnim.EAT);
+    public static final RegistryObject<Item> HEART_OF_AFRICA = ITEMS.register(
+            "heart_of_africa", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> FIRED_NODDLES = registerFood(
+            "fired_noddles", ModFoods.FIRED_NODDLES, null, 32, UseAnim.EAT);
+    public static final RegistryObject<Item> VITAMIN_EFFERVESCENT_TABLET = registerFood(
+            "vitamin_effervescent_tablet", ModFoods.VITAMIN_EFFERVESCENT_TABLET, null, 16, UseAnim.EAT);
     public static final RegistryObject<Item> YOGURT = registerFood(
             "yogurt", ModFoods.YOGURT, null, 24, UseAnim.EAT);
-    public static final RegistryObject<Item> FASTNOODLES = registerFood(
-            "fastnoodles", ModFoods.FASTNOODLES, null, 32, UseAnim.EAT);
-    public static final RegistryObject<Item> WILDBAR = registerFood(
-            "wildbar", ModFoods.WILDBAR, null, 16, UseAnim.EAT);
-    public static final RegistryObject<Item> NOSUGARBAR = registerFood(
-            "nosugarbar", ModFoods.NOSUGARBAR, null, 16, UseAnim.EAT);
-    public static final RegistryObject<Item> SUGARTRIANGLE = registerFood(
-            "sugartriangle", ModFoods.SUGARTRIANGLE, null, 24, UseAnim.EAT);
+    public static final RegistryObject<Item> CRISPY_NODDLES = registerFood(
+            "crispy_noddles", ModFoods.CRISPY_NODDLES, null, 32, UseAnim.EAT);
+    public static final RegistryObject<Item> FIELD_ENERGY_BAR = registerFood(
+            "field_energy_bar", ModFoods.FIELD_ENERGY_BAR, null, 16, UseAnim.EAT);
+    public static final RegistryObject<Item> SUGAR_FREE_ENERGY_BAR = registerFood(
+            "sugar_free_energy_bar", ModFoods.SUGAR_FREE_ENERGY_BAR, null, 16, UseAnim.EAT);
+    public static final RegistryObject<Item> CHOCOLATE = registerFood(
+            "chocolate", ModFoods.CHOCOLATE, null, 24, UseAnim.EAT);
     public static final RegistryObject<Item> PORRIDGE = registerFood(
             "porridge", ModFoods.PORRIDGE, null, 32, UseAnim.EAT);
-    public static final RegistryObject<Item> QINGYIYIN = ITEMS.register(
-            "qingyiyin", () -> new TooltipItem(new Item.Properties()));
-    public static final RegistryObject<Item> TANGMIZHI = ITEMS.register(
-            "tangmizhi", () -> new TooltipItem(new Item.Properties()));
-    public static final RegistryObject<Item> DUSONGLING = ITEMS.register(
-            "dusongling", () -> new TooltipItem(new Item.Properties()));
-    public static final RegistryObject<Item> HUPOLU = ITEMS.register(
-            "hupolu", () -> new TooltipItem(new Item.Properties()));
+    public static final RegistryObject<Item> HERBAL_TEA = ITEMS.register(
+            "herbal_tea", () -> new TooltipItem(new Item.Properties()));
+    public static final RegistryObject<Item> MOLASSES = ITEMS.register(
+            "molasses", () -> new TooltipItem(new Item.Properties()));
+    public static final RegistryObject<Item> JUNIPER_SPIRIT = ITEMS.register(
+            "juniper_spirit", () -> new TooltipItem(new Item.Properties()));
+    public static final RegistryObject<Item> AMBER_ESSENCE = ITEMS.register(
+            "amber_essence", () -> new TooltipItem(new Item.Properties()));
     public static final RegistryObject<Item> MIXED_COCKTAIL = ITEMS.register(
             "mixed_cocktail", () -> new CocktailItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SHAKER = ITEMS.register(
@@ -77,31 +75,26 @@ public final class ModItems {
 
     private static RegistryObject<Item> registerFood(String name, FoodProperties food,
                                                      Item returnItem, int useDuration, UseAnim useAnim) {
-        return ITEMS.register(name, () -> new GeneralFoodItem(
+        return registerPlacedFood(
+                name,
                 null,
-                new Item.Properties().food(food),
+                food,
+                Rarity.COMMON,
                 returnItem,
                 useDuration,
                 useAnim
-        ));
+        );
     }
 
     private static RegistryObject<Item> registerPlacedFood(String name, RegistryObject<Block> block,
                                                            FoodProperties food, Rarity rarity,
                                                            Item returnItem, int useDuration, UseAnim useAnim) {
         return ITEMS.register(name, () -> new GeneralFoodItem(
-                block.get(),
+                block != null ? block.get() : null,
                 new Item.Properties().food(food).rarity(rarity),
                 returnItem,
                 useDuration,
                 useAnim
         ));
-    }
-
-    private ModItems() {
-    }
-
-    public static void register(IEventBus bus) {
-        ITEMS.register(bus);
     }
 }

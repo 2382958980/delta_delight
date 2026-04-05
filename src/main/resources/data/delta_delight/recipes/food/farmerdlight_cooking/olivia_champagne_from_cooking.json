@@ -1,0 +1,32 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "delta_delight:red_berries"
+    },
+    {
+      "tag": "delta_delight:red_berries"
+    },
+    {
+      "tag": "delta_delight:red_berries"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "minecraft:ghast_tear"
+    },
+    {
+      "item": "minecraft:golden_apple"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:olivia_champagne",
+    "count": 1
+  },
+  "cookingtime": 400,
+  "experience": 10.0,
+  "container": {
+    "item": "minecraft:glass_bottle"
+  }
+}

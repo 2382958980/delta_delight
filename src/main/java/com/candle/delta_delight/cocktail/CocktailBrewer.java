@@ -7,11 +7,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.ItemStack;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 public final class CocktailBrewer {
     private static final int COMMON_NEGATIVE_DURATION = 20 * 120;
@@ -21,9 +17,6 @@ public final class CocktailBrewer {
     private static final float UNCOMMON_CHANCE = 0.6F;
     private static final float EPIC_PEAK_CHANCE = 0.8F;
     private static final float EPIC_FALLOFF_SECONDS = 5.0F;
-
-    private CocktailBrewer() {
-    }
 
     public static ItemStack brew(ShakerInventory inventory, float shakeSeconds, RandomSource random) {
         Optional<CocktailBase> baseOptional = CocktailBase.fromStack(inventory.getStackInSlot(ShakerInventory.BASE_SLOT));

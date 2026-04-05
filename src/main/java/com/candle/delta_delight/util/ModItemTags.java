@@ -1,6 +1,6 @@
 package com.candle.delta_delight.util;
 
-import com.candle.delta_delight.Delta_delight;
+import com.candle.delta_delight.DeltaDelight;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
@@ -15,6 +15,6 @@ public final class ModItemTags {
     }
 
     private static TagKey<Item> itemTag(String path) {
-        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(Delta_delight.MODID, path));
+        return ItemTags.create(ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, path));
     }
 }

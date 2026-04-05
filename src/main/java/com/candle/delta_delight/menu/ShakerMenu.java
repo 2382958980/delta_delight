@@ -10,6 +10,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
+import org.jetbrains.annotations.NotNull;
 
 public class ShakerMenu extends AbstractContainerMenu {
     public static final int MIXING_SLOT_COUNT = ShakerInventory.SLOT_COUNT;
@@ -48,7 +49,7 @@ public class ShakerMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public ItemStack quickMoveStack(Player player, int index) {
+    public @NotNull ItemStack quickMoveStack(@NotNull Player player, int index) {
         Slot sourceSlot = slots.get(index);
         if (!sourceSlot.hasItem()) {
             return ItemStack.EMPTY;
@@ -65,9 +66,9 @@ public class ShakerMenu extends AbstractContainerMenu {
             if (shakerInventory.isItemValid(ShakerInventory.BASE_SLOT, sourceStack)
                     && !slots.get(ShakerInventory.BASE_SLOT).hasItem()
                     && moveItemStackTo(sourceStack, ShakerInventory.BASE_SLOT, ShakerInventory.BASE_SLOT + 1, false)) {
-                // moved to base slot
+                // todo moved to base slot
             } else if (moveItemStackTo(sourceStack, ShakerInventory.INGREDIENT_SLOT_1, ShakerInventory.OUTPUT_SLOT, false)) {
-                // moved to ingredient slots
+                // todo moved to ingredient slots
             } else {
                 return ItemStack.EMPTY;
             }
@@ -89,7 +90,7 @@ public class ShakerMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public void removed(Player player) {
+    public void removed(@NotNull Player player) {
         super.removed(player);
         shakerInventory.save();
     }

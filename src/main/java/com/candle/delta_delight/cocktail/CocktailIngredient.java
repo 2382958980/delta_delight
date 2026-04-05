@@ -2,10 +2,8 @@ package com.candle.delta_delight.cocktail;
 
 import com.candle.delta_delight.registry.ModItems;
 import com.candle.delta_delight.util.ModItemTags;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import vectorwing.farmersdelight.common.registry.ModEffects;
@@ -16,8 +14,8 @@ import java.util.Optional;
 import java.util.function.Supplier;
 
 public enum CocktailIngredient {
-    COLA("cola", stack -> stack.is(ModItems.COLA.get()), () -> MobEffects.MOVEMENT_SPEED),
-    LEMONTEA("lemontea", stack -> stack.is(ModItems.LEMONTEA.get()), () -> MobEffects.REGENERATION),
+    COKE("coke", stack -> stack.is(ModItems.COKE.get()), () -> MobEffects.MOVEMENT_SPEED),
+    LEMON_TEA("lemon_tea", stack -> stack.is(ModItems.LEMON_TEA.get()), () -> MobEffects.REGENERATION),
     APPLE_CIDER("apple_cider", stack -> stack.is(ModItemTags.APPLE_CIDER_INGREDIENTS), () -> MobEffects.ABSORPTION),
     WATERMELON_JUICE("watermelon_juice", stack -> stack.is(ModItemTags.WATERMELON_JUICE_INGREDIENTS), () -> MobEffects.HEAL),
     HONEY_BOTTLE("honey_bottle", stack -> stack.is(Items.HONEY_BOTTLE), ModEffects.NOURISHMENT::get),

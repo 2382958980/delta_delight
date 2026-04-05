@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "minecraft:leaves"
+    },
+    {
+      "tag": "minecraft:leaves"
+    },
+    {
+      "item": "minecraft:sugar"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:english_tea_bag",
+    "count": 1
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "container": {
+    "item": "minecraft:iron_ingot"
+  }
+}

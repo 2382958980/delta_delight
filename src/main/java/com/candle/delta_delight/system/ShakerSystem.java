@@ -1,5 +1,6 @@
 package com.candle.delta_delight.system;
 
+import com.candle.delta_delight.DeltaDelight;
 import com.candle.delta_delight.cocktail.CocktailBrewer;
 import com.candle.delta_delight.content.ShakerInventory;
 import com.candle.delta_delight.network.ModMessages;
@@ -22,7 +23,7 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.UUID;
 
-@Mod.EventBusSubscriber(modid = com.candle.delta_delight.Delta_delight.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
+@Mod.EventBusSubscriber(modid = DeltaDelight.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE)
 public final class ShakerSystem {
     private static final Map<UUID, ActiveShake> ACTIVE_SHAKES = new HashMap<>();
 
@@ -109,7 +110,7 @@ public final class ShakerSystem {
         }
     }
 
-    @Mod.EventBusSubscriber(modid = com.candle.delta_delight.Delta_delight.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+    @Mod.EventBusSubscriber(modid = DeltaDelight.MODID, bus = Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
     public static final class ClientEvents {
         private static boolean localShaking;
         private static int localShakeTicks;
