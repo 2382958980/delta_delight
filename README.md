@@ -17,15 +17,11 @@
 
 <div class="img-text">
 
-- ![coke] 丰富的食物与饮料：从香喷喷的炒面到奥莉薇娅香槟，三角洲乐事为玩家提供了多种美味选择，每种食物和饮料都有独特的效果和精致的模型。
-- ![olivia-champagne] 创新的调酒系统：玩家可以根据不同的基底、配料和摇晃时间定制完全独一无二的鸡尾酒结果，享受调酒的乐趣。
-- ![heart-of-africa] 非洲之心：在钻石矿中寻找这个稀有物品，并与村民进行高价交易，增加了游戏的探索和交易元素。
+- <img src="/src/main/resources/assets/delta_delight/textures/item/cola.png" style="vertical-align: middle; width: 1.2em;"> 丰富的食物与饮料：从香喷喷的炒面到奥莉薇娅香槟，三角洲乐事为玩家提供了多种美味选择，每种食物和饮料都有独特的效果和精致的模型。
+- <img src="/src/main/resources/assets/delta_delight/textures/item/champagne.png" style="vertical-align: middle; width: 1.2em;"> 创新的调酒系统：玩家可以根据不同的基底、配料和摇晃时间定制完全独一无二的鸡尾酒结果，享受调酒的乐趣。
+- <img src="/src/main/resources/assets/delta_delight/textures/item/africaheart.png" style="vertical-align: middle; width: 1.2em;"> 非洲之心：在钻石矿中寻找这个稀有物品，并与村民进行高价交易，增加了游戏的探索和交易元素。
 
 </div>
-
-[coke]: ./src/main/resources/assets/delta_delight/textures/item/cola.png
-[olivia-champagne]: ./src/main/resources/assets/delta_delight/textures/item/champagne.png
-[heart-of-africa]: ./src/main/resources/assets/delta_delight/textures/item/africaheart.png
 
 ## 画廊
 
@@ -40,9 +36,3 @@
 
 [CurseForge]: https://www.curseforge.com/minecraft/mc-mods/delta-delight
 [Modrinth]: https://modrinth.com/mod/delta-delight
-
-<style>
-    .img-text img {
-        margin: -0.3em 0.1em
-    }
-</style>
