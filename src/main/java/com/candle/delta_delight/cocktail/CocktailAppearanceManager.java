@@ -1,6 +1,6 @@
 package com.candle.delta_delight.cocktail;
 
-import com.candle.delta_delight.Delta_delight;
+import com.candle.delta_delight.DeltaDelight;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -22,7 +22,7 @@ import java.util.Map;
 
 public final class CocktailAppearanceManager {
     private static final Logger LOGGER = LogUtils.getLogger();
-    private static final String COLORS_PATH = "data/" + Delta_delight.MODID + "/cocktails/ingredient_colors.json";
+    private static final String COLORS_PATH = "data/" + DeltaDelight.MODID + "/cocktails/ingredient_colors.json";
     private static final int BOTTOM_TINT_INDEX = 0;
     private static final int TOP_TINT_INDEX = 1;
     private static final int GLASS_TINT_INDEX = 2;

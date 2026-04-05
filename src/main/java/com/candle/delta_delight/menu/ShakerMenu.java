@@ -65,9 +65,9 @@ public class ShakerMenu extends AbstractContainerMenu {
             if (shakerInventory.isItemValid(ShakerInventory.BASE_SLOT, sourceStack)
                     && !slots.get(ShakerInventory.BASE_SLOT).hasItem()
                     && moveItemStackTo(sourceStack, ShakerInventory.BASE_SLOT, ShakerInventory.BASE_SLOT + 1, false)) {
-                // moved to base slot
+                // todo moved to base slot
             } else if (moveItemStackTo(sourceStack, ShakerInventory.INGREDIENT_SLOT_1, ShakerInventory.OUTPUT_SLOT, false)) {
-                // moved to ingredient slots
+                // todo moved to ingredient slots
             } else {
                 return ItemStack.EMPTY;
             }

@@ -1,0 +1,25 @@
+{
+  "conditions": [
+    {
+      "type": "forge:mod_loaded",
+      "modid": "vinery"
+    }
+  ],
+  "type": "vinery:wine_fermentation",
+  "juice": {
+    "type": "red_general",
+    "amount": 35
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:blue_orchid"
+    },
+    {
+      "item": "minecraft:sea_pickle"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:blue_sapphire_tequila",
+    "count": 1
+  }
+}

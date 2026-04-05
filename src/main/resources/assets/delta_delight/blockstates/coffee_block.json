@@ -1,5 +1,19 @@
 {
   "variants": {
-    "": { "model": "delta_delight:block/coffee_block" }
+    "facing=north": {
+      "model": "delta_delight:block/coffee_block"
+    },
+    "facing=east": {
+      "model": "delta_delight:block/coffee_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "delta_delight:block/coffee_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "delta_delight:block/coffee_block",
+      "y": 270
+    }
   }
 }

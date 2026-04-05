@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:crops/carrot"
+    },
+    {
+      "tag": "forge:crops/tomato"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:vitamin_effervescent_tablet",
+    "count": 2
+  },
+  "cookingtime": 200,
+  "experience": 1.0
+}

@@ -1,0 +1,23 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:grain/rice"
+    },
+    {
+      "tag": "forge:grain/rice"
+    },
+    {
+      "item": "minecraft:golden_carrot"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:nutritious_canned_porridge",
+    "count": 1
+  },
+  "cookingtime": 400,
+  "experience": 3.0,
+  "container": {
+    "item": "minecraft:iron_ingot"
+  }
+}

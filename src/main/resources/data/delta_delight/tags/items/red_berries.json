@@ -1,0 +1,9 @@
+{
+  "values": [
+    "minecraft:sweet_berries",
+    {
+      "id": "vinery:red_grape",
+      "required": false
+    }
+  ]
+}

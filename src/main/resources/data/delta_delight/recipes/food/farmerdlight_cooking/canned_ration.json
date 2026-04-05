@@ -1,0 +1,26 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "item": "minecraft:beef"
+    },
+    {
+      "tag": "forge:crops/tomato"
+    },
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:canned_ration",
+    "count": 1
+  },
+  "cookingtime": 200,
+  "experience": 1.0,
+  "container": {
+    "item": "minecraft:iron_ingot"
+  }
+}

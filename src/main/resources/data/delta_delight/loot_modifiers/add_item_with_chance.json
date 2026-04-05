@@ -2,7 +2,7 @@
   "type": "delta_delight:add_item_with_chance",
   "conditions": [
     {
-      "condition": "forge:or",
+      "condition": "minecraft:any_of",
       "terms": [
         {
           "condition": "forge:loot_table_id",
@@ -16,7 +16,7 @@
     }
   ],
   "item": {
-    "id": "delta_delight:africaheart",
+    "id": "delta_delight:heart_of_africa",
     "Count": 1
   },
   "chance": 0.0025
