@@ -20,18 +20,17 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
 
-public class GeneralFoodItem extends Item {
-
+public class DDFoodItem extends Item {
     private final Block linkedBlock;
     private final Item returnItem;
     private final int useDuration;
     private final UseAnim useAnim;
 
-    public GeneralFoodItem(Block linkedBlock,
-                           Properties properties,
-                           Item returnItem,
-                           int useDuration,
-                           UseAnim useAnim) {
+    public DDFoodItem(Block linkedBlock,
+                      Properties properties,
+                      Item returnItem,
+                      int useDuration,
+                      UseAnim useAnim) {
         super(properties);
         this.linkedBlock = linkedBlock;
         this.returnItem = returnItem;

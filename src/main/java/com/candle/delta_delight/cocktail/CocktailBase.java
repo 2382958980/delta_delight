@@ -13,9 +13,9 @@ import java.util.function.Supplier;
 
 public enum CocktailBase {
     JUNIPER_SPIRIT("juniper_spirit", "cocktail.delta_delight.common.juniper_spirit", ModItems.JUNIPER_SPIRIT, () -> MobEffects.WEAKNESS),
-    HERBAL_TEA("herbal_tea", "cocktail.delta_delight.common.qingyiyin", ModItems.HERBAL_TEA, () -> MobEffects.CONFUSION),
-    AMBER_ESSENCE("amber_essence", "cocktail.delta_delight.common.hupolu", ModItems.AMBER_ESSENCE, () -> MobEffects.MOVEMENT_SLOWDOWN),
-    MOLASSES("molasses", "cocktail.delta_delight.common.tangmizhi", ModItems.MOLASSES, () -> MobEffects.DIG_SLOWDOWN);
+    HERBAL_TEA("herbal_tea", "cocktail.delta_delight.common.herbal_tea", ModItems.HERBAL_TEA, () -> MobEffects.CONFUSION),
+    AMBER_ESSENCE("amber_essence", "cocktail.delta_delight.common.amber_essence", ModItems.AMBER_ESSENCE, () -> MobEffects.MOVEMENT_SLOWDOWN),
+    MOLASSES("molasses", "cocktail.delta_delight.common.molasses", ModItems.MOLASSES, () -> MobEffects.DIG_SLOWDOWN);
 
     private final String key;
     private final String commonNameKey;

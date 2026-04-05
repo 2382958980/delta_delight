@@ -4,13 +4,8 @@ import com.candle.delta_delight.client.screen.ShakerScreen;
 import com.candle.delta_delight.cocktail.CocktailAppearanceManager;
 import com.candle.delta_delight.cocktail.CocktailItem;
 import com.candle.delta_delight.network.ModMessages;
-import com.candle.delta_delight.registry.ModBlocks;
-import com.candle.delta_delight.registry.ModCreativeTabs;
-import com.candle.delta_delight.registry.ModItems;
-import com.candle.delta_delight.registry.ModLootModifiers;
-import com.candle.delta_delight.registry.ModMenuTypes;
+import com.candle.delta_delight.registry.*;
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.screens.MenuScreens;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
@@ -42,12 +37,6 @@ public class DeltaDelight {
     @EventBusSubscriber(value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-            LOGGER.info("HELLO FROM CLIENT SETUP");
-            LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
-        }
-
-        @SubscribeEvent
         public static void registerItemColors(RegisterColorHandlersEvent.Item event) {
             CocktailAppearanceManager.ensureLoaded();
             event.register(
@@ -65,9 +54,9 @@ public class DeltaDelight {
                         ModItems.MIXED_COCKTAIL.get(),
                         ResourceLocation.fromNamespaceAndPath(MODID, "cocktail_base_style"),
                         (stack, level, entity, seed) -> switch (CocktailItem.getStoredBaseKey(stack)) {
-                            case "qingyiyin" -> 1.0F;
-                            case "hupolu" -> 2.0F;
-                            case "tangmizhi" -> 3.0F;
+                            case "herbal_tea" -> 1.0F;
+                            case "amber_essence" -> 2.0F;
+                            case "molasses" -> 3.0F;
                             default -> 0.0F;
                         }
                 );

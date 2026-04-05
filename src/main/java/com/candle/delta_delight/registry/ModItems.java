@@ -1,7 +1,7 @@
 package com.candle.delta_delight.registry;
 
 import com.candle.delta_delight.cocktail.CocktailItem;
-import com.candle.delta_delight.content.GeneralFoodItem;
+import com.candle.delta_delight.content.DDFoodItem;
 import com.candle.delta_delight.content.ShakerItem;
 import com.candle.delta_delight.content.TooltipItem;
 import net.minecraft.world.food.FoodProperties;
@@ -18,17 +18,17 @@ public final class ModItems {
     public static final String MODID = "delta_delight";
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
-    public static final RegistryObject<Item> OLIVIA_CHAMPAGNE = registerPlacedFood(
+    public static final RegistryObject<Item> OLIVIA_CHAMPAGNE = registerPlaceableFood(
             "olivia_champagne", ModBlocks.OLIVIA_CHAMPAGNE_BLOCK, ModFoods.OLIVIA_CHAMPAGNE, Rarity.EPIC, Items.GLASS_BOTTLE, 32, UseAnim.DRINK);
-    public static final RegistryObject<Item> DIAMOND_CAVIAR = registerPlacedFood(
+    public static final RegistryObject<Item> DIAMOND_CAVIAR = registerPlaceableFood(
             "diamond_caviar", ModBlocks.DIAMOND_CAVIAR_BLOCK, ModFoods.DIAMOND_CAVIAR, Rarity.EPIC, Items.GOLD_INGOT, 16, UseAnim.EAT);
-    public static final RegistryObject<Item> BLUE_SAPPHIRE_TEQUILA = registerPlacedFood(
+    public static final RegistryObject<Item> BLUE_SAPPHIRE_TEQUILA = registerPlaceableFood(
             "blue_sapphire_tequila", ModBlocks.BLUE_SAPPHIRE_TEQUILA_BLOCK, ModFoods.BLUE_SAPPHIRE_TEQUILA, Rarity.UNCOMMON, Items.GLASS_BOTTLE, 32, UseAnim.DRINK);
-    public static final RegistryObject<Item> COFFEE = registerPlacedFood(
+    public static final RegistryObject<Item> COFFEE = registerPlaceableFood(
             "coffee", ModBlocks.COFFEE_BLOCK, ModFoods.COFFEE, Rarity.UNCOMMON, Items.GLASS_BOTTLE, 16, UseAnim.DRINK);
-    public static final RegistryObject<Item> SEAFOOD_CANNED_PORRIDGE = registerPlacedFood(
+    public static final RegistryObject<Item> SEAFOOD_CANNED_PORRIDGE = registerPlaceableFood(
             "seafood_canned_porridge", ModBlocks.SEAFOOD_CANNED_PORRIDGE_BLOCK, ModFoods.SEAFOOD_CANNED_PORRIDGE, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.EAT);
-    public static final RegistryObject<Item> NUTRITIOUS_CANNED_PORRIDGE = registerPlacedFood(
+    public static final RegistryObject<Item> NUTRITIOUS_CANNED_PORRIDGE = registerPlaceableFood(
             "nutritious_canned_porridge", ModBlocks.NUTRITIOUS_CANNED_PORRIDGE_BLOCK, ModFoods.NUTRITIOUS_CANNED_PORRIDGE, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.EAT);
     public static final RegistryObject<Item> LEMON_TEA = registerFood(
             "lemon_tea", ModFoods.LEMON_TEA, Items.IRON_INGOT, 24, UseAnim.DRINK);
@@ -75,7 +75,7 @@ public final class ModItems {
 
     private static RegistryObject<Item> registerFood(String name, FoodProperties food,
                                                      Item returnItem, int useDuration, UseAnim useAnim) {
-        return registerPlacedFood(
+        return registerPlaceableFood(
                 name,
                 null,
                 food,
@@ -86,10 +86,10 @@ public final class ModItems {
         );
     }
 
-    private static RegistryObject<Item> registerPlacedFood(String name, RegistryObject<Block> block,
-                                                           FoodProperties food, Rarity rarity,
-                                                           Item returnItem, int useDuration, UseAnim useAnim) {
-        return ITEMS.register(name, () -> new GeneralFoodItem(
+    private static RegistryObject<Item> registerPlaceableFood(String name, RegistryObject<Block> block,
+                                                              FoodProperties food, Rarity rarity,
+                                                              Item returnItem, int useDuration, UseAnim useAnim) {
+        return ITEMS.register(name, () -> new DDFoodItem(
                 block != null ? block.get() : null,
                 new Item.Properties().food(food).rarity(rarity),
                 returnItem,

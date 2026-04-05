@@ -10,7 +10,6 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
-import org.jetbrains.annotations.NotNull;
 
 public class ShakerMenu extends AbstractContainerMenu {
     public static final int MIXING_SLOT_COUNT = ShakerInventory.SLOT_COUNT;
@@ -49,7 +48,7 @@ public class ShakerMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public @NotNull ItemStack quickMoveStack(@NotNull Player player, int index) {
+    public ItemStack quickMoveStack(Player player, int index) {
         Slot sourceSlot = slots.get(index);
         if (!sourceSlot.hasItem()) {
             return ItemStack.EMPTY;
@@ -90,7 +89,7 @@ public class ShakerMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public void removed(@NotNull Player player) {
+    public void removed(Player player) {
         super.removed(player);
         shakerInventory.save();
     }

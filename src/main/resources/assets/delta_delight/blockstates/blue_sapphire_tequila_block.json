@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "delta_delight:block/blue_sapphire_tequila_block"
+    },
+    "facing=east": {
+      "model": "delta_delight:block/blue_sapphire_tequila_block",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "delta_delight:block/blue_sapphire_tequila_block",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "delta_delight:block/blue_sapphire_tequila_block",
+      "y": 270
+    }
+  }
+}

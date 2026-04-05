@@ -6,8 +6,8 @@
     32
   ],
   "textures": {
-    "0": "delta_delight:block/seafood_canned_porridge",
-    "particle": "delta_delight:item/seafood_canned_porridge_block"
+    "0": "delta_delight:block/seafood_canned_porridge_block",
+    "particle": "delta_delight:item/seafood_canned_porridge"
   },
   "elements": [
     {

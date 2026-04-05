@@ -11,9 +11,6 @@ public final class ModItemTags {
     public static final TagKey<Item> WATERMELON_JUICE_INGREDIENTS = itemTag("watermelon_juice_ingredients");
     public static final TagKey<Item> MILK_BOTTLE_INGREDIENTS = ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", "milk/milk_bottle"));
 
-    private ModItemTags() {
-    }
-
     private static TagKey<Item> itemTag(String path) {
         return ItemTags.create(ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, path));
     }
