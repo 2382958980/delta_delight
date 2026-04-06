@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:slimeballs"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    }
+  ],
+  "result": {
+    "item": "delta_delight:herbal_tea",
+    "count": 3
+  },
+  "cookingtime": 200,
+  "experience": 1.0
+}

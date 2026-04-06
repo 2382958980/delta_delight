@@ -1,6 +1,6 @@
 package com.candle.delta_delight.cocktail;
 
-import com.candle.delta_delight.Delta_delight;
+import com.candle.delta_delight.DeltaDelight;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -22,7 +22,7 @@ import java.util.Set;
 
 public final class CocktailManager {
     private static final Logger LOGGER = LogUtils.getLogger();
-    private static final String RECIPES_PATH = "data/" + Delta_delight.MODID + "/cocktails/recipes.json";
+    private static final String RECIPES_PATH = "data/" + DeltaDelight.MODID + "/cocktails/recipes.json";
     private static volatile List<CocktailDefinition> definitions = List.of();
     private static volatile boolean loaded;
 
