@@ -73,6 +73,8 @@ public final class ModItems {
             "mixed_cocktail", () -> new CocktailItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SHAKER = ITEMS.register(
             "shaker", () -> new ShakerItem(new Item.Properties().stacksTo(1)));
+    public static final RegistryObject<Item> BOOK = ITEMS.register(
+            "book",() -> new Item(new Item.Properties()));
 
     private static RegistryObject<Item> registerFood(String name, FoodProperties food,
                                                      Item returnItem, int useDuration, UseAnim useAnim) {
