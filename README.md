@@ -25,7 +25,10 @@
 
 ## 画廊
 
-银烛自己贴图
+<img width="400" height="300" alt="943e5c44-ae0e-4b26-800b-8811adc320a5" src="https://github.com/user-attachments/assets/5192d522-056b-44e9-aea5-51052516c7ae" />
+<img width="400" height="300" alt="528f8c46-d6f9-48c4-a19c-ce7ffcfa31d7" src="https://github.com/user-attachments/assets/1c37bc45-818a-4855-9257-3dd01fa36823" />
+<img width="400" height="300" alt="e3e71c72-8437-48ab-8189-6c61e1e0cdfa" src="https://github.com/user-attachments/assets/87fa107f-52fd-4060-850e-adeb2b6ec886" />
+<img width="400" height="300" alt="wine1" src="https://github.com/user-attachments/assets/9c2c5344-854b-4f93-8276-3ed1453858e5" />
 
 ## 作者的话
 
