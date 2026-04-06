@@ -19,7 +19,6 @@ public class DDFoodItem extends Item {
                       int useDuration,
                       UseAnim useAnim) {
         super(properties);
-        ;
         this.returnItem = returnItem;
         this.useDuration = useDuration;
         this.useAnim = useAnim;
