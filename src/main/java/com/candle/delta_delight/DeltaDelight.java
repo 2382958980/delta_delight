@@ -13,8 +13,8 @@ public class DeltaDelight {
     public static final String MODID = "delta_delight";
     public static final Logger LOGGER = LogUtils.getLogger();
 
-    public DeltaDelight(FMLJavaModLoadingContext fmlJavaModLoadingContext) {
-        IEventBus modEventBus = fmlJavaModLoadingContext.getModEventBus();
+    public DeltaDelight() {
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.BLOCKS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.TABS.register(modEventBus);
