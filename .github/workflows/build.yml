@@ -1,0 +1,37 @@
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ "main", "master" ] # 當推送到這些分支時觸發
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17' # Forge 1.20.1 必須使用 Java 17
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build with Gradle
+        run: ./gradlew build
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Forge-Mod-Jar
+          # 路徑通常在 build/libs/ 下，排除掉 -sources 或 -dev 的 jar
+          path: build/libs/*.jar
+          # 如果你只想保留最終的 mod jar，可以寫具體一點，例如：
+          # path: build/libs/${{ github.event.repository.name }}-${{ github.ref_name }}.jar
