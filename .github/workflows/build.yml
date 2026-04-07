@@ -27,11 +27,20 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
+      - name: Get Build Info
+        id: info
+        run: |
+          # 取得 build/libs 下第一個 .jar 的名稱（不含路徑與副檔名）
+          JAR_NAME=$(basename $(ls build/libs/*.jar | head -n 1) .jar)
+          # 取得 7 位元的 commit hash [cite: 8]
+          SHORT_SHA=$(git rev-parse --short HEAD)
+          # 存入環境變數供後續步驟使用
+          echo "jar_name=$JAR_NAME" >> $GITHUB_OUTPUT
+          echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
+
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Forge-Mod-Jar
-          # 路徑通常在 build/libs/ 下，排除掉 -sources 或 -dev 的 jar
+          # 組合名稱：例如 mymod-1.0.0-a1b2c3d [cite: 18, 19]
+          name: ${{ steps.info.outputs.jar_name }}-${{ steps.info.outputs.short_sha }}
           path: build/libs/*.jar
-          # 如果你只想保留最終的 mod jar，可以寫具體一點，例如：
-          # path: build/libs/${{ github.event.repository.name }}-${{ github.ref_name }}.jar
