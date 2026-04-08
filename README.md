@@ -21,10 +21,8 @@
 
 ## 画廊
 
-<img width="40%" alt="Heart Of Africa" src="./docs/gallery-0.png" />
-<img width="40%" alt="Placeable Foods" src="./docs/gallery-1.png" />
-<img width="40%" alt="Foods" src="./docs/gallery-2.png" />
-<img width="40%" alt="Wines" src="./docs/gallery-3.png" />
+<img width="400" height="300" alt="Heart Of Africa" src="./docs/gallery-0.png" /> <img width="400" height="300" alt="Placeable Foods" src="./docs/gallery-1.png" />
+<img width="400" height="300" alt="Foods" src="./docs/gallery-2.png" /> <img width="400" height="300" alt="Wines" src="./docs/gallery-3.png" />
 
 ## 作者的话
 
