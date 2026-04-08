@@ -9,6 +9,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.stream.Stream;
@@ -40,7 +41,7 @@ public class ShakerInventory extends ItemStackHandler {
     }
 
     @Override
-    public boolean isItemValid(int slot, ItemStack stack) {
+    public boolean isItemValid(int slot, @NotNull ItemStack stack) {
         return switch (slot) {
             case BASE_SLOT -> CocktailBase.fromStack(stack).isPresent();
             case INGREDIENT_SLOT_1, INGREDIENT_SLOT_2 -> CocktailIngredient.fromStack(stack).isPresent();

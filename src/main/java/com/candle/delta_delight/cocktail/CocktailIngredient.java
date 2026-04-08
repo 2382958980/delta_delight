@@ -4,7 +4,6 @@ import com.candle.delta_delight.util.ModItemTags;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 import java.util.Arrays;

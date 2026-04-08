@@ -6,6 +6,7 @@ import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import org.jetbrains.annotations.NotNull;
 
 public class ShakerScreen extends AbstractContainerScreen<ShakerMenu> {
     private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath("delta_delight", "textures/gui/shaker_ui.png");
@@ -32,14 +33,14 @@ public class ShakerScreen extends AbstractContainerScreen<ShakerMenu> {
     }
 
     @Override
-    public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
+    public void render(@NotNull GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTick) {
         renderBackground(guiGraphics);
         super.render(guiGraphics, mouseX, mouseY, partialTick);
         renderTooltip(guiGraphics, mouseX, mouseY);
     }
 
     @Override
-    protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+    protected void renderLabels(@NotNull GuiGraphics guiGraphics, int mouseX, int mouseY) {
         drawCenteredLabel(guiGraphics, Component.translatable("container.delta_delight.shaker"), 89, 6);
         drawCenteredLabel(guiGraphics, Component.translatable("container.delta_delight.shaker.base"), 35, 22);
         drawCenteredLabel(guiGraphics, Component.translatable("container.delta_delight.shaker.ingredient"), 69, 22);
