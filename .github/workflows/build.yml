@@ -41,10 +41,9 @@ jobs:
           SHORT_SHA=$(git rev-parse --short HEAD)
           echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
           
-          # 2. 修正後的抓取邏輯：
-          # 使用 -E 支援 (a|b) 語法
-          # 直接抓取 build/libs 下第一個非特殊用途的 .jar 檔名
-          RAW_JAR_NAME=$(ls build/libs/*.jar | grep -E -v "-(sources|dev|api|plain)" | head -n 1 | xargs -r basename -s .jar)
+          # 2. 簡化抓取邏輯：
+          # 不使用括號語法，直接排除常見的後綴，只抓取主程式 Jar
+          RAW_JAR_NAME=$(ls build/libs/*.jar | grep -v "\-sources" | grep -v "\-dev" | grep -v "\-api" | grep -v "\-plain" | head -n 1 | xargs -r basename -s .jar)
           
           # 檢查是否抓到檔名
           if [ -z "$RAW_JAR_NAME" ]; then
