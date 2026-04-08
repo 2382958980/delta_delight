@@ -37,7 +37,7 @@ jobs:
       - name: Analyze Build Context
         id: context
         run: |
-          # 1. 取得短 Hash
+          # 1. 取得短 Hash 
           SHORT_SHA=$(git rev-parse --short HEAD)
           echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
           
