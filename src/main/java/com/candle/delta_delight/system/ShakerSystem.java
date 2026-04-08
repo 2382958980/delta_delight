@@ -75,7 +75,7 @@ public final class ShakerSystem {
             return;
         }
 
-        inventory.clearInputs();
+        inventory.returnInputReminingItems();
         inventory.setStackInSlot(ShakerInventory.OUTPUT_SLOT, result);
         inventory.save();
         player.displayClientMessage(Component.translatable("actionbar.delta_delight.shaker_complete"), true);

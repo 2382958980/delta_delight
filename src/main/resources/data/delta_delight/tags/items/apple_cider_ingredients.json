@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "farmersdelight:apple_cider",
     { "id": "vinery:apple_cider", "required": false },
     { "id": "candlelight:apple_cider", "required": false }
   ]

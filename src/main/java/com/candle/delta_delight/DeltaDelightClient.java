@@ -23,7 +23,7 @@ public class DeltaDelightClient {
             MenuScreens.register(ModMenuTypes.SHAKER.get(), ShakerScreen::new);
             ItemProperties.register(
                     ModItems.MIXED_COCKTAIL.get(),
-                    new ResourceLocation(DeltaDelight.MODID, "cocktail_base_style"),
+                    ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "cocktail_base_style"),
                     (stack, level, entity, seed) -> switch (CocktailItem.getStoredBaseKey(stack)) {
                         case "herbal_tea" -> 1.0F;
                         case "amber_essence" -> 2.0F;

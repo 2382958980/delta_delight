@@ -9,8 +9,10 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.ItemStackHandler;
+import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ShakerInventory extends ItemStackHandler {
     public static final int BASE_SLOT = 0;
@@ -39,7 +41,7 @@ public class ShakerInventory extends ItemStackHandler {
     }
 
     @Override
-    public boolean isItemValid(int slot, ItemStack stack) {
+    public boolean isItemValid(int slot, @NotNull ItemStack stack) {
         return switch (slot) {
             case BASE_SLOT -> CocktailBase.fromStack(stack).isPresent();
             case INGREDIENT_SLOT_1, INGREDIENT_SLOT_2 -> CocktailIngredient.fromStack(stack).isPresent();
@@ -78,10 +80,17 @@ public class ShakerInventory extends ItemStackHandler {
         return List.of(getStackInSlot(INGREDIENT_SLOT_1), getStackInSlot(INGREDIENT_SLOT_2));
     }
 
-    public void clearInputs() {
-        setStackInSlot(BASE_SLOT, ItemStack.EMPTY);
-        setStackInSlot(INGREDIENT_SLOT_1, ItemStack.EMPTY);
-        setStackInSlot(INGREDIENT_SLOT_2, ItemStack.EMPTY);
+    private static void returnCraftReminingItemToSlot(ShakerInventory inventory, int slotId) {
+        ItemStack stack = inventory.getStackInSlot(slotId);
+        inventory.setStackInSlot(slotId, stack.getCraftingRemainingItem());
+    }
+
+    public void returnInputReminingItems() {
+        Stream.of(
+                ShakerInventory.BASE_SLOT,
+                ShakerInventory.INGREDIENT_SLOT_1,
+                ShakerInventory.INGREDIENT_SLOT_2
+        ).forEach(slot -> returnCraftReminingItemToSlot(this, slot));
     }
 
     public void load() {

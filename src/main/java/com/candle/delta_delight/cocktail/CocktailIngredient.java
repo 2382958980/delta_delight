@@ -1,11 +1,9 @@
 package com.candle.delta_delight.cocktail;
 
-import com.candle.delta_delight.registry.ModItems;
 import com.candle.delta_delight.util.ModItemTags;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 import java.util.Arrays;
@@ -14,22 +12,22 @@ import java.util.Optional;
 import java.util.function.Supplier;
 
 public enum CocktailIngredient {
-    COKE("coke", stack -> stack.is(ModItems.COKE.get()), () -> MobEffects.MOVEMENT_SPEED),
-    LEMON_TEA("lemon_tea", stack -> stack.is(ModItems.LEMON_TEA.get()), () -> MobEffects.REGENERATION),
+    COKE("coke", stack -> stack.is(ModItemTags.COKE_INGREDIENTS), () -> MobEffects.MOVEMENT_SPEED),
+    LEMON_TEA("lemon_tea", stack -> stack.is(ModItemTags.LEMON_TEA_INGREDIENTS), () -> MobEffects.REGENERATION),
     APPLE_CIDER("apple_cider", stack -> stack.is(ModItemTags.APPLE_CIDER_INGREDIENTS), () -> MobEffects.ABSORPTION),
     WATERMELON_JUICE("watermelon_juice", stack -> stack.is(ModItemTags.WATERMELON_JUICE_INGREDIENTS), () -> MobEffects.HEAL),
-    HONEY_BOTTLE("honey_bottle", stack -> stack.is(Items.HONEY_BOTTLE), ModEffects.NOURISHMENT::get),
-    MILK_BOTTLE("milk_bottle", stack -> stack.is(ModItemTags.MILK_BOTTLE_INGREDIENTS), ModEffects.COMFORT::get),
-    DRAGON_BREATH("dragon_breath", stack -> stack.is(Items.DRAGON_BREATH), () -> MobEffects.INVISIBILITY),
-    GLOW_BERRIES("glow_berries", stack -> stack.is(Items.GLOW_BERRIES), () -> MobEffects.LUCK),
-    GOLDEN_CARROT("golden_carrot", stack -> stack.is(Items.GOLDEN_CARROT), () -> MobEffects.JUMP),
-    SEA_PICKLE("sea_pickle", stack -> stack.is(Items.SEA_PICKLE), () -> MobEffects.WATER_BREATHING),
-    ENDER_PEARL("ender_pearl", stack -> stack.is(Items.ENDER_PEARL), () -> MobEffects.NIGHT_VISION),
-    CHORUS_FRUIT("chorus_fruit", stack -> stack.is(Items.CHORUS_FRUIT), () -> MobEffects.SLOW_FALLING),
-    GUNPOWDER("gunpowder", stack -> stack.is(Items.GUNPOWDER), () -> MobEffects.DAMAGE_BOOST),
-    REDSTONE("redstone", stack -> stack.is(Items.REDSTONE), () -> MobEffects.DIG_SPEED),
-    GLOWSTONE_DUST("glowstone_dust", stack -> stack.is(Items.GLOWSTONE_DUST), () -> MobEffects.GLOWING),
-    BLAZE_POWDER("blaze_powder", stack -> stack.is(Items.BLAZE_POWDER), () -> MobEffects.FIRE_RESISTANCE);
+    HONEY_BOTTLE("honey_bottle", stack -> stack.is(ModItemTags.HONEY_BOTTLE_INGREDIENTS), ModEffects.NOURISHMENT),
+    MILK_BOTTLE("milk_bottle", stack -> stack.is(ModItemTags.MILK_BOTTLE_INGREDIENTS), ModEffects.COMFORT),
+    DRAGON_BREATH("dragon_breath", stack -> stack.is(ModItemTags.DRAGON_BREATH_INGREDIENTS), () -> MobEffects.INVISIBILITY),
+    GLOW_BERRIES("glow_berries", stack -> stack.is(ModItemTags.GLOW_BERRIES_INGREDIENTS), () -> MobEffects.LUCK),
+    GOLDEN_CARROT("golden_carrot", stack -> stack.is(ModItemTags.GOLDEN_CARROT_INGREDIENTS), () -> MobEffects.JUMP),
+    SEA_PICKLE("sea_pickle", stack -> stack.is(ModItemTags.SEA_PICKLE_INGREDIENTS), () -> MobEffects.WATER_BREATHING),
+    ENDER_PEARL("ender_pearl", stack -> stack.is(ModItemTags.ENDER_PEARL_INGREDIENTS), () -> MobEffects.NIGHT_VISION),
+    CHORUS_FRUIT("chorus_fruit", stack -> stack.is(ModItemTags.CHORUS_FRUIT_INGREDIENTS), () -> MobEffects.SLOW_FALLING),
+    GUNPOWDER("gunpowder", stack -> stack.is(ModItemTags.GUNPOWDER_INGREDIENTS), () -> MobEffects.DAMAGE_BOOST),
+    REDSTONE("redstone", stack -> stack.is(ModItemTags.REDSTONE_INGREDIENTS), () -> MobEffects.DIG_SPEED),
+    GLOWSTONE_DUST("glowstone_dust", stack -> stack.is(ModItemTags.GLOWSTONE_DUST_INGREDIENTS), () -> MobEffects.GLOWING),
+    BLAZE_POWDER("blaze_powder", stack -> stack.is(ModItemTags.BLAZE_POWDER_INGREDIENTS), () -> MobEffects.FIRE_RESISTANCE);
 
     private final String key;
     private final ItemMatcher matcher;
