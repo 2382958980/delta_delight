@@ -1,5 +1,8 @@
 name: Delta Delight Forge 1.20.1 CI/CD
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # 強制使用 Node.js 24 以消除警告
+
 on:
   push:
     branches: [ "master", "main" ]
