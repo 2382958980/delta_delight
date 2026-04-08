@@ -42,14 +42,13 @@ jobs:
           echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
           
           # 2. 修正後的抓取邏輯：
-          # 關鍵點：必須使用 -E 才能讓 grep 理解 (a|b) 語法
-          # 關鍵點：使用 xargs -r 避免在找不到檔案時執行 basename
+          # 使用 -E 支援 (a|b) 語法
+          # 直接抓取 build/libs 下第一個非特殊用途的 .jar 檔名
           RAW_JAR_NAME=$(ls build/libs/*.jar | grep -E -v "-(sources|dev|api|plain)" | head -n 1 | xargs -r basename -s .jar)
           
           # 檢查是否抓到檔名
           if [ -z "$RAW_JAR_NAME" ]; then
             echo "Error: No primary jar file found in build/libs/"
-            echo "目前 build/libs 內容如下："
             ls -R build/libs/
             exit 1
           fi
