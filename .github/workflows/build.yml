@@ -1,7 +1,7 @@
 name: Delta Delight Forge 1.20.1 CI/CD
 
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # 強制使用 Node.js 24 以消除警告
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 on:
   push:
@@ -13,13 +13,13 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 允許建立 Release
+      contents: write
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 獲取歷史紀錄以生成 Changelog
+          fetch-depth: 0
 
       - name: Set up JDK 17
         uses: actions/setup-java@v4
@@ -34,58 +34,49 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-      # 核心分析：決定版本與抓取檔名
       - name: Analyze Build Context
         id: context
         run: |
-          # 1. 抓取原始 Jar 檔名 (排除 sources/dev/api)
-          RAW_JAR_PATH=$(ls build/libs/*.jar | grep -vE "-(sources|dev|api|plain)" | head -n 1)
-          JAR_BASE=$(basename "$RAW_JAR_PATH" .jar)
-          echo "jar_base=$JAR_BASE" >> $GITHUB_OUTPUT
-          
-          # 2. 取得短 Hash
+          # 1. 取得短 Hash
           SHORT_SHA=$(git rev-parse --short HEAD)
           echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
           
+          # 2. 精確抓取原始 Jar 名稱 (在改名前先記住它)
+          # 排除常見的輔助 Jar，只抓主程式 Jar
+          RAW_JAR_NAME=$(ls build/libs/*.jar | grep -vE "-(sources|dev|api|plain)" | head -n 1 | xargs basename -s .jar)
+          echo "jar_base=$RAW_JAR_NAME" >> $GITHUB_OUTPUT
+          
           # 3. 判斷是否為 Release
           COMMIT_MSG="${{ github.event.head_commit.message }}"
-          REGEX="update ([0-9a-zA-Z.-]+)"
-          if [[ "$COMMIT_MSG" =~ $REGEX ]]; then
+          if [[ "$COMMIT_MSG" =~ update\ ([0-9a-zA-Z.-]+) ]]; then
             echo "is_release=true" >> $GITHUB_OUTPUT
             echo "version=${BASH_REMATCH[1]}" >> $GITHUB_OUTPUT
           else
             echo "is_release=false" >> $GITHUB_OUTPUT
           fi
 
-      # 重新命名：統一管理檔案輸出
-      - name: Prepare Artifacts
+      - name: Prepare Files
         run: |
           cd build/libs
           SHORT_SHA="${{ steps.context.outputs.short_sha }}"
           IS_RELEASE="${{ steps.context.outputs.is_release }}"
+          JAR_BASE="${{ steps.context.outputs.jar_base }}"
           
-          for f in *.jar; do
-            if [[ $f != *"-sources.jar"* && $f != *"-dev.jar"* && $f != *"-api.jar"* ]]; then
-              if [ "$IS_RELEASE" == "true" ]; then
-                new_name="${f%.jar}-${SHORT_SHA}.jar"
-              else
-                new_name="${f%.jar}-dev-${SHORT_SHA}.jar"
-              fi
-              mv "$f" "$new_name"
-            fi
-          done
+          # 針對主程式 Jar 進行改名
+          if [ "$IS_RELEASE" == "true" ]; then
+            mv "${JAR_BASE}.jar" "${JAR_BASE}-${SHORT_SHA}.jar" || true
+          else
+            mv "${JAR_BASE}.jar" "${JAR_BASE}-dev-${SHORT_SHA}.jar" || true
+          fi
 
-      # --- 上傳到 Actions Artifacts (無論是否為 Release 都執行) ---
       - name: Upload Build Artifact
-        # 刪除了 if: steps.context.outputs.is_release == 'false'
         uses: actions/upload-artifact@v4
         with:
-          # 動態調整名稱：如果是 Release 就加 [Release] 字樣，否則加 [Dev]
+          # 使用強化的變數組合名稱
           name: ${{ steps.context.outputs.jar_base }}-${{ steps.context.outputs.is_release == 'true' && 'Release' || 'Dev' }}-${{ steps.context.outputs.short_sha }}
           path: build/libs/*.jar
           retention-days: 7
 
-      # --- 正式版 (GitHub Release) ---
       - name: Generate Changelog
         if: steps.context.outputs.is_release == 'true'
         id: changelog
