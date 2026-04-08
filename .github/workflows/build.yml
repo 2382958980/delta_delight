@@ -40,7 +40,7 @@ jobs:
           JAR_BASE=$(basename "$RAW_JAR_PATH" .jar)
           echo "jar_base=$JAR_BASE" >> $GITHUB_OUTPUT
           
-          # 2. 取得短 Hash
+          # 2. 取得短 Hash 
           SHORT_SHA=$(git rev-parse --short HEAD)
           echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
           
