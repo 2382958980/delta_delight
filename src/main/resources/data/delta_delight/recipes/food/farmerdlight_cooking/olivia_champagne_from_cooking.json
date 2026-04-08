@@ -2,13 +2,13 @@
   "type": "farmersdelight:cooking",
   "ingredients": [
     {
-      "tag": "delta_delight:red_berries"
+      "tag": "forge:berries/red"
     },
     {
-      "tag": "delta_delight:red_berries"
+      "tag": "forge:berries/red"
     },
     {
-      "tag": "delta_delight:red_berries"
+      "tag": "forge:berries/red"
     },
     {
       "item": "minecraft:ghast_tear"
