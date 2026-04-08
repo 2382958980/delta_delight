@@ -40,7 +40,7 @@ jobs:
           JAR_BASE=$(basename "$RAW_JAR_PATH" .jar)
           echo "jar_base=$JAR_BASE" >> $GITHUB_OUTPUT
           
-          # 2. 取得短 Hash 
+          # 2. 取得短 Hash
           SHORT_SHA=$(git rev-parse --short HEAD)
           echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
           
@@ -72,16 +72,17 @@ jobs:
             fi
           done
 
-      # --- 情況 A：開發版 (Upload Artifact) ---
-      - name: Upload Dev Artifact
-        if: steps.context.outputs.is_release == 'false'
+      # --- 上傳到 Actions Artifacts (無論是否為 Release 都執行) ---
+      - name: Upload Build Artifact
+        # 刪除了 if: steps.context.outputs.is_release == 'false'
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ steps.context.outputs.jar_base }}-dev-${{ steps.context.outputs.short_sha }}
+          # 動態調整名稱：如果是 Release 就加 [Release] 字樣，否則加 [Dev]
+          name: ${{ steps.context.outputs.jar_base }}-${{ steps.context.outputs.is_release == 'true' && 'Release' || 'Dev' }}-${{ steps.context.outputs.short_sha }}
           path: build/libs/*.jar
           retention-days: 7
 
-      # --- 情況 B：正式版 (GitHub Release) ---
+      # --- 正式版 (GitHub Release) ---
       - name: Generate Changelog
         if: steps.context.outputs.is_release == 'true'
         id: changelog
