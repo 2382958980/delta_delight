@@ -11,6 +11,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.ItemStackHandler;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class ShakerInventory extends ItemStackHandler {
     public static final int BASE_SLOT = 0;
@@ -78,10 +79,17 @@ public class ShakerInventory extends ItemStackHandler {
         return List.of(getStackInSlot(INGREDIENT_SLOT_1), getStackInSlot(INGREDIENT_SLOT_2));
     }
 
-    public void clearInputs() {
-        setStackInSlot(BASE_SLOT, ItemStack.EMPTY);
-        setStackInSlot(INGREDIENT_SLOT_1, ItemStack.EMPTY);
-        setStackInSlot(INGREDIENT_SLOT_2, ItemStack.EMPTY);
+    private static void returnCraftReminingItemToSlot(ShakerInventory inventory, int slotId) {
+        ItemStack stack = inventory.getStackInSlot(slotId);
+        inventory.setStackInSlot(slotId, stack.getCraftingRemainingItem());
+    }
+
+    public void returnInputReminingItems() {
+        Stream.of(
+                ShakerInventory.BASE_SLOT,
+                ShakerInventory.INGREDIENT_SLOT_1,
+                ShakerInventory.INGREDIENT_SLOT_2
+        ).forEach(slot -> returnCraftReminingItemToSlot(this, slot));
     }
 
     public void load() {

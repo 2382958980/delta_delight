@@ -8,7 +8,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
 
 public class ShakerScreen extends AbstractContainerScreen<ShakerMenu> {
-    private static final ResourceLocation TEXTURE = new ResourceLocation("delta_delight", "textures/gui/shaker_ui.png");
+    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath("delta_delight", "textures/gui/shaker_ui.png");
     private static final int LABEL_COLOR = 0x404040;
 
     public ShakerScreen(ShakerMenu menu, Inventory playerInventory, Component title) {
