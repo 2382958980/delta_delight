@@ -41,9 +41,16 @@ jobs:
           SHORT_SHA=$(git rev-parse --short HEAD)
           echo "short_sha=$SHORT_SHA" >> $GITHUB_OUTPUT
           
-          # 2. 精確抓取原始 Jar 名稱 (在改名前先記住它)
-          # 排除常見的輔助 Jar，只抓主程式 Jar
-          RAW_JAR_NAME=$(ls build/libs/*.jar | grep -vE "-(sources|dev|api|plain)" | head -n 1 | xargs basename -s .jar)
+          # 2. 修正後的抓取邏輯
+          # 加入 -E 支援擴展正則，加入 xargs -r 防止空值報錯
+          RAW_JAR_NAME=$(ls build/libs/*.jar | grep -E -v "-(sources|dev|api|plain)" | head -n 1 | xargs -r basename -s .jar)
+          
+          # 檢查是否真的有抓到檔名，避免後面步驟崩潰
+          if [ -z "$RAW_JAR_NAME" ]; then
+            echo "Error: No primary jar file found in build/libs/"
+            exit 1
+          fi
+          
           echo "jar_base=$RAW_JAR_NAME" >> $GITHUB_OUTPUT
           
           # 3. 判斷是否為 Release
