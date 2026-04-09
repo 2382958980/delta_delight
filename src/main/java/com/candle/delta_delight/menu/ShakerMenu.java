@@ -10,6 +10,7 @@ import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
+import org.jetbrains.annotations.NotNull;
 
 public class ShakerMenu extends AbstractContainerMenu {
     public static final int MIXING_SLOT_COUNT = ShakerInventory.SLOT_COUNT;
@@ -38,7 +39,7 @@ public class ShakerMenu extends AbstractContainerMenu {
         addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.INGREDIENT_SLOT_2, 79, 34));
         addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.OUTPUT_SLOT, 133, 34) {
             @Override
-            public boolean mayPlace(ItemStack stack) {
+            public boolean mayPlace(@NotNull ItemStack stack) {
                 return false;
             }
         });
@@ -47,8 +48,9 @@ public class ShakerMenu extends AbstractContainerMenu {
         addPlayerHotbar(playerInventory);
     }
 
+    @SuppressWarnings("StatementWithEmptyBody")
     @Override
-    public ItemStack quickMoveStack(Player player, int index) {
+    public @NotNull ItemStack quickMoveStack(@NotNull Player player, int index) {
         Slot sourceSlot = slots.get(index);
         if (!sourceSlot.hasItem()) {
             return ItemStack.EMPTY;
@@ -89,7 +91,7 @@ public class ShakerMenu extends AbstractContainerMenu {
     }
 
     @Override
-    public void removed(Player player) {
+    public void removed(@NotNull Player player) {
         super.removed(player);
         shakerInventory.save();
     }
@@ -108,10 +110,12 @@ public class ShakerMenu extends AbstractContainerMenu {
         }
     }
 
+    @SuppressWarnings("unused")
     public ShakerInventory getShakerInventory() {
         return shakerInventory;
     }
 
+    @SuppressWarnings("unused")
     public InteractionHand getHand() {
         return hand;
     }

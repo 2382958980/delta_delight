@@ -23,10 +23,13 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.Level;
+import net.minecraftforge.registries.ForgeRegistries;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class CocktailItem extends Item {
     public static final String NAME_KEY_TAG = "CocktailNameKey";
@@ -43,7 +46,7 @@ public class CocktailItem extends Item {
     }
 
     @Override
-    public Component getName(ItemStack stack) {
+    public @NotNull Component getName(ItemStack stack) {
         CompoundTag tag = stack.getTag();
         if (tag != null && tag.contains(NAME_KEY_TAG, Tag.TAG_STRING)) {
             return Component.translatable(tag.getString(NAME_KEY_TAG));
@@ -52,7 +55,7 @@ public class CocktailItem extends Item {
     }
 
     @Override
-    public Rarity getRarity(ItemStack stack) {
+    public @NotNull Rarity getRarity(ItemStack stack) {
         CompoundTag tag = stack.getTag();
         if (tag == null || !tag.contains(QUALITY_TAG, Tag.TAG_STRING)) {
             return super.getRarity(stack);
@@ -76,22 +79,22 @@ public class CocktailItem extends Item {
     }
 
     @Override
-    public UseAnim getUseAnimation(ItemStack stack) {
+    public @NotNull UseAnim getUseAnimation(@NotNull ItemStack stack) {
         return UseAnim.DRINK;
     }
 
     @Override
-    public int getUseDuration(ItemStack stack) {
+    public int getUseDuration(@NotNull ItemStack stack) {
         return 32;
     }
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
         return ItemUtils.startUsingInstantly(level, player, hand);
     }
 
     @Override
-    public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
+    public @NotNull ItemStack finishUsingItem(@NotNull ItemStack stack, Level level, @NotNull LivingEntity entity) {
         if (!level.isClientSide) {
             for (MobEffectInstance effectInstance : getStoredEffects(stack)) {
                 entity.addEffect(new MobEffectInstance(effectInstance));
@@ -117,7 +120,7 @@ public class CocktailItem extends Item {
     }
 
     @Override
-    public void appendHoverText(ItemStack stack, @Nullable Level level, List<Component> tooltip, TooltipFlag flag) {
+    public void appendHoverText(@NotNull ItemStack stack, @Nullable Level level, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
         for (MobEffectInstance effectInstance : getStoredEffects(stack)) {
             tooltip.add(formatEffectLine(effectInstance));
         }
@@ -158,7 +161,7 @@ public class CocktailItem extends Item {
         ListTag effectList = new ListTag();
         for (MobEffectInstance effectInstance : effects) {
             CompoundTag effectTag = new CompoundTag();
-            effectTag.putString(EFFECT_ID_TAG, net.minecraftforge.registries.ForgeRegistries.MOB_EFFECTS.getKey(effectInstance.getEffect()).toString());
+            effectTag.putString(EFFECT_ID_TAG, Objects.requireNonNull(ForgeRegistries.MOB_EFFECTS.getKey(effectInstance.getEffect())).toString());
             effectTag.putInt(DURATION_TAG, effectInstance.getDuration());
             effectTag.putInt(AMPLIFIER_TAG, effectInstance.getAmplifier());
             effectList.add(effectTag);
@@ -191,7 +194,7 @@ public class CocktailItem extends Item {
         ListTag effectList = tag.getList(EFFECTS_TAG, Tag.TAG_COMPOUND);
         for (Tag tagElement : effectList) {
             CompoundTag effectTag = (CompoundTag) tagElement;
-            MobEffect effect = net.minecraftforge.registries.ForgeRegistries.MOB_EFFECTS.getValue(new ResourceLocation(effectTag.getString(EFFECT_ID_TAG)));
+            MobEffect effect = net.minecraftforge.registries.ForgeRegistries.MOB_EFFECTS.getValue(ResourceLocation.parse(effectTag.getString(EFFECT_ID_TAG)));
             if (effect != null) {
                 effects.add(new MobEffectInstance(
                         effect,

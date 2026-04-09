@@ -11,6 +11,7 @@ public enum CocktailQuality {
         this.serializedName = serializedName;
     }
 
+    @SuppressWarnings("unused")
     public String getSerializedName() {
         return serializedName;
     }

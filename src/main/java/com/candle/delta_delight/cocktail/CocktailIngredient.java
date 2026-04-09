@@ -4,6 +4,7 @@ import com.candle.delta_delight.util.ModItemTags;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.ItemStack;
+import net.minecraftforge.common.IExtensibleEnum;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
 import java.util.Arrays;
@@ -11,7 +12,7 @@ import java.util.Locale;
 import java.util.Optional;
 import java.util.function.Supplier;
 
-public enum CocktailIngredient {
+public enum CocktailIngredient implements IExtensibleEnum {
     COKE("coke", stack -> stack.is(ModItemTags.COKE_INGREDIENTS), () -> MobEffects.MOVEMENT_SPEED),
     LEMON_TEA("lemon_tea", stack -> stack.is(ModItemTags.LEMON_TEA_INGREDIENTS), () -> MobEffects.REGENERATION),
     APPLE_CIDER("apple_cider", stack -> stack.is(ModItemTags.APPLE_CIDER_INGREDIENTS), () -> MobEffects.ABSORPTION),
@@ -39,6 +40,11 @@ public enum CocktailIngredient {
         this.effectSupplier = effectSupplier;
     }
 
+    @SuppressWarnings("unused")
+    public static CocktailIngredient create(String key, ItemMatcher matcher, Supplier<MobEffect> effectSupplier) {
+        throw new IllegalStateException("Enum constants must be defined at compile time");
+    }
+
     public String getKey() {
         return key;
     }
@@ -55,13 +61,14 @@ public enum CocktailIngredient {
         return Arrays.stream(values()).filter(ingredient -> ingredient.matches(stack)).findFirst();
     }
 
+    @SuppressWarnings("unused")
     public static Optional<CocktailIngredient> fromKey(String key) {
         String normalized = key.toLowerCase(Locale.ROOT);
         return Arrays.stream(values()).filter(ingredient -> ingredient.key.equals(normalized)).findFirst();
     }
 
     @FunctionalInterface
-    private interface ItemMatcher {
+    public interface ItemMatcher {
         boolean matches(ItemStack stack);
     }
 }

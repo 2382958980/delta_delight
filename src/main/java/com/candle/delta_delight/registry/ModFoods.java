@@ -5,6 +5,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.food.FoodProperties;
 import vectorwing.farmersdelight.common.registry.ModEffects;
 
+@SuppressWarnings("unused")
 public final class ModFoods {
     public static final FoodProperties OLIVIA_CHAMPAGNE = new FoodProperties.Builder()
             .nutrition(0)

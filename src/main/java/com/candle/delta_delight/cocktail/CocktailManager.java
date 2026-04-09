@@ -47,7 +47,7 @@ public final class CocktailManager {
                 List<CocktailDefinition> parsed = new ArrayList<>();
                 for (JsonElement element : GsonHelper.getAsJsonArray(root, "recipes")) {
                     JsonObject recipeJson = GsonHelper.convertToJsonObject(element, "recipe");
-                    ResourceLocation id = new ResourceLocation(GsonHelper.getAsString(recipeJson, "id"));
+                    ResourceLocation id = ResourceLocation.parse(GsonHelper.getAsString(recipeJson, "id"));
                     String nameKey = GsonHelper.getAsString(recipeJson, "name_key");
                     CocktailQuality quality = CocktailQuality.valueOf(GsonHelper.getAsString(recipeJson, "quality").toUpperCase());
                     String baseKey = GsonHelper.getAsString(recipeJson, "base");
@@ -81,6 +81,7 @@ public final class CocktailManager {
                 .findFirst();
     }
 
+    @SuppressWarnings("unused")
     public static List<CocktailDefinition> getDefinitions() {
         ensureLoaded();
         return definitions;

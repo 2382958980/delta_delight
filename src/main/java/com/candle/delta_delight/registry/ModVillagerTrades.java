@@ -8,6 +8,7 @@ import net.minecraftforge.event.village.VillagerTradesEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 
+@SuppressWarnings("unused")
 @EventBusSubscriber
 public final class ModVillagerTrades {
     private static final int LIBRARIAN_NOVICE_LEVEL = 1;

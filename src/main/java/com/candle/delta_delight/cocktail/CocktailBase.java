@@ -49,6 +49,7 @@ public enum CocktailBase {
         return Arrays.stream(values()).filter(base -> base.matches(stack)).findFirst();
     }
 
+    @SuppressWarnings("unused")
     public static Optional<CocktailBase> fromKey(String key) {
         String normalized = key.toLowerCase(Locale.ROOT);
         return Arrays.stream(values()).filter(base -> base.key.equals(normalized)).findFirst();
