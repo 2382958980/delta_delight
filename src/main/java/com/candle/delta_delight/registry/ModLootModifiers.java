@@ -15,6 +15,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import org.jetbrains.annotations.NotNull;
 
+@SuppressWarnings("unused")
 public class ModLootModifiers {
     public static class AddItemWithChanceModifier extends LootModifier {
         public static final Codec<ModLootModifiers.AddItemWithChanceModifier> CODEC = RecordCodecBuilder.create(inst ->

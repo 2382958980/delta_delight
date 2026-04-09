@@ -45,7 +45,6 @@ public class ShakerInventory extends ItemStackHandler {
         return switch (slot) {
             case BASE_SLOT -> CocktailBase.fromStack(stack).isPresent();
             case INGREDIENT_SLOT_1, INGREDIENT_SLOT_2 -> CocktailIngredient.fromStack(stack).isPresent();
-            case OUTPUT_SLOT -> false;
             default -> false;
         };
     }
@@ -59,6 +58,7 @@ public class ShakerInventory extends ItemStackHandler {
         return player.getItemInHand(hand);
     }
 
+    @SuppressWarnings("unused")
     public InteractionHand getHand() {
         return hand;
     }

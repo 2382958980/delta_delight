@@ -13,12 +13,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
-import java.util.Map;
+import java.util.*;
 
 public final class CocktailAppearanceManager {
     private static final Logger LOGGER = LogUtils.getLogger();
@@ -108,10 +103,7 @@ public final class CocktailAppearanceManager {
         }
 
         List<String> sorted = new ArrayList<>(keys);
-        sorted.sort((left, right) -> Integer.compare(
-                ingredientOrder.getOrDefault(left, Integer.MAX_VALUE),
-                ingredientOrder.getOrDefault(right, Integer.MAX_VALUE)
-        ));
+        sorted.sort(Comparator.comparingInt(ingredient -> ingredientOrder.getOrDefault(ingredient, Integer.MAX_VALUE)));
         return sorted;
     }
 
