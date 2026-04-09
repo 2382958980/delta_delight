@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "delta_delight:item/music_discs/menu1"
+  }
+}

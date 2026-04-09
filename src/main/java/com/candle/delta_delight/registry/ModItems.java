@@ -5,9 +5,11 @@ import com.candle.delta_delight.content.DDFoodItem;
 import com.candle.delta_delight.content.DDPlaceableFoodBlockItem;
 import com.candle.delta_delight.content.ShakerItem;
 import com.candle.delta_delight.content.TooltipItem;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.RecordItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.UseAnim;
 import net.minecraft.world.level.block.Block;
@@ -75,6 +77,20 @@ public final class ModItems {
             "shaker", () -> new ShakerItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> BOOK = ITEMS.register(
             "book",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> DAWN_MUSIC_DISC = registerMusicDisc(
+            "dawn_music_disc", ModSoundEvents.MUSIC_DISC_DAWN, 8, 243);
+    public static final RegistryObject<Item> IN_THE_SUMMER_MUSIC_DISC = registerMusicDisc(
+            "in_the_summer_music_disc", ModSoundEvents.MUSIC_DISC_IN_THE_SUMMER, 14, 181);
+    public static final RegistryObject<Item> KING_OF_THE_RING_MUSIC_DISC = registerMusicDisc(
+            "king_of_the_ring_music_disc", ModSoundEvents.MUSIC_DISC_KING_OF_THE_RING, 9, 203);
+    public static final RegistryObject<Item> MAKING_LEGENDS_MUSIC_DISC = registerMusicDisc(
+            "making_legends_music_disc", ModSoundEvents.MUSIC_DISC_MAKING_LEGENDS, 10, 126);
+    public static final RegistryObject<Item> MENU1_MUSIC_DISC = registerMusicDisc(
+            "menu1_music_disc", ModSoundEvents.MUSIC_DISC_MENU1, 11, 71);
+    public static final RegistryObject<Item> MENU2_MUSIC_DISC = registerMusicDisc(
+            "menu2_music_disc", ModSoundEvents.MUSIC_DISC_MENU2, 12, 111);
+    public static final RegistryObject<Item> PLAY_WITH_FIRE_MUSIC_DISC = registerMusicDisc(
+            "play_with_fire_music_disc", ModSoundEvents.MUSIC_DISC_PLAY_WITH_FIRE, 13, 165);
 
     private static RegistryObject<Item> registerFood(String name, FoodProperties food,
                                                      Item returnItem, int useDuration, UseAnim useAnim) {
@@ -95,6 +111,16 @@ public final class ModItems {
                 returnItem,
                 useDuration,
                 useAnim
+        ));
+    }
+
+    private static RegistryObject<Item> registerMusicDisc(String name, RegistryObject<SoundEvent> sound,
+                                                          int analogOutput, int durationSeconds) {
+        return ITEMS.register(name, () -> new RecordItem(
+                analogOutput,
+                sound,
+                new Item.Properties().stacksTo(1).rarity(Rarity.RARE),
+                durationSeconds * 20
         ));
     }
 }

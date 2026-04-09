@@ -41,7 +41,14 @@ public class ModCreativeTabs {
             ModItems.JUNIPER_SPIRIT,
             ModItems.HERBAL_TEA,
             ModItems.AMBER_ESSENCE,
-            ModItems.MOLASSES
+            ModItems.MOLASSES,
+            ModItems.DAWN_MUSIC_DISC,
+            ModItems.IN_THE_SUMMER_MUSIC_DISC,
+            ModItems.KING_OF_THE_RING_MUSIC_DISC,
+            ModItems.MAKING_LEGENDS_MUSIC_DISC,
+            ModItems.MENU1_MUSIC_DISC,
+            ModItems.MENU2_MUSIC_DISC,
+            ModItems.PLAY_WITH_FIRE_MUSIC_DISC
     );
 
     public static final RegistryObject<CreativeModeTab> DELTA_DELIGHT = TABS.register(

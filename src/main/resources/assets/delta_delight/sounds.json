@@ -1,0 +1,58 @@
+{
+  "music_disc.dawn": {
+    "sounds": [
+      {
+        "name": "delta_delight:music_discs/dawn",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.in_the_summer": {
+    "sounds": [
+      {
+        "name": "delta_delight:music_discs/in_the_summer",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.king_of_the_ring": {
+    "sounds": [
+      {
+        "name": "delta_delight:music_discs/king_of_the_ring",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.making_legends": {
+    "sounds": [
+      {
+        "name": "delta_delight:music_discs/making_legends",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.menu1": {
+    "sounds": [
+      {
+        "name": "delta_delight:music_discs/menu1",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.menu2": {
+    "sounds": [
+      {
+        "name": "delta_delight:music_discs/menu2",
+        "stream": true
+      }
+    ]
+  },
+  "music_disc.play_with_fire": {
+    "sounds": [
+      {
+        "name": "delta_delight:music_discs/play_with_fire",
+        "stream": true
+      }
+    ]
+  }
+}
