@@ -68,8 +68,7 @@ public class ShakerInventory extends ItemStackHandler {
     }
 
     public boolean hasInputItems() {
-        return CocktailBase.fromStack(getStackInSlot(BASE_SLOT)).isPresent()
-                && (!getStackInSlot(INGREDIENT_SLOT_1).isEmpty() || !getStackInSlot(INGREDIENT_SLOT_2).isEmpty());
+        return hasValidShakeInputs(this);
     }
 
     public boolean hasOutput() {
@@ -131,8 +130,31 @@ public class ShakerInventory extends ItemStackHandler {
         }
 
         handler.deserializeNBT(root.getCompound(INVENTORY_TAG));
-        return CocktailBase.fromStack(handler.getStackInSlot(BASE_SLOT)).isPresent()
-                && (!handler.getStackInSlot(INGREDIENT_SLOT_1).isEmpty() || !handler.getStackInSlot(INGREDIENT_SLOT_2).isEmpty())
-                && handler.getStackInSlot(OUTPUT_SLOT).isEmpty();
+        return hasValidShakeInputs(handler);
+    }
+
+    private static boolean hasValidShakeInputs(ItemStackHandler handler) {
+        if (handler.getSlots() <= OUTPUT_SLOT || !handler.getStackInSlot(OUTPUT_SLOT).isEmpty()) {
+            return false;
+        }
+
+        if (CocktailBase.fromStack(handler.getStackInSlot(BASE_SLOT)).isEmpty()) {
+            return false;
+        }
+
+        boolean hasIngredient = false;
+        for (int slot : new int[]{INGREDIENT_SLOT_1, INGREDIENT_SLOT_2}) {
+            ItemStack stack = handler.getStackInSlot(slot);
+            if (stack.isEmpty()) {
+                continue;
+            }
+
+            if (CocktailIngredient.fromStack(stack).isEmpty()) {
+                return false;
+            }
+            hasIngredient = true;
+        }
+
+        return hasIngredient;
     }
 }

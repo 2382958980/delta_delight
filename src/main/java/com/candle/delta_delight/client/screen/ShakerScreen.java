@@ -1,5 +1,6 @@
 package com.candle.delta_delight.client.screen;
 
+import com.candle.delta_delight.DeltaDelight;
 import com.candle.delta_delight.menu.ShakerMenu;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
@@ -9,7 +10,8 @@ import net.minecraft.world.entity.player.Inventory;
 import org.jetbrains.annotations.NotNull;
 
 public class ShakerScreen extends AbstractContainerScreen<ShakerMenu> {
-    private static final ResourceLocation TEXTURE = ResourceLocation.fromNamespaceAndPath("delta_delight", "textures/gui/shaker_ui.png");
+    private static final ResourceLocation TEXTURE =
+            ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "textures/gui/shaker_ui.png");
     private static final int LABEL_COLOR = 0x404040;
 
     public ShakerScreen(ShakerMenu menu, Inventory playerInventory, Component title) {
