@@ -23,6 +23,7 @@ public final class ModSoundEvents {
     public static final RegistryObject<SoundEvent> MUSIC_DISC_MENU1 = registerMusicDisc("menu1");
     public static final RegistryObject<SoundEvent> MUSIC_DISC_MENU2 = registerMusicDisc("menu2");
     public static final RegistryObject<SoundEvent> MUSIC_DISC_PLAY_WITH_FIRE = registerMusicDisc("play_with_fire");
+    public static final RegistryObject<SoundEvent> MUSIC_DISC_SPOTLIGHT_HUNTER = registerMusicDisc("spotlight_hunter");
 
     private ModSoundEvents() {
     }

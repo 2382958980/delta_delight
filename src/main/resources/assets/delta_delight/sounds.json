@@ -54,5 +54,13 @@
         "stream": true
       }
     ]
+  },
+  "music_disc.spotlight_hunter": {
+    "sounds": [
+      {
+        "name": "delta_delight:music_discs/spotlight_hunter",
+        "stream": true
+      }
+    ]
   }
 }

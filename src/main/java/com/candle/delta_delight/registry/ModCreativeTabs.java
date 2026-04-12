@@ -44,6 +44,7 @@ public class ModCreativeTabs {
             ModItems.AMBER_ESSENCE,
             ModItems.MOLASSES,
             ModItems.DAWN_MUSIC_DISC,
+            ModItems.SPOTLIGHT_HUNTER_MUSIC_DISC,
             ModItems.IN_THE_SUMMER_MUSIC_DISC,
             ModItems.KING_OF_THE_RING_MUSIC_DISC,
             ModItems.MAKING_LEGENDS_MUSIC_DISC,

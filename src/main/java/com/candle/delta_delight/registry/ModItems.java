@@ -92,6 +92,8 @@ public final class ModItems {
             "menu2_music_disc", ModSoundEvents.MUSIC_DISC_MENU2, 12, 111);
     public static final RegistryObject<Item> PLAY_WITH_FIRE_MUSIC_DISC = registerMusicDisc(
             "play_with_fire_music_disc", ModSoundEvents.MUSIC_DISC_PLAY_WITH_FIRE, 13, 165);
+    public static final RegistryObject<Item> SPOTLIGHT_HUNTER_MUSIC_DISC = registerMusicDisc(
+            "spotlight_hunter_music_disc", ModSoundEvents.MUSIC_DISC_SPOTLIGHT_HUNTER, 15, 174);
 
     private static RegistryObject<Item> registerFood(String name, FoodProperties food,
                                                      Item returnItem, int useDuration, UseAnim useAnim) {
