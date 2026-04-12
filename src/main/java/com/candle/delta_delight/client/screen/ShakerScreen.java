@@ -44,8 +44,6 @@ public class ShakerScreen extends AbstractContainerScreen<ShakerMenu> {
     @Override
     protected void renderLabels(@NotNull GuiGraphics guiGraphics, int mouseX, int mouseY) {
         drawCenteredLabel(guiGraphics, Component.translatable("container.delta_delight.shaker"), 89, 6);
-        drawCenteredLabel(guiGraphics, Component.translatable("container.delta_delight.shaker.base"), 35, 22);
-        drawCenteredLabel(guiGraphics, Component.translatable("container.delta_delight.shaker.ingredient"), 69, 22);
         drawCenteredLabel(guiGraphics, Component.translatable("container.delta_delight.shaker.inventory"), 20, 72);
     }
 

@@ -65,13 +65,13 @@ public final class ModItems {
     public static final RegistryObject<Item> PORRIDGE = registerFood(
             "porridge", ModFoods.PORRIDGE, null, 32, UseAnim.EAT);
     public static final RegistryObject<Item> HERBAL_TEA = ITEMS.register(
-            "herbal_tea", () -> new TooltipItem(new Item.Properties()));
+            "herbal_tea", () -> new TooltipItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> MOLASSES = ITEMS.register(
-            "molasses", () -> new TooltipItem(new Item.Properties()));
+            "molasses", () -> new TooltipItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> JUNIPER_SPIRIT = ITEMS.register(
-            "juniper_spirit", () -> new TooltipItem(new Item.Properties()));
+            "juniper_spirit", () -> new TooltipItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> AMBER_ESSENCE = ITEMS.register(
-            "amber_essence", () -> new TooltipItem(new Item.Properties()));
+            "amber_essence", () -> new TooltipItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> MIXED_COCKTAIL = ITEMS.register(
             "mixed_cocktail", () -> new CocktailItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> SHAKER = ITEMS.register(
@@ -97,24 +97,25 @@ public final class ModItems {
 
     private static RegistryObject<Item> registerFood(String name, FoodProperties food,
                                                      Item returnItem, int useDuration, UseAnim useAnim) {
-        return ITEMS.register(name, () -> new DDFoodItem(
-                new Item.Properties().food(food).rarity(Rarity.COMMON),
-                returnItem,
-                useDuration,
-                useAnim
-        ));
+        return ITEMS.register(name, () -> {
+            Item.Properties properties = new Item.Properties().food(food).rarity(Rarity.COMMON);
+            if (returnItem != null) {
+                properties.craftRemainder(returnItem);
+            }
+            return new DDFoodItem(properties, returnItem, useDuration, useAnim);
+        });
     }
 
     private static RegistryObject<Item> registerPlaceableFood(String name, RegistryObject<Block> block,
                                                               FoodProperties food, Rarity rarity,
                                                               Item returnItem, int useDuration, UseAnim useAnim) {
-        return ITEMS.register(name, () -> new DDPlaceableFoodBlockItem(
-                block.get(),
-                new Item.Properties().food(food).rarity(rarity),
-                returnItem,
-                useDuration,
-                useAnim
-        ));
+        return ITEMS.register(name, () -> {
+            Item.Properties properties = new Item.Properties().food(food).rarity(rarity);
+            if (returnItem != null) {
+                properties.craftRemainder(returnItem);
+            }
+            return new DDPlaceableFoodBlockItem(block.get(), properties, returnItem, useDuration, useAnim);
+        });
     }
 
     private static RegistryObject<Item> registerMusicDisc(String name, RegistryObject<SoundEvent> sound,

@@ -24,6 +24,12 @@ public final class ModSoundEvents {
     public static final RegistryObject<SoundEvent> MUSIC_DISC_MENU2 = registerMusicDisc("menu2");
     public static final RegistryObject<SoundEvent> MUSIC_DISC_PLAY_WITH_FIRE = registerMusicDisc("play_with_fire");
     public static final RegistryObject<SoundEvent> MUSIC_DISC_SPOTLIGHT_HUNTER = registerMusicDisc("spotlight_hunter");
+    public static final RegistryObject<SoundEvent> SHAKER_SHAKE = SOUND_EVENTS.register(
+            "shaker.shake",
+            () -> SoundEvent.createVariableRangeEvent(
+                    ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "shaker.shake")
+            )
+    );
 
     private ModSoundEvents() {
     }

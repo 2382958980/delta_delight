@@ -8,6 +8,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.inventory.AbstractContainerMenu;
 import net.minecraft.world.inventory.Slot;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraftforge.items.SlotItemHandler;
 import org.jetbrains.annotations.NotNull;
@@ -34,10 +35,22 @@ public class ShakerMenu extends AbstractContainerMenu {
         this.shakerInventory = shakerInventory;
         this.hand = hand;
 
-        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.BASE_SLOT, 27, 34));
-        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.INGREDIENT_SLOT_1, 61, 34));
-        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.INGREDIENT_SLOT_2, 79, 34));
-        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.OUTPUT_SLOT, 133, 34) {
+        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.BASE_SLOT, 27, 22));
+        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.INGREDIENT_SLOT_1, 61, 22));
+        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.INGREDIENT_SLOT_2, 79, 22));
+        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.BREWED_SLOT, 133, 22) {
+            @Override
+            public boolean mayPlace(@NotNull ItemStack stack) {
+                return false;
+            }
+
+            @Override
+            public boolean mayPickup(Player player) {
+                return false;
+            }
+        });
+        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.BOTTLE_SLOT, 101, 49));
+        addSlot(new SlotItemHandler(shakerInventory, ShakerInventory.OUTPUT_SLOT, 133, 49) {
             @Override
             public boolean mayPlace(@NotNull ItemStack stack) {
                 return false;
@@ -59,6 +72,10 @@ public class ShakerMenu extends AbstractContainerMenu {
         ItemStack sourceStack = sourceSlot.getItem();
         ItemStack copyOfSourceStack = sourceStack.copy();
 
+        if (index == ShakerInventory.BREWED_SLOT) {
+            return ItemStack.EMPTY;
+        }
+
         if (index < MIXING_SLOT_END) {
             if (!moveItemStackTo(sourceStack, PLAYER_SLOT_START, PLAYER_SLOT_END, true)) {
                 return ItemStack.EMPTY;
@@ -68,8 +85,11 @@ public class ShakerMenu extends AbstractContainerMenu {
                     && !slots.get(ShakerInventory.BASE_SLOT).hasItem()
                     && moveItemStackTo(sourceStack, ShakerInventory.BASE_SLOT, ShakerInventory.BASE_SLOT + 1, false)) {
                 // moved to base slot
-            } else if (moveItemStackTo(sourceStack, ShakerInventory.INGREDIENT_SLOT_1, ShakerInventory.OUTPUT_SLOT, false)) {
+            } else if (moveItemStackTo(sourceStack, ShakerInventory.INGREDIENT_SLOT_1, ShakerInventory.BREWED_SLOT, false)) {
                 // moved to ingredient slots
+            } else if (sourceStack.is(Items.GLASS_BOTTLE)
+                    && moveItemStackTo(sourceStack, ShakerInventory.BOTTLE_SLOT, ShakerInventory.BOTTLE_SLOT + 1, false)) {
+                // moved to bottle slot
             } else {
                 return ItemStack.EMPTY;
             }

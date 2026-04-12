@@ -219,4 +219,18 @@ public class CocktailItem extends Item {
         }
         return ingredientKeys;
     }
+
+    public static boolean shouldRenderBaseDecoration(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if (tag == null || !tag.contains(QUALITY_TAG, Tag.TAG_STRING)) {
+            return false;
+        }
+
+        try {
+            CocktailQuality quality = CocktailQuality.valueOf(tag.getString(QUALITY_TAG));
+            return quality == CocktailQuality.UNCOMMON || quality == CocktailQuality.EPIC;
+        } catch (IllegalArgumentException exception) {
+            return false;
+        }
+    }
 }

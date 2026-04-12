@@ -24,11 +24,15 @@ public class DeltaDelightClient {
             ItemProperties.register(
                     ModItems.MIXED_COCKTAIL.get(),
                     ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "cocktail_base_style"),
-                    (stack, level, entity, seed) -> switch (CocktailItem.getStoredBaseKey(stack)) {
-                        case "herbal_tea" -> 1.0F;
-                        case "amber_essence" -> 2.0F;
-                        case "molasses" -> 3.0F;
-                        default -> 0.0F;
+                    (stack, level, entity, seed) -> {
+                        boolean decorated = CocktailItem.shouldRenderBaseDecoration(stack);
+                        return switch (CocktailItem.getStoredBaseKey(stack)) {
+                            case "juniper_spirit" -> decorated ? 4.0F : 0.0F;
+                            case "herbal_tea" -> decorated ? 5.0F : 1.0F;
+                            case "amber_essence" -> decorated ? 6.0F : 2.0F;
+                            case "molasses" -> decorated ? 7.0F : 3.0F;
+                            default -> 0.0F;
+                        };
                     }
             );
             CocktailAppearanceManager.ensureLoaded();

@@ -1,0 +1,9 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "delta_delight:item/wines/layer2_bottom_2",
+    "layer1": "delta_delight:item/wines/layer2_top_2",
+    "layer2": "delta_delight:item/wines/qingyiyin_decorate",
+    "layer3": "delta_delight:item/wines/layer1_2"
+  }
+}

@@ -62,5 +62,13 @@
         "stream": true
       }
     ]
+  },
+  "shaker.shake": {
+    "subtitle": "subtitles.delta_delight.shaker.shake",
+    "sounds": [
+      {
+        "name": "delta_delight:shake"
+      }
+    ]
   }
 }
