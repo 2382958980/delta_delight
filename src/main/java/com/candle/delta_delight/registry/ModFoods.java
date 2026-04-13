@@ -41,13 +41,13 @@ public final class ModFoods {
     public static final FoodProperties SEAFOOD_CANNED_PORRIDGE = new FoodProperties.Builder()
             .nutrition(7)
             .saturationMod(1F)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4500, 0), 1.0F)
             .build();
 
     public static final FoodProperties NUTRITIOUS_CANNED_PORRIDGE = new FoodProperties.Builder()
             .nutrition(8)
             .saturationMod(0.75F)
-            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 6000, 0), 1.0F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4500, 0), 1.0F)
             .build();
 
     public static final FoodProperties LEMON_TEA = new FoodProperties.Builder()
@@ -128,5 +128,6 @@ public final class ModFoods {
     public static final FoodProperties PORRIDGE = new FoodProperties.Builder()
             .nutrition(8)
             .saturationMod(0.75F)
+            .effect(() -> new MobEffectInstance(ModEffects.NOURISHMENT.get(), 4500, 0), 1.0F)
             .build();
 }

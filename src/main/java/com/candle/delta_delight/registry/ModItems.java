@@ -62,8 +62,8 @@ public final class ModItems {
             "sugar_free_energy_bar", ModFoods.SUGAR_FREE_ENERGY_BAR, null, 16, UseAnim.EAT);
     public static final RegistryObject<Item> CHOCOLATE = registerFood(
             "chocolate", ModFoods.CHOCOLATE, null, 24, UseAnim.EAT);
-    public static final RegistryObject<Item> PORRIDGE = registerFood(
-            "porridge", ModFoods.PORRIDGE, null, 32, UseAnim.EAT);
+    public static final RegistryObject<Item> PORRIDGE = registerPlaceableFood(
+            "porridge", ModBlocks.PORRIDGE_BLOCK, ModFoods.PORRIDGE, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.DRINK);
     public static final RegistryObject<Item> HERBAL_TEA = ITEMS.register(
             "herbal_tea", () -> new TooltipItem(new Item.Properties().craftRemainder(Items.GLASS_BOTTLE)));
     public static final RegistryObject<Item> MOLASSES = ITEMS.register(
