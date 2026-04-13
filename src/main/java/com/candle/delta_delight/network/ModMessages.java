@@ -17,7 +17,7 @@ public final class ModMessages {
 
     private static final String PROTOCOL_VERSION = "1";
     public static final SimpleChannel CHANNEL = NetworkRegistry.newSimpleChannel(
-            ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "messages"),
+            new ResourceLocation(DeltaDelight.MODID, "messages"),
             () -> PROTOCOL_VERSION,
             PROTOCOL_VERSION::equals,
             PROTOCOL_VERSION::equals

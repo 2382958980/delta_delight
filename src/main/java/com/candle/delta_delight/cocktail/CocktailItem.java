@@ -194,7 +194,7 @@ public class CocktailItem extends Item {
         ListTag effectList = tag.getList(EFFECTS_TAG, Tag.TAG_COMPOUND);
         for (Tag tagElement : effectList) {
             CompoundTag effectTag = (CompoundTag) tagElement;
-            MobEffect effect = net.minecraftforge.registries.ForgeRegistries.MOB_EFFECTS.getValue(ResourceLocation.parse(effectTag.getString(EFFECT_ID_TAG)));
+            MobEffect effect = net.minecraftforge.registries.ForgeRegistries.MOB_EFFECTS.getValue(new ResourceLocation(effectTag.getString(EFFECT_ID_TAG)));
             if (effect != null) {
                 effects.add(new MobEffectInstance(
                         effect,

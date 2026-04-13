@@ -11,7 +11,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class ShakerScreen extends AbstractContainerScreen<ShakerMenu> {
     private static final ResourceLocation TEXTURE =
-            ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "textures/gui/shaker_ui.png");
+            new ResourceLocation(DeltaDelight.MODID, "textures/gui/shaker_ui.png");
     private static final int LABEL_COLOR = 0x404040;
 
     public ShakerScreen(ShakerMenu menu, Inventory playerInventory, Component title) {

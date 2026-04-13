@@ -15,7 +15,7 @@ public final class ModSoundEvents {
     public static final RegistryObject<SoundEvent> MUSIC_DISC_IN_THE_SUMMER = SOUND_EVENTS.register(
             "music_disc.in_the_summer",
             () -> SoundEvent.createVariableRangeEvent(
-                    ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "music_disc.in_the_summer")
+                    new ResourceLocation(DeltaDelight.MODID, "music_disc.in_the_summer")
             )
     );
     public static final RegistryObject<SoundEvent> MUSIC_DISC_KING_OF_THE_RING = registerMusicDisc("king_of_the_ring");
@@ -27,7 +27,7 @@ public final class ModSoundEvents {
     public static final RegistryObject<SoundEvent> SHAKER_SHAKE = SOUND_EVENTS.register(
             "shaker.shake",
             () -> SoundEvent.createVariableRangeEvent(
-                    ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "shaker.shake")
+                    new ResourceLocation(DeltaDelight.MODID, "shaker.shake")
             )
     );
 
@@ -38,7 +38,7 @@ public final class ModSoundEvents {
         return SOUND_EVENTS.register(
                 "music_disc." + name,
                 () -> SoundEvent.createVariableRangeEvent(
-                        ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "music_disc." + name)
+                        new ResourceLocation(DeltaDelight.MODID, "music_disc." + name)
                 )
         );
     }

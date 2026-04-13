@@ -23,7 +23,7 @@ public class DeltaDelightClient {
             MenuScreens.register(ModMenuTypes.SHAKER.get(), ShakerScreen::new);
             ItemProperties.register(
                     ModItems.MIXED_COCKTAIL.get(),
-                    ResourceLocation.fromNamespaceAndPath(DeltaDelight.MODID, "cocktail_base_style"),
+                    new ResourceLocation(DeltaDelight.MODID, "cocktail_base_style"),
                     (stack, level, entity, seed) -> {
                         boolean decorated = CocktailItem.shouldRenderBaseDecoration(stack);
                         return switch (CocktailItem.getStoredBaseKey(stack)) {
