@@ -64,9 +64,7 @@ public class DDPlaceableFoodBlock extends HorizontalDirectionalBlock {
     @Override
     public boolean canSurvive(@NotNull BlockState state, LevelReader level, BlockPos pos) {
         BlockPos below = pos.below();
-        BlockState support = level.getBlockState(below);
-
-        return support.canOcclude() && support.isFaceSturdy(level, below, Direction.UP);
+        return Block.canSupportCenter(level, below, Direction.UP);
     }
 
     @SuppressWarnings("deprecation")

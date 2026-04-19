@@ -40,7 +40,10 @@ public class DDPlaceableFoodBlockItem extends BlockItem {
 
     @Override
     public @NotNull InteractionResultHolder<ItemStack> use(@NotNull Level level, @NotNull Player player, @NotNull InteractionHand hand) {
-        super.use(level, player, hand); // 先调用父类的 use 方法以处理放置逻辑
+        InteractionResultHolder<ItemStack> placementResult = super.use(level, player, hand);
+        if (placementResult.getResult().consumesAction()) {
+            return placementResult;
+        }
 
         return IDDFoodItem.use(this, level, player, hand);
     }
