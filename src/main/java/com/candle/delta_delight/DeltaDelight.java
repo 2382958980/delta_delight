@@ -17,6 +17,7 @@ public class DeltaDelight {
     public DeltaDelight() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         ModBlocks.BLOCKS.register(modEventBus);
+        ModEntityTypes.ENTITY_TYPES.register(modEventBus);
         ModSoundEvents.SOUND_EVENTS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
         ModCreativeTabs.TABS.register(modEventBus);

@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "combat",
+  "pattern": [
+    " GR",
+    " AG",
+    "I  "
+  ],
+  "key": {
+    "A": {
+      "item": "minecraft:arrow"
+    },
+    "G": {
+      "item": "minecraft:glowstone_dust"
+    },
+    "R": {
+      "item": "minecraft:redstone"
+    },
+    "I": {
+      "item": "minecraft:iron_ingot"
+    }
+  },
+  "result": {
+    "item": "delta_delight:recon_arrow",
+    "count": 1
+  }
+}

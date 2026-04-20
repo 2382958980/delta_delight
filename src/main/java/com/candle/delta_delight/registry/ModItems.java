@@ -3,6 +3,7 @@ package com.candle.delta_delight.registry;
 import com.candle.delta_delight.cocktail.CocktailItem;
 import com.candle.delta_delight.content.DDFoodItem;
 import com.candle.delta_delight.content.DDPlaceableFoodBlockItem;
+import com.candle.delta_delight.content.ReconArrowItem;
 import com.candle.delta_delight.content.ShakerItem;
 import com.candle.delta_delight.content.TooltipItem;
 import net.minecraft.sounds.SoundEvent;
@@ -78,6 +79,8 @@ public final class ModItems {
             "shaker", () -> new ShakerItem(new Item.Properties().stacksTo(1)));
     public static final RegistryObject<Item> BOOK = ITEMS.register(
             "book",() -> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RECON_ARROW = ITEMS.register(
+            "recon_arrow", () -> new ReconArrowItem(new Item.Properties()));
     public static final RegistryObject<Item> DAWN_MUSIC_DISC = registerMusicDisc(
             "dawn_music_disc", ModSoundEvents.MUSIC_DISC_DAWN, 8, 243);
     public static final RegistryObject<Item> IN_THE_SUMMER_MUSIC_DISC = registerMusicDisc(

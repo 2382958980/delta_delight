@@ -43,6 +43,7 @@ public class ModCreativeTabs {
             ModItems.HERBAL_TEA,
             ModItems.AMBER_ESSENCE,
             ModItems.MOLASSES,
+            ModItems.RECON_ARROW,
             ModItems.DAWN_MUSIC_DISC,
             ModItems.SPOTLIGHT_HUNTER_MUSIC_DISC,
             ModItems.IN_THE_SUMMER_MUSIC_DISC,

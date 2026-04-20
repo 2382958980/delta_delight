@@ -1,11 +1,14 @@
 package com.candle.delta_delight;
 
 import com.candle.delta_delight.client.screen.ShakerScreen;
+import com.candle.delta_delight.client.renderer.ReconArrowRenderer;
 import com.candle.delta_delight.cocktail.CocktailAppearanceManager;
 import com.candle.delta_delight.cocktail.CocktailItem;
+import com.candle.delta_delight.registry.ModEntityTypes;
 import com.candle.delta_delight.registry.ModItems;
 import com.candle.delta_delight.registry.ModMenuTypes;
 import net.minecraft.client.gui.screens.MenuScreens;
+import net.minecraftforge.client.event.EntityRenderersEvent;
 import net.minecraft.client.renderer.item.ItemProperties;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
@@ -47,5 +50,10 @@ public class DeltaDelightClient {
                 CocktailAppearanceManager::getTintColor,
                 ModItems.MIXED_COCKTAIL.get()
         );
+    }
+
+    @SubscribeEvent
+    public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerEntityRenderer(ModEntityTypes.RECON_ARROW.get(), ReconArrowRenderer::new);
     }
 }
