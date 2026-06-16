@@ -37,18 +37,23 @@ public final class CocktailBrewer {
         Set<String> ingredientKeys = ingredientList.stream()
                 .map(CocktailIngredient::getKey)
                 .collect(LinkedHashSet::new, Set::add, Set::addAll);
+        List<String> ingredientNameKeys = inventory.getIngredientStacks().stream()
+                .filter(stack -> CocktailIngredient.fromStack(stack).isPresent())
+                .map(ItemStack::getDescriptionId)
+                .toList();
+        String baseNameKey = inventory.getStackInSlot(ShakerInventory.BASE_SLOT).getDescriptionId();
 
         Optional<CocktailDefinition> epicDefinition = CocktailManager.findMatch(CocktailQuality.EPIC, base.getKey(), ingredientKeys);
         if (epicDefinition.isPresent() && random.nextFloat() < calculateEpicChance(epicDefinition.get(), shakeSeconds)) {
-            return createDrink(epicDefinition.get().nameKey(), CocktailQuality.EPIC, base, ingredientList);
+            return createDrink(epicDefinition.get().nameKey(), CocktailQuality.EPIC, base, baseNameKey, ingredientList, ingredientNameKeys);
         }
 
         Optional<CocktailDefinition> uncommonDefinition = CocktailManager.findMatch(CocktailQuality.UNCOMMON, base.getKey(), ingredientKeys);
         if (uncommonDefinition.isPresent() && random.nextFloat() < UNCOMMON_CHANCE) {
-            return createDrink(uncommonDefinition.get().nameKey(), CocktailQuality.UNCOMMON, base, ingredientList);
+            return createDrink(uncommonDefinition.get().nameKey(), CocktailQuality.UNCOMMON, base, baseNameKey, ingredientList, ingredientNameKeys);
         }
 
-        return createDrink(base.getCommonNameKey(), CocktailQuality.COMMON, base, ingredientList);
+        return createDrink(base.getCommonNameKey(), CocktailQuality.COMMON, base, baseNameKey, ingredientList, ingredientNameKeys);
     }
 
     private static float calculateEpicChance(CocktailDefinition definition, float shakeSeconds) {
@@ -63,7 +68,8 @@ public final class CocktailBrewer {
         return EPIC_PEAK_CHANCE * multiplier;
     }
 
-    private static ItemStack createDrink(String nameKey, CocktailQuality quality, CocktailBase base, List<CocktailIngredient> ingredients) {
+    private static ItemStack createDrink(String nameKey, CocktailQuality quality, CocktailBase base, String baseNameKey,
+                                         List<CocktailIngredient> ingredients, List<String> ingredientNameKeys) {
         List<MobEffectInstance> effects = new ArrayList<>();
         if (quality != CocktailQuality.EPIC) {
             int negativeDuration = quality == CocktailQuality.COMMON ? COMMON_NEGATIVE_DURATION : UNCOMMON_NEGATIVE_DURATION;
@@ -90,7 +96,16 @@ public final class CocktailBrewer {
         List<String> ingredientKeys = ingredients.stream()
                 .map(CocktailIngredient::getKey)
                 .toList();
-        return CocktailItem.create(nameKey, quality, base.getKey(), effects, ingredientKeys, ModItems.MIXED_COCKTAIL.get());
+        return CocktailItem.create(
+                nameKey,
+                quality,
+                base.getKey(),
+                baseNameKey,
+                effects,
+                ingredientKeys,
+                ingredientNameKeys,
+                ModItems.MIXED_COCKTAIL.get()
+        );
     }
 
     private static void addOrMergeEffect(List<MobEffectInstance> effects, MobEffectInstance candidate) {

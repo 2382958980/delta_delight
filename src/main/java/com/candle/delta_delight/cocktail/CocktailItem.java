@@ -1,10 +1,12 @@
 package com.candle.delta_delight.cocktail;
 
 import net.minecraft.advancements.CriteriaTriggers;
+import net.minecraft.ChatFormatting;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.ListTag;
 import net.minecraft.nbt.StringTag;
 import net.minecraft.nbt.Tag;
+import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.resources.ResourceLocation;
@@ -30,13 +32,16 @@ import org.jetbrains.annotations.Nullable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Optional;
 
 public class CocktailItem extends Item {
     public static final String NAME_KEY_TAG = "CocktailNameKey";
     public static final String QUALITY_TAG = "CocktailQuality";
     public static final String BASE_KEY_TAG = "CocktailBaseKey";
+    public static final String BASE_NAME_KEY_TAG = "CocktailBaseNameKey";
     public static final String EFFECTS_TAG = "CocktailEffects";
     public static final String INGREDIENT_KEYS_TAG = "CocktailIngredientKeys";
+    public static final String INGREDIENT_NAME_KEYS_TAG = "CocktailIngredientNameKeys";
     private static final String EFFECT_ID_TAG = "Id";
     private static final String DURATION_TAG = "Duration";
     private static final String AMPLIFIER_TAG = "Amplifier";
@@ -124,6 +129,38 @@ public class CocktailItem extends Item {
         for (MobEffectInstance effectInstance : getStoredEffects(stack)) {
             tooltip.add(formatEffectLine(effectInstance));
         }
+        if (Screen.hasShiftDown()) {
+            addCocktailInfoTooltip(stack, tooltip);
+        }
+    }
+
+    private static void addCocktailInfoTooltip(ItemStack stack, List<Component> tooltip) {
+        getStoredQuality(stack).ifPresent(quality -> tooltip.add(formatQualityLine(quality)));
+
+        String baseNameKey = getStoredBaseNameKey(stack);
+        if (!baseNameKey.isEmpty()) {
+            tooltip.add(Component.translatable(
+                    "tooltip.delta_delight.cocktail.base",
+                    Component.translatable(baseNameKey)
+            ).withStyle(ChatFormatting.GRAY));
+        }
+
+        for (String ingredientNameKey : getStoredIngredientNameKeys(stack)) {
+            tooltip.add(Component.translatable(
+                    "tooltip.delta_delight.cocktail.ingredient",
+                    Component.translatable(ingredientNameKey)
+            ).withStyle(ChatFormatting.GRAY));
+        }
+    }
+
+    private static Component formatQualityLine(CocktailQuality quality) {
+        MutableComponent qualityName = Component.translatable("cocktail.delta_delight.quality." + quality.getSerializedName());
+        switch (quality) {
+            case COMMON -> qualityName.withStyle(ChatFormatting.WHITE);
+            case UNCOMMON -> qualityName.withStyle(ChatFormatting.YELLOW);
+            case EPIC -> qualityName.withStyle(ChatFormatting.LIGHT_PURPLE, ChatFormatting.BOLD);
+        }
+        return Component.translatable("tooltip.delta_delight.cocktail.quality", qualityName).withStyle(ChatFormatting.GRAY);
     }
 
     private static Component formatEffectLine(MobEffectInstance effectInstance) {
@@ -150,13 +187,15 @@ public class CocktailItem extends Item {
         };
     }
 
-    public static ItemStack create(String nameKey, CocktailQuality quality, String baseKey, List<MobEffectInstance> effects,
-                                   List<String> ingredientKeys, Item item) {
+    public static ItemStack create(String nameKey, CocktailQuality quality, String baseKey, String baseNameKey,
+                                   List<MobEffectInstance> effects, List<String> ingredientKeys,
+                                   List<String> ingredientNameKeys, Item item) {
         ItemStack stack = new ItemStack(item);
         CompoundTag tag = stack.getOrCreateTag();
         tag.putString(NAME_KEY_TAG, nameKey);
         tag.putString(QUALITY_TAG, quality.name());
         tag.putString(BASE_KEY_TAG, baseKey);
+        tag.putString(BASE_NAME_KEY_TAG, baseNameKey);
 
         ListTag effectList = new ListTag();
         for (MobEffectInstance effectInstance : effects) {
@@ -173,7 +212,26 @@ public class CocktailItem extends Item {
             ingredientList.add(StringTag.valueOf(ingredientKey));
         }
         tag.put(INGREDIENT_KEYS_TAG, ingredientList);
+
+        ListTag ingredientNameList = new ListTag();
+        for (String ingredientNameKey : ingredientNameKeys) {
+            ingredientNameList.add(StringTag.valueOf(ingredientNameKey));
+        }
+        tag.put(INGREDIENT_NAME_KEYS_TAG, ingredientNameList);
         return stack;
+    }
+
+    private static Optional<CocktailQuality> getStoredQuality(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if (tag == null || !tag.contains(QUALITY_TAG, Tag.TAG_STRING)) {
+            return Optional.empty();
+        }
+
+        try {
+            return Optional.of(CocktailQuality.valueOf(tag.getString(QUALITY_TAG)));
+        } catch (IllegalArgumentException exception) {
+            return Optional.empty();
+        }
     }
 
     public static String getStoredBaseKey(ItemStack stack) {
@@ -182,6 +240,19 @@ public class CocktailItem extends Item {
             return "";
         }
         return tag.getString(BASE_KEY_TAG);
+    }
+
+    private static String getStoredBaseNameKey(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if (tag == null) {
+            return "";
+        }
+        if (tag.contains(BASE_NAME_KEY_TAG, Tag.TAG_STRING)) {
+            return tag.getString(BASE_NAME_KEY_TAG);
+        }
+        return CocktailBase.fromKey(getStoredBaseKey(stack))
+                .map(CocktailBase::getItemDescriptionId)
+                .orElse("");
     }
 
     public static List<MobEffectInstance> getStoredEffects(ItemStack stack) {
@@ -218,6 +289,25 @@ public class CocktailItem extends Item {
             ingredientKeys.add(tagElement.getAsString());
         }
         return ingredientKeys;
+    }
+
+    private static List<String> getStoredIngredientNameKeys(ItemStack stack) {
+        CompoundTag tag = stack.getTag();
+        if (tag == null) {
+            return List.of();
+        }
+        if (!tag.contains(INGREDIENT_NAME_KEYS_TAG, Tag.TAG_LIST)) {
+            return CocktailItem.getStoredIngredientKeys(stack).stream()
+                    .map(ingredientKey -> "cocktail.delta_delight.ingredient." + ingredientKey)
+                    .toList();
+        }
+
+        List<String> ingredientNameKeys = new ArrayList<>();
+        ListTag ingredientNameList = tag.getList(INGREDIENT_NAME_KEYS_TAG, Tag.TAG_STRING);
+        for (Tag tagElement : ingredientNameList) {
+            ingredientNameKeys.add(tagElement.getAsString());
+        }
+        return ingredientNameKeys;
     }
 
     public static boolean shouldRenderBaseDecoration(ItemStack stack) {

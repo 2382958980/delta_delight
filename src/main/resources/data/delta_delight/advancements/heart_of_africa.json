@@ -1,4 +1,5 @@
 {
+  "parent": "delta_delight:root",
   "display": {
     "icon": {
       "item": "delta_delight:heart_of_africa"
@@ -9,7 +10,6 @@
     "description": {
       "translate": "advancement.delta_delight.africaheart.description"
     },
-    "background": "minecraft:textures/block/dark_oak_planks.png",
     "frame": "challenge",
     "show_toast": true,
     "announce_to_chat": true,

@@ -1,0 +1,25 @@
+{
+  "name": "鸟窝",
+  "icon": "delta_delight:birdsnest_block",
+  "category": "delta_delight:delta_exploration",
+  "sortnum": 0,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:birdsnest_block",
+      "title": "鸟窝",
+      "text": "$(bold)位置$()：森林类群系，树叶上方。$(br)$(bold)交互$()：右键打开容器。$(br)$(bold)外观$()：随机16向旋转。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "战利品",
+      "text": "$(bold)常见$()：羽毛、鸡蛋、种子、骨头、皮革、煤炭、铁粒。$(br)$(bold)稀有$()：紫水晶碎片、海晶碎片、青金石、铁锭、金锭、火药、萤石粉、末影珍珠。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "极稀有",
+      "text": "钻石、绿宝石、恶魂之泪、回响碎片、非洲之心。"
+    }
+  ]
+}

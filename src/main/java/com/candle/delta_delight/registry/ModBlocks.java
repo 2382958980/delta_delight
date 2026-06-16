@@ -1,8 +1,11 @@
 package com.candle.delta_delight.registry;
 
 import com.candle.delta_delight.DeltaDelight;
+import com.candle.delta_delight.content.BirdsnestBlock;
 import com.candle.delta_delight.content.DDPlaceableFoodBlock;
+import com.candle.delta_delight.content.ShellBlock;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.PushReaction;
 import net.minecraftforge.registries.DeferredRegister;
@@ -43,4 +46,21 @@ public class ModBlocks {
             registerPlaceableFoodBlock("nutritious_canned_porridge_block", 4.5, 0, 6, 11.5, 3.25, 10);
     public static final RegistryObject<Block> PORRIDGE_BLOCK =
             registerPlaceableFoodBlock("porridge_block", 6, 0, 6, 10, 6.5, 10);
+    public static final RegistryObject<Block> BIRDSNEST_BLOCK = BLOCKS.register(
+            "birdsnest_block",
+            () -> new BirdsnestBlock(BlockBehaviour.Properties.of()
+                    .strength(0.2F)
+                    .sound(SoundType.AZALEA_LEAVES)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.NORMAL))
+    );
+    public static final RegistryObject<Block> SHELL_BLOCK = BLOCKS.register(
+            "shell_block",
+            () -> new ShellBlock(BlockBehaviour.Properties.of()
+                    .strength(0.3F)
+                    .sound(SoundType.CALCITE)
+                    .lightLevel(state -> 3)
+                    .noOcclusion()
+                    .pushReaction(PushReaction.NORMAL))
+    );
 }

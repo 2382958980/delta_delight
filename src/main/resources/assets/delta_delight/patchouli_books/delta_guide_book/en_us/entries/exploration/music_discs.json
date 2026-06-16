@@ -1,0 +1,20 @@
+{
+  "name": "音乐唱片",
+  "icon": "delta_delight:dawn_music_disc",
+  "category": "delta_delight:delta_exploration",
+  "sortnum": 40,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "收藏列表",
+      "text": "$(li)Dawn$(li)In the Summer$(li)King of the Ring$(li)Making Legends$(li)Menu 1$(li)Menu 2$(li)Play with Fire$(li)Spotlight Hunter"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:spotlight_hunter_music_disc",
+      "title": "唱片机",
+      "text": "$(bold)用途$()：放入唱片机播放。"
+    }
+  ]
+}

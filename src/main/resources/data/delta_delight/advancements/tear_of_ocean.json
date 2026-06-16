@@ -1,0 +1,37 @@
+{
+  "parent": "delta_delight:root",
+  "display": {
+    "icon": {
+      "item": "delta_delight:tear_of_ocean"
+    },
+    "title": {
+      "translate": "advancement.delta_delight.tear_of_ocean.title"
+    },
+    "description": {
+      "translate": "advancement.delta_delight.tear_of_ocean.description"
+    },
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_tear_of_ocean": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delta_delight:tear_of_ocean"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain_tear_of_ocean"
+    ]
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "钻石鱼子酱",
+  "icon": "delta_delight:diamond_caviar",
+  "category": "delta_delight:delta_food",
+  "sortnum": 10,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:diamond_caviar",
+      "title": "钻石鱼子酱",
+      "text": "$(bold)效果$()：营养+1；饱和8.0；滋养 I 300秒；海豚的恩惠 I 150秒。$(br2)$(bold)配方$()：烹饪锅：鲑鱼片、龙息、爆裂紫颂果；容器：金锭。"
+    }
+  ]
+}

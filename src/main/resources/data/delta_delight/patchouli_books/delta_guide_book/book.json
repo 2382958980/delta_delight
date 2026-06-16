@@ -1,8 +1,15 @@
 {
   "name": "三角洲乐事指南",
-  "landing_text": "欢迎游玩三角洲乐事！",
-  "version": 1,
+  "landing_text": "$(bold)食物$()：逐项列出贴图、名称、效果、配方。$(br)$(bold)调酒$()：入门、基底、配料、品质。$(br)$(bold)探索$()：鸟窝、三角蚌、非洲之心、侦察箭、唱片。",
+  "version": 3,
   "creative_tab": "delta_delight:delta_delight",
   "use_resource_pack": true,
-  "model": "delta_delight:book"
+  "model": "delta_delight:book",
+  "text_color": "2f241c",
+  "header_color": "7a341f",
+  "nameplate_color": "d9b36f",
+  "link_color": "9f4c1d",
+  "link_hover_color": "c46a27",
+  "progress_bar_color": "b85b25",
+  "progress_bar_background": "ead7aa"
 }

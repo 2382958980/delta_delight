@@ -2,8 +2,10 @@ package com.candle.delta_delight;
 
 import com.candle.delta_delight.client.screen.ShakerScreen;
 import com.candle.delta_delight.client.renderer.ReconArrowRenderer;
+import com.candle.delta_delight.client.renderer.ShellBlockEntityRenderer;
 import com.candle.delta_delight.cocktail.CocktailAppearanceManager;
 import com.candle.delta_delight.cocktail.CocktailItem;
+import com.candle.delta_delight.registry.ModBlockEntityTypes;
 import com.candle.delta_delight.registry.ModEntityTypes;
 import com.candle.delta_delight.registry.ModItems;
 import com.candle.delta_delight.registry.ModMenuTypes;
@@ -55,5 +57,6 @@ public class DeltaDelightClient {
     @SubscribeEvent
     public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntityTypes.RECON_ARROW.get(), ReconArrowRenderer::new);
+        event.registerBlockEntityRenderer(ModBlockEntityTypes.SHELL.get(), ShellBlockEntityRenderer::new);
     }
 }

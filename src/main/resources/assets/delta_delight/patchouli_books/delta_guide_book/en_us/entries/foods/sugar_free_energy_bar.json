@@ -1,0 +1,15 @@
+{
+  "name": "无糖缓释能量棒",
+  "icon": "delta_delight:sugar_free_energy_bar",
+  "category": "delta_delight:delta_food",
+  "sortnum": 170,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:sugar_free_energy_bar",
+      "title": "无糖缓释能量棒",
+      "text": "$(bold)效果$()：营养+2；饱和1.0；无状态效果。$(br2)$(bold)配方$()：烹饪锅：面团、可可豆x2；产出x4。"
+    }
+  ]
+}

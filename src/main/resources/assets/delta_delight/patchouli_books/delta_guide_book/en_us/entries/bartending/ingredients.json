@@ -1,0 +1,24 @@
+{
+  "name": "配料",
+  "icon": "delta_delight:lemon_tea",
+  "category": "delta_delight:delta_bartending",
+  "sortnum": 20,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "饮品类",
+      "text": "$(li)可乐：速度。$(li)生津柠檬茶：生命恢复。$(li)苹果酒：伤害吸收。$(li)西瓜汁：瞬间治疗。$(li)蜂蜜瓶：滋养。$(li)奶瓶：舒适。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "素材类",
+      "text": "$(li)龙息：隐身。$(li)发光浆果：幸运。$(li)金胡萝卜：跳跃提升。$(li)海泡菜：水下呼吸。$(li)末影珍珠：夜视。$(li)紫颂果：缓降。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "粉末材料",
+      "text": "$(li)火药：力量。$(li)红石粉：急迫。$(li)萤石粉：发光。$(li)烈焰粉：抗火。$(br2)配料通过标签识别，整合包可以向对应标签加入兼容物品。"
+    }
+  ]
+}

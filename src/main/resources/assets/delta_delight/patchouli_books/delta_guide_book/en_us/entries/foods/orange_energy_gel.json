@@ -1,0 +1,15 @@
+{
+  "name": "清新橘味能量凝胶",
+  "icon": "delta_delight:orange_energy_gel",
+  "category": "delta_delight:delta_food",
+  "sortnum": 80,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:orange_energy_gel",
+      "title": "清新橘味能量凝胶",
+      "text": "$(bold)效果$()：营养+1；饱和3.0；速度 I 30秒。$(br2)$(bold)配方$()：烹饪锅：黏液球、发光浆果；产出x3。"
+    }
+  ]
+}

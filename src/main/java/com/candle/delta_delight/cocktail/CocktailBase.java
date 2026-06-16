@@ -37,6 +37,10 @@ public enum CocktailBase {
         return commonNameKey;
     }
 
+    public String getItemDescriptionId() {
+        return itemSupplier.get().getDescriptionId();
+    }
+
     public MobEffect getNegativeEffect() {
         return negativeEffect.get();
     }

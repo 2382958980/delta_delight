@@ -1,0 +1,20 @@
+{
+  "name": "侦察箭",
+  "icon": "delta_delight:recon_arrow",
+  "category": "delta_delight:delta_exploration",
+  "sortnum": 30,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:crafting",
+      "recipe": "delta_delight:recon_arrow",
+      "title": "侦察箭",
+      "text": "$(bold)类型$()：箭矢。$(br)$(bold)效果$()：扫描敌对生物。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "数值",
+      "text": "$(li)扫描范围：水平半径6格。$(li)扫描方向：箭矢下方。$(li)目标：敌对生物。$(li)限制：需要无遮挡视线。$(li)效果：发光15秒。$(li)反弹：碰到方块最多3次。"
+    }
+  ]
+}

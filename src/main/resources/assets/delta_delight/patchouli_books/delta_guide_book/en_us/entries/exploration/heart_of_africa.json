@@ -1,0 +1,20 @@
+{
+  "name": "非洲之心",
+  "icon": "delta_delight:heart_of_africa",
+  "category": "delta_delight:delta_exploration",
+  "sortnum": 20,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:heart_of_africa",
+      "title": "非洲之心",
+      "text": "$(bold)来源$()：钻石矿石、深层钻石矿石额外掉落。$(br)$(bold)概率$()：0.25%。$(br)$(bold)其他$()：鸟窝极稀有战利品。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "用途",
+      "text": "收藏物；创造标签页图标；进度“一颗永流传”目标。"
+    }
+  ]
+}

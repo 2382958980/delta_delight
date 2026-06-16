@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#delta_delight:has_shell",
+  "features": "delta_delight:shell",
+  "step": "vegetal_decoration"
+}

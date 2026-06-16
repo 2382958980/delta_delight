@@ -1,0 +1,20 @@
+{
+  "name": "三角蚌",
+  "icon": "delta_delight:shell_block",
+  "category": "delta_delight:delta_exploration",
+  "sortnum": 10,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:shell_block",
+      "title": "三角蚌",
+      "text": "$(bold)放置$()：可水下放置；随机16向旋转。$(br)$(bold)存储$()：1个物品。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "交互",
+      "text": "$(li)右键关闭状态：打开。$(li)打开且手持物品：放入1个。$(li)打开且空手：取出物品。$(li)打开且潜行右键：关闭。"
+    }
+  ]
+}

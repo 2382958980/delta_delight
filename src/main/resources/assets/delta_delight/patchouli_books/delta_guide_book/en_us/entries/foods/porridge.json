@@ -1,0 +1,15 @@
+{
+  "name": "银翼八宝粥",
+  "icon": "delta_delight:porridge",
+  "category": "delta_delight:delta_food",
+  "sortnum": 190,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:porridge",
+      "title": "银翼八宝粥",
+      "text": "$(bold)效果$()：营养+8；饱和0.75；滋养 I 225秒。$(br2)$(bold)配方$()：烹饪锅：米x2、南瓜片、糖；容器：铁锭。"
+    }
+  ]
+}

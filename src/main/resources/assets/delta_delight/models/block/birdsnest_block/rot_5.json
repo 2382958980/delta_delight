@@ -1,0 +1,7 @@
+{
+  "parent": "delta_delight:block/birdsnest_block",
+  "transform": {
+    "origin": "center",
+    "rotation": [0, -112.5, 0]
+  }
+}

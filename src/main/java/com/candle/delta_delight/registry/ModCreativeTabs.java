@@ -18,6 +18,7 @@ public class ModCreativeTabs {
 
     public static final List<RegistryObject<Item>> TAB_ITEMS = List.of(
             ModItems.HEART_OF_AFRICA,
+            ModItems.TEAR_OF_OCEAN,
             ModItems.OLIVIA_CHAMPAGNE,
             ModItems.DIAMOND_CAVIAR,
             ModItems.BLUE_SAPPHIRE_TEQUILA,
@@ -44,6 +45,8 @@ public class ModCreativeTabs {
             ModItems.AMBER_ESSENCE,
             ModItems.MOLASSES,
             ModItems.RECON_ARROW,
+            ModItems.BIRDSNEST_BLOCK,
+            ModItems.SHELL_BLOCK,
             ModItems.DAWN_MUSIC_DISC,
             ModItems.SPOTLIGHT_HUNTER_MUSIC_DISC,
             ModItems.IN_THE_SUMMER_MUSIC_DISC,

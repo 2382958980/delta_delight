@@ -1,7 +1,7 @@
 {
   "name": "食物",
-  "description": "查看三角洲乐事加入的食物。",
+  "description": "每种食物的贴图、名称、效果、配方。",
   "icon": "delta_delight:coffee",
-  "sortnum": 10,
+  "sortnum": 0,
   "secret": false
 }

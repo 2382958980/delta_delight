@@ -1,0 +1,7 @@
+{
+  "parent": "delta_delight:block/shell_open_block",
+  "transform": {
+    "origin": "center",
+    "rotation": [0, -135, 0]
+  }
+}

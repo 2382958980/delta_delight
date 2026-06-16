@@ -1,0 +1,15 @@
+{
+  "name": "维生素泡腾片",
+  "icon": "delta_delight:vitamin_effervescent_tablet",
+  "category": "delta_delight:delta_food",
+  "sortnum": 130,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:vitamin_effervescent_tablet",
+      "title": "维生素泡腾片",
+      "text": "$(bold)效果$()：营养+1；饱和1.0；生命恢复 I 10秒。$(br2)$(bold)配方$()：烹饪锅：胡萝卜、番茄；产出x2。"
+    }
+  ]
+}

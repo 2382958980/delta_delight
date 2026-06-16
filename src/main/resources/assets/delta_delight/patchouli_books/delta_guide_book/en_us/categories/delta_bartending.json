@@ -1,7 +1,7 @@
 {
   "name": "调酒",
-  "description": "查看三角洲乐事独特的调酒系统！",
+  "description": "入门、基底、配料、品质。",
   "icon": "delta_delight:shaker",
-  "sortnum": 20,
+  "sortnum": 10,
   "secret": false
 }

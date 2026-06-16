@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "delta_delight:heart_of_africa"
+    },
+    "title": {
+      "translate": "advancement.delta_delight.root.title"
+    },
+    "description": {
+      "translate": "advancement.delta_delight.root.description"
+    },
+    "background": "minecraft:textures/block/dark_oak_planks.png",
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "tick": {
+      "trigger": "minecraft:tick"
+    }
+  }
+}

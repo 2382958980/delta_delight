@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#delta_delight:has_birdsnest",
+  "features": "delta_delight:birdsnest",
+  "step": "vegetal_decoration"
+}

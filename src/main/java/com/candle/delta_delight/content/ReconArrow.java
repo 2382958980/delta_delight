@@ -5,6 +5,7 @@ import com.candle.delta_delight.registry.ModItems;
 import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -20,6 +21,7 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.AABB;
+import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.HitResult;
 import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.network.NetworkHooks;
@@ -38,12 +40,17 @@ public class ReconArrow extends AbstractArrow {
     private static final int MAX_TRAIL_PARTICLE_DELAY_TICKS = 2;
     private static final int MIN_FALLING_PARTICLE_DELAY_TICKS = 1;
     private static final int MAX_FALLING_PARTICLE_DELAY_TICKS = 4;
+    private static final int MAX_BOUNCES = 3;
+    private static final double BOUNCE_DAMPING = 0.8D;
+    private static final double MIN_BOUNCE_SPEED_SQR = 0.01D;
+    private static final String BOUNCES_TAG = "Bounces";
     private static final BlockParticleOption FALLING_REDSTONE_DUST = new BlockParticleOption(
             ParticleTypes.FALLING_DUST,
             Blocks.REDSTONE_BLOCK.defaultBlockState()
     );
     private int trailParticleDelay;
     private int fallingParticleDelay;
+    private int bounces;
 
     public ReconArrow(EntityType<? extends ReconArrow> entityType, Level level) {
         super(entityType, level);
@@ -130,6 +137,39 @@ public class ReconArrow extends AbstractArrow {
         return minInclusive + random.nextInt(maxInclusive - minInclusive + 1);
     }
 
+    @Override
+    protected void onHitBlock(@NotNull BlockHitResult hitResult) {
+        if (bounces >= MAX_BOUNCES) {
+            super.onHitBlock(hitResult);
+            return;
+        }
+
+        Vec3 movement = getDeltaMovement();
+        Vec3 reflected = reflect(movement, hitResult).scale(BOUNCE_DAMPING);
+        if (reflected.lengthSqr() < MIN_BOUNCE_SPEED_SQR) {
+            super.onHitBlock(hitResult);
+            return;
+        }
+
+        bounces++;
+        inGround = false;
+        setDeltaMovement(reflected);
+        setPos(hitResult.getLocation().add(reflected.normalize().scale(0.05D)));
+        setYRot((float) (Math.atan2(reflected.x, reflected.z) * (180.0D / Math.PI)));
+        setXRot((float) (Math.atan2(reflected.y, reflected.horizontalDistance()) * (180.0D / Math.PI)));
+        yRotO = getYRot();
+        xRotO = getXRot();
+        hasImpulse = true;
+    }
+
+    private Vec3 reflect(Vec3 movement, BlockHitResult hitResult) {
+        return switch (hitResult.getDirection().getAxis()) {
+            case X -> new Vec3(-movement.x, movement.y, movement.z);
+            case Y -> new Vec3(movement.x, -movement.y, movement.z);
+            case Z -> new Vec3(movement.x, movement.y, -movement.z);
+        };
+    }
+
     private void revealVisibleHostileMobsBelow() {
         Vec3 arrowPosition = position();
         AABB scanArea = new AABB(
@@ -187,6 +227,18 @@ public class ReconArrow extends AbstractArrow {
     @Override
     protected @NotNull ItemStack getPickupItem() {
         return new ItemStack(ModItems.RECON_ARROW.get());
+    }
+
+    @Override
+    public void addAdditionalSaveData(@NotNull CompoundTag tag) {
+        super.addAdditionalSaveData(tag);
+        tag.putInt(BOUNCES_TAG, bounces);
+    }
+
+    @Override
+    public void readAdditionalSaveData(@NotNull CompoundTag tag) {
+        super.readAdditionalSaveData(tag);
+        bounces = tag.getInt(BOUNCES_TAG);
     }
 
     @Override

@@ -10,6 +10,7 @@ import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.RecordItem;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.UseAnim;
@@ -49,6 +50,8 @@ public final class ModItems {
             "canned_ration", ModFoods.CANNED_RATION, Items.IRON_INGOT, 32, UseAnim.EAT);
     public static final RegistryObject<Item> HEART_OF_AFRICA = ITEMS.register(
             "heart_of_africa", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
+    public static final RegistryObject<Item> TEAR_OF_OCEAN = ITEMS.register(
+            "tear_of_ocean", () -> new Item(new Item.Properties().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> FIRED_NODDLES = registerFood(
             "fired_noddles", ModFoods.FIRED_NODDLES, null, 32, UseAnim.EAT);
     public static final RegistryObject<Item> VITAMIN_EFFERVESCENT_TABLET = registerFood(
@@ -81,6 +84,10 @@ public final class ModItems {
             "book",() -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> RECON_ARROW = ITEMS.register(
             "recon_arrow", () -> new ReconArrowItem(new Item.Properties()));
+    public static final RegistryObject<Item> BIRDSNEST_BLOCK = ITEMS.register(
+            "birdsnest_block", () -> new BlockItem(ModBlocks.BIRDSNEST_BLOCK.get(), new Item.Properties()));
+    public static final RegistryObject<Item> SHELL_BLOCK = ITEMS.register(
+            "shell_block", () -> new BlockItem(ModBlocks.SHELL_BLOCK.get(), new Item.Properties()));
     public static final RegistryObject<Item> DAWN_MUSIC_DISC = registerMusicDisc(
             "dawn_music_disc", ModSoundEvents.MUSIC_DISC_DAWN, 8, 243);
     public static final RegistryObject<Item> IN_THE_SUMMER_MUSIC_DISC = registerMusicDisc(

@@ -1,0 +1,38 @@
+{
+  "name": "基底",
+  "icon": "delta_delight:juniper_spirit",
+  "category": "delta_delight:delta_bartending",
+  "sortnum": 10,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "基底列表",
+      "text": "$(li)杜松灵：普通名“杜松特调”；负面：虚弱。$(li)清逸饮：普通名“清逸特调”；负面：反胃。$(li)琥珀露：普通名“琥珀特调”；负面：缓慢。$(li)糖蜜汁：普通名“糖蜜特调”；负面：挖掘疲劳。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:juniper_spirit",
+      "title": "杜松灵",
+      "text": "$(bold)配方$()：烹饪锅：水瓶、甜浆果、树叶；容器：玻璃瓶。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:herbal_tea",
+      "title": "清逸饮",
+      "text": "$(bold)配方$()：烹饪锅：水瓶、马铃薯、小花；容器：玻璃瓶。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:amber_essence",
+      "title": "琥珀露",
+      "text": "$(bold)配方$()：烹饪锅：水瓶、小麦、蜂蜜瓶；容器：玻璃瓶。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:molasses",
+      "title": "糖蜜汁",
+      "text": "$(bold)配方$()：烹饪锅：水瓶、甘蔗、糖；容器：玻璃瓶。"
+    }
+  ]
+}
