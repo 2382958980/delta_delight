@@ -4,7 +4,7 @@
 	"texture_size": [32, 32],
 	"textures": {
 		"1": "delta_delight:block/shell_close_block",
-        "particle": "delta_delight:item/shell"
+		"particle": "delta_delight:item/shell"
 	},
 	"elements": [
 		{

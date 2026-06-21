@@ -2,14 +2,24 @@
   "name": "军用罐头",
   "icon": "delta_delight:canned_ration",
   "category": "delta_delight:delta_food",
-  "sortnum": 110,
+  "sortnum": 30,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:canned_ration",
       "title": "军用罐头",
-      "text": "$(bold)效果$()：营养+12；饱和0.5；舒适 I 300秒；滋养 I 300秒。$(br2)$(bold)配方$()：烹饪锅：牛肉x2、番茄、马铃薯；容器：铁锭。"
+      "text": "$(o)三角洲部队标准配给口粮——满载牛肉、番茄与马铃薯的铁罐，一罐下肚便能支撑一整天的行军。士兵们常说：「罐头在手，天下我有。」$(br2)$(bold)品质$()：$(a)普通$(/a)　$(bold)类型$()：食品$(br)$(bold)容器$()：铁锭　$(bold)可放置$()：否"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+12$(/6)　饱和 $(6)0.5$(/6)$(li)舒适 $(6)I 5 分钟$(/6)$(li)滋养 $(6)I 5 分钟$(/6)$(br2)食用后返还铁锭。$(br)本模组饱食度最高的食物——5 分钟的舒适 + 滋养双重 buff，让你在战场上持久作战。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)牛肉 ×2$(li)番茄 ×1$(li)马铃薯 ×1$(li)容器：铁锭$(br2)$(o)配方质朴，效果不凡——这正是军用标准的精髓。"
     }
   ]
 }

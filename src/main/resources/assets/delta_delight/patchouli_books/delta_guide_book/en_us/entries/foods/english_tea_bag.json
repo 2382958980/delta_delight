@@ -2,14 +2,24 @@
   "name": "英式袋泡茶",
   "icon": "delta_delight:english_tea_bag",
   "category": "delta_delight:delta_food",
-  "sortnum": 90,
+  "sortnum": 110,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:english_tea_bag",
       "title": "英式袋泡茶",
-      "text": "$(bold)效果$()：营养+3；饱和0.0；无状态效果。$(br2)$(bold)配方$()：烹饪锅：树叶x2、糖；容器：铁锭。"
+      "text": "$(o)经典的英式下午茶，只不过现在是在战壕里喝。树叶经干燥处理后装入铁罐，热水一冲便是熟悉的味道——让人想起家乡的厨房和母亲的微笑。$(br2)$(bold)品质$()：$(a)普通$(/a)　$(bold)类型$()：饮品$(br)$(bold)容器$()：铁锭　$(bold)可放置$()：否"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+3$(/6)　饱和 $(6)0.0$(/6)$(br2)食用后返还铁锭。$(br)无任何状态效果，但 3 点饱食度加上零饱和意味着饥饿值会更快下降——纯粹的「填肚子」饮品，适合在没有其他食物时应急。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)树叶 ×2（任意种类）$(li)糖 ×1$(li)容器：铁锭$(br2)$(o)最简单的配方——出门前砍两把树叶就能备好几天的茶。"
     }
   ]
 }

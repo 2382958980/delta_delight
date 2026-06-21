@@ -1,0 +1,28 @@
+{
+  "parent": "delta_delight:root",
+  "display": {
+    "icon": {
+      "item": "minecraft:bread"
+    },
+    "title": {
+      "translate": "advancement.delta_delight.bread_in_shell.title"
+    },
+    "description": {
+      "translate": "advancement.delta_delight.bread_in_shell.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "open_natural_bread_shell": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "requirements": [
+    [
+      "open_natural_bread_shell"
+    ]
+  ]
+}

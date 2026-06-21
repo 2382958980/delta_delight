@@ -26,17 +26,27 @@ public class ShellFeature extends Feature<NoneFeatureConfiguration> {
     private static final int SEARCH_RADIUS = 4;
     private static final int ATTEMPTS = 8;
     private static final WeightedItem[] LOOT = {
-            new WeightedItem(Items.PRISMARINE_SHARD, 35),
-            new WeightedItem(Items.PRISMARINE_CRYSTALS, 25),
-            new WeightedItem(Items.KELP, 25),
-            new WeightedItem(Items.SEAGRASS, 25),
-            new WeightedItem(Items.IRON_NUGGET, 18),
-            new WeightedItem(Items.GOLD_NUGGET, 12),
-            new WeightedItem(Items.LAPIS_LAZULI, 10),
-            new WeightedItem(Items.AMETHYST_SHARD, 8),
-            new WeightedItem(Items.NAUTILUS_SHELL, 6),
-            new WeightedItem(Items.ENDER_PEARL, 3),
-            new WeightedItem(Items.DIAMOND, 1)
+            new WeightedItem(Items.KELP, 35),
+            new WeightedItem(Items.SEAGRASS, 35),
+            new WeightedItem(Items.FLINT, 35),
+            new WeightedItem(Items.IRON_NUGGET, 35),
+            new WeightedItem(Items.GOLD_NUGGET, 35),
+            new WeightedItem(Items.PUFFERFISH, 35),
+            new WeightedItem(Items.BREAD, 35),
+            new WeightedItem(Items.CLAY, 35),
+            new WeightedItem(Items.ENDER_PEARL, 15),
+            new WeightedItem(Items.PEARLESCENT_FROGLIGHT, 15),
+            new WeightedItem(Items.NAUTILUS_SHELL, 15),
+            new WeightedItem(Items.PRISMARINE_SHARD, 15),
+            new WeightedItem(Items.AMETHYST_SHARD, 15),
+            new WeightedItem(Items.PRISMARINE_CRYSTALS, 15),
+            new WeightedItem(Items.LAPIS_LAZULI, 15),
+            new WeightedItem(Items.DIAMOND, 5),
+            new WeightedItem(Items.GHAST_TEAR, 5),
+            new WeightedItem(Items.EMERALD, 5),
+            new WeightedItem(Items.GOLD_BLOCK, 5),
+            new WeightedItem(Items.ANCIENT_DEBRIS, 4),
+            new WeightedItem(ModItems.TEAR_OF_OCEAN.get(), 1)
     };
 
     public ShellFeature(Codec<NoneFeatureConfiguration> codec) {
@@ -82,6 +92,7 @@ public class ShellFeature extends Feature<NoneFeatureConfiguration> {
         BlockEntity blockEntity = level.getBlockEntity(pos);
         if (blockEntity instanceof ShellBlockEntity shell) {
             shell.setStoredItem(randomLoot(random));
+            shell.setNaturallyGenerated(true);
         }
         return true;
     }
@@ -96,10 +107,6 @@ public class ShellFeature extends Feature<NoneFeatureConfiguration> {
     }
 
     private static ItemStack randomLoot(RandomSource random) {
-        if (random.nextInt(400) == 0) {
-            return new ItemStack(ModItems.TEAR_OF_OCEAN.get());
-        }
-
         int totalWeight = 0;
         for (WeightedItem item : LOOT) {
             totalWeight += item.weight();

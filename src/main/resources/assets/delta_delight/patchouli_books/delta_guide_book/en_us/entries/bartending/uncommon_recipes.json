@@ -1,0 +1,34 @@
+{
+  "name": "优质配方图鉴",
+  "icon": "delta_delight:mixed_cocktail",
+  "category": "delta_delight:delta_bartending",
+  "sortnum": 50,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "优质鸡尾酒 · 总览",
+      "text": "$(o)以下是全部 $(e)16 种优质鸡尾酒配方$()。优质鸡尾酒有 $(6)60% 概率$() 从匹配配方中获得——无需精确时间，只需基底与配料正确即可。$(br2)$(bold)提示$()：优质鸡尾酒将基底负面效果缩短至 30 秒，配料正面效果延长至 2 分钟。$(br2)配方格式：$(6)酒名 —— 配料 A + 配料 B$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "杜松灵系（4种）",
+      "text": "$(li)$(bold)金色清爽 · Golden Fresh$()$(br)$(7)发光浆果 + 金胡萝卜$()$(br)$(li)$(bold)清雅柠韵 · Elegant Citrus$()$(br)$(7)西瓜汁 + 龙息$()$(li)$(bold)醇甜交响 · Sweet Symphony$()$(br)$(7)蜂蜜瓶 + 烈焰粉$()$(li)$(bold)清风 · Clear Breeze$()$(br)$(7)末影珍珠 + 海泡菜$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "清逸饮系（4种）",
+      "text": "$(li)$(bold)可乐风暴 · Cola Storm$()$(br)$(7)可乐 + 火药$()$(li)$(bold)繁星 · Countless Stars$()$(br)$(7)萤石粉 + 末影珍珠$()$(li)$(bold)红色狂欢 · Red Carnival$()$(br)$(7)红石粉 + 烈焰粉$()$(li)$(bold)甜蜜旋律 · Sweet Melody$()$(br)$(7)蜂蜜瓶 + 奶瓶$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "琥珀露系（4种）",
+      "text": "$(li)$(bold)启程 · Departure$()$(br)$(7)生津柠檬茶 + 紫颂果$()$(li)$(bold)赤焰 · Scarlet Flame$()$(br)$(7)烈焰粉 + 火药$()$(li)$(bold)晨曦 · Dawnlight$()$(br)$(7)金胡萝卜 + 苹果酒$()$(li)$(bold)泡影 · Bubble Shadow$()$(br)$(7)海泡菜 + 龙息$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "糖蜜汁系（4种）",
+      "text": "$(li)$(bold)柔情岁月 · Tender Years$()$(br)$(7)红石粉 + 苹果酒$()$(li)$(bold)经典交响 · Classic Symphony$()$(br)$(7)可乐 + 发光浆果$()$(li)$(bold)活力四溢 · Bursting Vitality$()$(br)$(7)烈焰粉 + 蜂蜜瓶$()$(li)$(bold)夏韵 · Summer Rhyme$()$(br)$(7)海泡菜 + 紫颂果$()$(br2)$(o)每种基底恰好有 4 种优质配方——总共 16 种。多尝试不同的配料组合！"
+    }
+  ]
+}

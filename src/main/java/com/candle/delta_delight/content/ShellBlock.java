@@ -1,10 +1,14 @@
 package com.candle.delta_delight.content;
 
+import com.candle.delta_delight.DeltaDelight;
 import com.google.common.collect.ImmutableMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.advancements.Advancement;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.Containers;
@@ -12,6 +16,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -41,6 +46,8 @@ public class ShellBlock extends HorizontalDirectionalBlock implements EntityBloc
     public static final BooleanProperty OPEN = BooleanProperty.create("open");
     public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
     public static final IntegerProperty ROTATION = IntegerProperty.create("rotation", 0, 15);
+    private static final ResourceLocation BREAD_IN_SHELL_ADVANCEMENT =
+            new ResourceLocation(DeltaDelight.MODID, "bread_in_shell");
     private static final int ROTATION_SEGMENTS = 16;
     private static final float DEGREES_PER_SEGMENT = 360.0F / ROTATION_SEGMENTS;
     private static final VoxelShape CENTERED_SHAPE = Block.box(4.5D, 0.0D, 4.5D, 11.5D, 2.0D, 11.5D);
@@ -144,6 +151,7 @@ public class ShellBlock extends HorizontalDirectionalBlock implements EntityBloc
             if (state.getValue(WATERLOGGED)) {
                 spawnUnderwaterOpenParticles(level, pos);
             }
+            awardBreadInShellAdvancement(level, pos, player);
             return InteractionResult.CONSUME;
         }
 
@@ -166,12 +174,31 @@ public class ShellBlock extends HorizontalDirectionalBlock implements EntityBloc
                 ItemStack stored = held.copy();
                 stored.setCount(1);
                 shell.setStoredItem(stored);
+                shell.setNaturallyGenerated(false);
                 held.shrink(1);
                 return InteractionResult.CONSUME;
             }
         }
 
         return InteractionResult.PASS;
+    }
+
+    private static void awardBreadInShellAdvancement(Level level, BlockPos pos, Player player) {
+        if (!(player instanceof ServerPlayer serverPlayer)) {
+            return;
+        }
+
+        BlockEntity blockEntity = level.getBlockEntity(pos);
+        if (!(blockEntity instanceof ShellBlockEntity shell)
+                || !shell.isNaturallyGenerated()
+                || !shell.getStoredItem().is(Items.BREAD)) {
+            return;
+        }
+
+        Advancement advancement = serverPlayer.server.getAdvancements().getAdvancement(BREAD_IN_SHELL_ADVANCEMENT);
+        if (advancement != null) {
+            serverPlayer.getAdvancements().award(advancement, "open_natural_bread_shell");
+        }
     }
 
     private static void playOpenSound(Level level, BlockPos pos) {

@@ -1,7 +1,7 @@
 {
   "name": "三角洲乐事指南",
-  "landing_text": "$(bold)食物$()：逐项列出贴图、名称、效果、配方。$(br)$(bold)调酒$()：入门、基底、配料、品质。$(br)$(bold)探索$()：鸟窝、三角蚌、非洲之心、侦察箭、唱片。",
-  "version": 3,
+  "landing_text": "$(bold)欢迎翻开这本战地美食手册！$(br2)本书将引领你掌握三角洲战区三大生存技能：$(br)$(li)$(l:delta_food)$(bold)炊事$()——从奢华珍馐到便捷军粮，了解每一种食品的配方、效果与背后的故事。$(li)$(l:delta_bartending)$(bold)调酒$()——掌握摇酒壶的使用、四大基底的奥秘、十六种配料的本领，以及从普通到极品的品质之道。$(li)$(l:delta_exploration)$(bold)探索$()——寻找林间鸟窝、海底三角蚌，发掘传说中的非洲之心与海洋之泪，学会使用侦察箭，收集三角洲部队经典唱片。$(br2)$(o)祝你好运，士兵。记住——吃饱了才有力气战斗。",
+  "version": 4,
   "creative_tab": "delta_delight:delta_delight",
   "use_resource_pack": true,
   "model": "delta_delight:book",

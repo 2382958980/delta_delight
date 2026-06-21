@@ -2,14 +2,24 @@
   "name": "营养粥罐头",
   "icon": "delta_delight:nutritious_canned_porridge",
   "category": "delta_delight:delta_food",
-  "sortnum": 50,
+  "sortnum": 60,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:nutritious_canned_porridge",
       "title": "营养粥罐头",
-      "text": "$(bold)效果$()：营养+8；饱和0.75；滋养 I 225秒。$(br2)$(bold)配方$()：烹饪锅：米x2、金胡萝卜；容器：铁锭。"
+      "text": "$(o)专为特种作战人员调配的高能营养粥——以金胡萝卜提升其滋补效果，色泽金黄，口感绵密。据说炊事班在其中加入了某种「秘密配方」。$(br2)$(bold)品质$()：$(e)罕见$(/e)　$(bold)类型$()：食品$(br)$(bold)容器$()：铁锭　$(bold)可放置$()：是"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+8$(/6)　饱和 $(6)0.75$(/6)$(li)滋养 $(6)I 3 分 45 秒$(/6)$(br2)食用后返还铁锭。可放置为方块展示。比海鲜粥多 1 点饱食度——虽然饱和稍低，但综合性价比出色。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)米 ×2$(li)金胡萝卜 ×1$(li)容器：铁锭$(br2)$(o)金胡萝卜中的β-胡萝卜素在慢火熬煮中充分释放——当然，也可能只是心理作用。"
     }
   ]
 }

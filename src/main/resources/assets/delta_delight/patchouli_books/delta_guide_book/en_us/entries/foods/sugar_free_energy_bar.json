@@ -2,14 +2,24 @@
   "name": "无糖缓释能量棒",
   "icon": "delta_delight:sugar_free_energy_bar",
   "category": "delta_delight:delta_food",
-  "sortnum": 170,
+  "sortnum": 190,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:sugar_free_energy_bar",
       "title": "无糖缓释能量棒",
-      "text": "$(bold)效果$()：营养+2；饱和1.0；无状态效果。$(br2)$(bold)配方$()：烹饪锅：面团、可可豆x2；产出x4。"
+      "text": "$(o)专为长期潜伏任务设计的缓释型能量棒——不加糖，纯可可提供持久能量。虽然口感不如普通版香甜，但它能在更长时间内维持你的饱食度。$(br2)$(bold)品质$()：$(a)普通$(/a)　$(bold)类型$()：食品$(br)$(bold)容器$()：无　$(bold)可放置$()：否"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+2$(/6)　饱和 $(6)1.0$(/6)$(br2)纯基础食品。仅 2 点饱食度，但 1.0 的饱和意味着饱食度消耗更慢——配合其 x4 的产量，是长期探险的经济之选。$(br2)$(bold)对比野外能量棒$()：单份饱食度更低，但饱和是后者的 2 倍。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)面团 ×1$(li)可可豆 ×2$(br)产出 $(6)×4$(/6)$(br2)$(o)去掉了糖，加倍了可可——更健康，更持久，但……少了点乐趣。"
     }
   ]
 }

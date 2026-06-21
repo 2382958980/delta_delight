@@ -15,7 +15,9 @@ import org.jetbrains.annotations.Nullable;
 public class ShellBlockEntity extends BlockEntity implements Clearable {
     private static final String ITEM_TAG = "Item";
     private static final String ITEM_EMPTY_TAG = "ItemEmpty";
+    private static final String NATURALLY_GENERATED_TAG = "NaturallyGenerated";
     private ItemStack item = ItemStack.EMPTY;
+    private boolean naturallyGenerated;
 
     public ShellBlockEntity(BlockPos pos, BlockState state) {
         super(ModBlockEntityTypes.SHELL.get(), pos, state);
@@ -27,6 +29,15 @@ public class ShellBlockEntity extends BlockEntity implements Clearable {
 
     public boolean isEmpty() {
         return item.isEmpty();
+    }
+
+    public boolean isNaturallyGenerated() {
+        return naturallyGenerated;
+    }
+
+    public void setNaturallyGenerated(boolean naturallyGenerated) {
+        this.naturallyGenerated = naturallyGenerated;
+        sync();
     }
 
     public void setStoredItem(ItemStack stack) {
@@ -56,6 +67,7 @@ public class ShellBlockEntity extends BlockEntity implements Clearable {
         } else {
             tag.putBoolean(ITEM_EMPTY_TAG, true);
         }
+        tag.putBoolean(NATURALLY_GENERATED_TAG, naturallyGenerated);
     }
 
     @Override
@@ -64,6 +76,7 @@ public class ShellBlockEntity extends BlockEntity implements Clearable {
         item = tag.contains(ITEM_TAG) && !tag.getBoolean(ITEM_EMPTY_TAG)
                 ? ItemStack.of(tag.getCompound(ITEM_TAG))
                 : ItemStack.EMPTY;
+        naturallyGenerated = tag.getBoolean(NATURALLY_GENERATED_TAG);
     }
 
     @Override

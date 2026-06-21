@@ -2,14 +2,24 @@
   "name": "咖啡",
   "icon": "delta_delight:coffee",
   "category": "delta_delight:delta_food",
-  "sortnum": 30,
+  "sortnum": 80,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:coffee",
       "title": "咖啡",
-      "text": "$(bold)效果$()：营养+2；饱和2.0；速度 I 60秒；夜视 I 60秒。$(br2)$(bold)配方$()：烹饪锅：奶瓶、可可豆、糖；容器：玻璃瓶。"
+      "text": "$(o)三角洲战区特供——浓醇黑咖啡。奶香与可可的微苦完美平衡，一口提神，两眼放光。早起哨声响起时，炊事班门口排起的长队就是它最好的广告。$(br2)$(bold)品质$()：$(e)罕见$(/e)　$(bold)类型$()：饮品$(br)$(bold)容器$()：玻璃瓶　$(bold)可放置$()：是"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+2$(/6)　饱和 $(6)2.0$(/6)$(li)速度 $(6)I 1 分钟$(/6)$(li)夜视 $(6)I 1 分钟$(/6)$(br2)饮用后返还空玻璃瓶。$(br)速度与夜视的组合——洞穴探险和夜战巡逻的不二之选。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)奶瓶 ×1$(li)可可豆 ×1$(li)糖 ×1$(li)容器：玻璃瓶$(br2)$(o)据说有人试着加入末影珍珠粉末来增强夜视效果……但目前为止还没人成功过。"
     }
   ]
 }

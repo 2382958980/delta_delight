@@ -2,14 +2,24 @@
   "name": "可乐",
   "icon": "delta_delight:coke",
   "category": "delta_delight:delta_food",
-  "sortnum": 100,
+  "sortnum": 90,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:coke",
       "title": "可乐",
-      "text": "$(bold)效果$()：营养+2；饱和1.0；速度 I 30秒。$(br2)$(bold)配方$()：烹饪锅：水瓶、墨囊、糖；容器：铁锭。"
+      "text": "$(o)深棕色气泡饮料，冰镇后口感最佳。虽然炊事班坚称配方是「高度机密」，但所有人都知道那标志性的焦糖色来自墨囊——不过没人介意，因为它真的很好喝。$(br2)$(bold)品质$()：$(a)普通$(/a)　$(bold)类型$()：饮品$(br)$(bold)容器$()：铁锭　$(bold)可放置$()：否"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+2$(/6)　饱和 $(6)1.0$(/6)$(li)速度 $(6)I 30 秒$(/6)$(br2)食用后返还铁锭。$(br)30 秒的速度 I——虽短但足以让你在战场上抢占先机。快速啜饮，然后冲锋。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)水瓶 ×1$(li)墨囊 ×1$(li)糖 ×1$(li)容器：铁锭$(br2)$(o)也是调酒系统的配料之一（标签：delta_delight:cocktail/ingredient/coke）。"
     }
   ]
 }

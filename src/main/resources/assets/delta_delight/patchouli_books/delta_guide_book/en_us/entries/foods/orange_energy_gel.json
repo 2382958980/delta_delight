@@ -2,14 +2,24 @@
   "name": "清新橘味能量凝胶",
   "icon": "delta_delight:orange_energy_gel",
   "category": "delta_delight:delta_food",
-  "sortnum": 80,
+  "sortnum": 160,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:orange_energy_gel",
       "title": "清新橘味能量凝胶",
-      "text": "$(bold)效果$()：营养+1；饱和3.0；速度 I 30秒。$(br2)$(bold)配方$()：烹饪锅：黏液球、发光浆果；产出x3。"
+      "text": "$(o)专为高强度作战研发的速效能量胶——半透明橙色凝胶状，一口吸尽，橘香满口。食用方便、起效迅速，是突击队的最爱。就是口感有点像在吃史莱姆……$(br2)$(bold)品质$()：$(a)普通$(/a)　$(bold)类型$()：食品$(br)$(bold)容器$()：无　$(bold)可放置$()：否"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+1$(/6)　饱和 $(6)3.0$(/6)$(li)速度 $(6)I 30 秒$(/6)$(br2)食用速度极快（16 tick）。饱和高达 3.0——意味着饱食度几乎不会自然下降，配合速度效果，是战斗冲锋前的完美「燃料」。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)黏液球 ×1$(li)发光浆果 ×1$(br)产出 $(6)×3$(/6)$(br2)$(o)一份材料做三个，性价比极高——前提是你有稳定的黏液球来源。"
     }
   ]
 }

@@ -11,47 +11,47 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:feather",
-          "weight": 100
+          "weight": 40
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:egg",
-          "weight": 100
+          "weight": 40
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:wheat_seeds",
-          "weight": 100
+          "weight": 40
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:pumpkin_seeds",
-          "weight": 100
+          "weight": 40
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:melon_seeds",
-          "weight": 100
+          "weight": 40
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:bone",
-          "weight": 100
+          "weight": 40
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:leather",
-          "weight": 100
+          "weight": 40
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:coal",
-          "weight": 100
+          "weight": 40
         },
         {
           "type": "minecraft:item",
           "name": "minecraft:iron_nugget",
-          "weight": 100
+          "weight": 40
         },
         {
           "type": "minecraft:item",

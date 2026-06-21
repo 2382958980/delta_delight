@@ -1,0 +1,39 @@
+{
+  "parent": "delta_delight:bartending_bases",
+  "display": {
+    "icon": {
+      "item": "delta_delight:mixed_cocktail",
+      "nbt": "{CocktailNameKey:\"cocktail.delta_delight.elegant_citrus\",CocktailQuality:\"UNCOMMON\",CocktailBaseKey:\"juniper_spirit\",CocktailIngredientKeys:[\"watermelon_juice\",\"dragon_breath\"]}"
+    },
+    "title": {
+      "translate": "advancement.delta_delight.bartending_uncommon_cocktail.title"
+    },
+    "description": {
+      "translate": "advancement.delta_delight.bartending_uncommon_cocktail.description"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_uncommon_cocktail": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delta_delight:mixed_cocktail"
+            ],
+            "nbt": "{CocktailQuality:\"UNCOMMON\"}"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain_uncommon_cocktail"
+    ]
+  ]
+}

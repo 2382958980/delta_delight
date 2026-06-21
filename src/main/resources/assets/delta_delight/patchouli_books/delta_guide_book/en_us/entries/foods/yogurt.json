@@ -2,14 +2,24 @@
   "name": "酸奶",
   "icon": "delta_delight:yogurt",
   "category": "delta_delight:delta_food",
-  "sortnum": 140,
+  "sortnum": 120,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:yogurt",
       "title": "酸奶",
-      "text": "$(bold)效果$()：营养+4；饱和0.5；无状态效果。$(br2)$(bold)配方$()：烹饪锅：奶瓶x2、蘑菇。"
+      "text": "$(o)用鲜奶与野生蘑菇发酵而成的浓稠酸奶——别问为什么是蘑菇，问就是炊事班祖传秘方。口感醇厚，回味悠长，是战地上难得的乳制品享受。$(br2)$(bold)品质$()：$(a)普通$(/a)　$(bold)类型$()：食品$(br)$(bold)容器$()：无　$(bold)可放置$()：否"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+4$(/6)　饱和 $(6)0.5$(/6)$(br2)基础食品，无特殊效果。4 点饱食度是中等偏上的水平——简单实用的日常补给。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)奶瓶 ×2$(li)蘑菇 ×1（任意种类）$(br2)$(o)蘑菇提供独特的发酵风味——也许多加几种蘑菇会有不同的效果？"
     }
   ]
 }

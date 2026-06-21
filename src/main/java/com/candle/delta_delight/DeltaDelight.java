@@ -21,6 +21,7 @@ public class DeltaDelight {
         ModEntityTypes.ENTITY_TYPES.register(modEventBus);
         ModSoundEvents.SOUND_EVENTS.register(modEventBus);
         ModItems.ITEMS.register(modEventBus);
+        ModRecipeSerializers.RECIPE_SERIALIZERS.register(modEventBus);
         ModFeatures.register(modEventBus);
         ModCreativeTabs.TABS.register(modEventBus);
         ModLootModifiers.register(modEventBus);

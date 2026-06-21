@@ -2,14 +2,24 @@
   "name": "糖三角",
   "icon": "delta_delight:chocolate",
   "category": "delta_delight:delta_food",
-  "sortnum": 180,
+  "sortnum": 140,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:chocolate",
       "title": "糖三角",
-      "text": "$(bold)效果$()：营养+4；饱和1.0；无状态效果。$(br2)$(bold)配方$()：烹饪锅：糖x2、可可豆x2；产出x2。"
+      "text": "$(o)三角洲战区最受欢迎的能量甜点——以可可粉与砂糖制成的三角形小饼，口感酥脆，甜而不腻。三两口一块，是哨所值夜时提神醒脑的好伙伴。$(br2)$(bold)品质$()：$(a)普通$(/a)　$(bold)类型$()：食品$(br)$(bold)容器$()：无　$(bold)可放置$()：否"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+4$(/6)　饱和 $(6)1.0$(/6)$(br2)纯基础食品，无特殊效果。4 点饱食度搭配 1.0 饱和，是一次不错的能量补给。配方产出 2 个，性价比高。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)糖 ×2$(li)可可豆 ×2$(br)产出 $(6)×2$(/6)"
     }
   ]
 }

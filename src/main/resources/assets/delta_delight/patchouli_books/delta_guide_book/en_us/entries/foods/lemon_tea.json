@@ -2,14 +2,24 @@
   "name": "生津柠檬茶",
   "icon": "delta_delight:lemon_tea",
   "category": "delta_delight:delta_food",
-  "sortnum": 60,
+  "sortnum": 100,
   "secret": false,
   "pages": [
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:lemon_tea",
       "title": "生津柠檬茶",
-      "text": "$(bold)效果$()：营养+2；饱和2.0；生命恢复 II 15秒。$(br2)$(bold)配方$()：烹饪锅：蜂蜜瓶、发光浆果x2；容器：铁锭。"
+      "text": "$(o)蜂蜜的甘甜与发光浆果的清酸在舌尖相遇——不含咖啡因，却能让人精神一振。炎热的午后，一杯柠檬茶是最好的喘息。$(br2)$(bold)品质$()：$(a)普通$(/a)　$(bold)类型$()：饮品$(br)$(bold)容器$()：铁锭　$(bold)可放置$()：否"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "食用效果",
+      "text": "$(li)饱食度 $(6)+2$(/6)　饱和 $(6)2.0$(/6)$(li)生命恢复 $(6)II 15 秒$(/6)$(br2)食用后返还铁锭。$(br)生命恢复 II 虽然只有 15 秒，但能在危急时刻迅速拉回血量——包里常备一瓶，关键时能救命。"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "烹饪配方",
+      "text": "$(bold)农夫乐事烹饪锅$()：$(li)蜂蜜瓶 ×1$(li)发光浆果 ×2$(li)容器：铁锭$(br2)$(o)也是调酒系统的配料之一（标签：delta_delight:cocktail/ingredient/lemon_tea）。"
     }
   ]
 }

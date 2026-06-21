@@ -1,5 +1,5 @@
 {
-  "name": "基底",
+  "name": "基底详解",
   "icon": "delta_delight:juniper_spirit",
   "category": "delta_delight:delta_bartending",
   "sortnum": 10,
@@ -7,32 +7,32 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "title": "基底列表",
-      "text": "$(li)杜松灵：普通名“杜松特调”；负面：虚弱。$(li)清逸饮：普通名“清逸特调”；负面：反胃。$(li)琥珀露：普通名“琥珀特调”；负面：缓慢。$(li)糖蜜汁：普通名“糖蜜特调”；负面：挖掘疲劳。"
+      "title": "什么是基底？",
+      "text": "$(o)基底决定了鸡尾酒的「底色」——不仅是风味的基础，更影响负面效果的属性。四大基底各有性格，选对基底是调酒的第一步。$(br2)$(bold)鸡尾酒品质为普通或优质时$()，会附带基底对应的负面效果。$(br)$(bold)品质为极品时$()，基底负面效果被完全消除，只保留正面增益。"
     },
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:juniper_spirit",
-      "title": "杜松灵",
-      "text": "$(bold)配方$()：烹饪锅：水瓶、甜浆果、树叶；容器：玻璃瓶。"
+      "title": "杜松灵 · Juniper Spirit",
+      "text": "$(o)「松针清香，回味微苦——像极了凌晨四点的哨声。」$(br2)$(bold)负面效果$()：$(c)虚弱$(/c)$(br)$(bold)普通鸡尾酒名$()：杜松特调$(br2)$(bold)烹饪锅配方$()：$(li)水瓶 ×1$(li)甜浆果 ×1$(li)树叶 ×1（任意种类）$(li)容器：玻璃瓶"
     },
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:herbal_tea",
-      "title": "清逸饮",
-      "text": "$(bold)配方$()：烹饪锅：水瓶、马铃薯、小花；容器：玻璃瓶。"
+      "title": "清逸饮 · Herbal Tea",
+      "text": "$(o)「花草芬芳，入口清冽——据说配方源自一位隐居山林的老药师。」$(br2)$(bold)负面效果$()：$(c)反胃$(/c)$(br)$(bold)普通鸡尾酒名$()：清逸特调$(br2)$(bold)烹饪锅配方$()：$(li)水瓶 ×1$(li)马铃薯 ×1$(li)小花 ×1（任意种类）$(li)容器：玻璃瓶"
     },
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:amber_essence",
-      "title": "琥珀露",
-      "text": "$(bold)配方$()：烹饪锅：水瓶、小麦、蜂蜜瓶；容器：玻璃瓶。"
+      "title": "琥珀露 · Amber Essence",
+      "text": "$(o)「色泽如琥珀，入口醇厚——小麦与蜂蜜在舌尖跳起一支慢舞。」$(br2)$(bold)负面效果$()：$(c)缓慢$(/c)$(br)$(bold)普通鸡尾酒名$()：琥珀特调$(br2)$(bold)烹饪锅配方$()：$(li)水瓶 ×1$(li)小麦 ×1$(li)蜂蜜瓶 ×1$(li)容器：玻璃瓶"
     },
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:molasses",
-      "title": "糖蜜汁",
-      "text": "$(bold)配方$()：烹饪锅：水瓶、甘蔗、糖；容器：玻璃瓶。"
+      "title": "糖蜜汁 · Molasses",
+      "text": "$(o)「甘蔗的甘甜与糖的纯粹——甜到让人忘记战争的苦涩。」$(br2)$(bold)负面效果$()：$(c)挖掘疲劳$(/c)$(br)$(bold)普通鸡尾酒名$()：糖蜜特调$(br2)$(bold)烹饪锅配方$()：$(li)水瓶 ×1$(li)甘蔗 ×1$(li)糖 ×1$(li)容器：玻璃瓶"
     }
   ]
 }

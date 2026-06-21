@@ -6,6 +6,7 @@ import com.candle.delta_delight.content.DDPlaceableFoodBlockItem;
 import com.candle.delta_delight.content.ReconArrowItem;
 import com.candle.delta_delight.content.ShakerItem;
 import com.candle.delta_delight.content.TooltipItem;
+import com.candle.delta_delight.content.ZongziItem;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
@@ -66,6 +67,8 @@ public final class ModItems {
             "sugar_free_energy_bar", ModFoods.SUGAR_FREE_ENERGY_BAR, null, 16, UseAnim.EAT);
     public static final RegistryObject<Item> CHOCOLATE = registerFood(
             "chocolate", ModFoods.CHOCOLATE, null, 24, UseAnim.EAT);
+    public static final RegistryObject<Item> ZONGZI = ITEMS.register(
+            "zongzi", () -> new ZongziItem(new Item.Properties()));
     public static final RegistryObject<Item> PORRIDGE = registerPlaceableFood(
             "porridge", ModBlocks.PORRIDGE_BLOCK, ModFoods.PORRIDGE, Rarity.UNCOMMON, Items.IRON_INGOT, 32, UseAnim.DRINK);
     public static final RegistryObject<Item> HERBAL_TEA = ITEMS.register(

@@ -1,0 +1,34 @@
+{
+  "name": "极品配方图鉴",
+  "icon": "delta_delight:mixed_cocktail",
+  "category": "delta_delight:delta_bartending",
+  "sortnum": 40,
+  "secret": false,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "title": "极品鸡尾酒 · 总览",
+      "text": "$(o)以下是三角洲战区已知的全部 $(d)12 种极品鸡尾酒配方$()。每一种都需要精确的基底、配料组合与摇晃时间。$(br2)$(bold)提示$()：极品鸡尾酒无基底负面效果，且配料效果升为 2 分钟 + 额外增幅器。$(br2)配方格式：$(6)酒名 —— 配料 A + 配料 B —— 最佳时间窗口$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "杜松灵系（3种）",
+      "text": "$(bold)漫长告别 · Long Farewell$()$(br)配料：$(6)生津柠檬茶 + 蜂蜜瓶$()$(br)时间：$(6)8.0 - 8.5 秒$()$(br2)$(bold)空山灵雨 · Mountain Rain$()$(br)配料：$(6)苹果酒 + 海泡菜$()$(br)时间：$(6)7.5 - 8.0 秒$()$(br2)$(bold)郁金香 · Tulip$()$(br)配料：$(6)西瓜汁 + 奶瓶$()$(br)时间：$(6)8.5 - 9.0 秒$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "清逸饮系（3种）",
+      "text": "$(bold)空岛 · Sky Island$()$(br)配料：$(6)发光浆果 + 龙息$()$(br)时间：$(6)8.0 - 8.5 秒$()$(br2)$(bold)星光熠熠 · Starlight$()$(br)配料：$(6)可乐 + 萤石粉$()$(br)时间：$(6)9.5 - 10.0 秒$()$(br2)$(bold)怦然心动 · Heartbeat$()$(br)配料：$(6)生津柠檬茶 + 火药$()$(br)时间：$(6)9.5 - 10.0 秒$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "琥珀露系（3种）",
+      "text": "$(bold)嗨棒 · Highball$()$(br)配料：$(6)苹果酒 + 西瓜汁$()$(br)时间：$(6)4.0 - 4.5 秒$()$(br2)$(bold)野玫瑰 · Wild Rose$()$(br)配料：$(6)龙息 + 末影珍珠$()$(br)时间：$(6)4.0 - 4.5 秒$()$(br2)$(bold)关山难越 · Impassable Mountains$()$(br)配料：$(6)生津柠檬茶 + 烈焰粉$()$(br)时间：$(6)5.0 - 5.5 秒$()"
+    },
+    {
+      "type": "patchouli:text",
+      "title": "糖蜜汁系（3种）",
+      "text": "$(bold)迷雾晨 · Misty Morning$()$(br)配料：$(6)发光浆果 + 金胡萝卜$()$(br)时间：$(6)2.5 - 3.0 秒$()$(br2)$(bold)阿萨拉风情 · Ahsarah Style$()$(br)配料：$(6)可乐 + 红石粉$()$(br)时间：$(6)2.5 - 3.0 秒$()$(br2)$(bold)雷斯舞步 · Thunder Step$()$(br)配料：$(6)可乐 + 火药$()$(br)时间：$(6)2.5 - 3.0 秒$()$(br2)$(o)糖蜜汁系的极品时间窗口最短——仅 0.5 秒容错，最考验手感。"
+    }
+  ]
+}

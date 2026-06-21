@@ -12,7 +12,8 @@ import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
 @EventBusSubscriber
 public final class ModVillagerTrades {
     private static final int LIBRARIAN_NOVICE_LEVEL = 1;
-    private static final float HEART_OF_AFRICA_TRADE_CHANCE = 0.10F;
+    private static final float HEART_OF_AFRICA_TRADE_CHANCE = 0.075F;
+    private static final float TEAR_OF_OCEAN_TRADE_CHANCE = 0.025F;
     private static final int MAX_USES = 1;
     private static final int VILLAGER_XP = 10;
     private static final float PRICE_MULTIPLIER = 0F;
@@ -39,6 +40,20 @@ public final class ModVillagerTrades {
             return new MerchantOffer(
                     new ItemStack(ModItems.HEART_OF_AFRICA.get()),
                     new ItemStack(Items.EMERALD_BLOCK, 64),
+                    MAX_USES,
+                    VILLAGER_XP,
+                    PRICE_MULTIPLIER
+            );
+        });
+
+        noviceTrades.add((trader, random) -> {
+            if (random.nextFloat() >= TEAR_OF_OCEAN_TRADE_CHANCE) {
+                return null;
+            }
+
+            return new MerchantOffer(
+                    new ItemStack(ModItems.TEAR_OF_OCEAN.get()),
+                    new ItemStack(Items.DIAMOND_BLOCK, 64),
                     MAX_USES,
                     VILLAGER_XP,
                     PRICE_MULTIPLIER

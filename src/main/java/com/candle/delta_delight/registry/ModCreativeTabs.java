@@ -40,6 +40,7 @@ public class ModCreativeTabs {
             ModItems.YOGURT,
             ModItems.CRISPY_NODDLES,
             ModItems.SHAKER,
+            ModItems.ZONGZI,
             ModItems.JUNIPER_SPIRIT,
             ModItems.HERBAL_TEA,
             ModItems.AMBER_ESSENCE,

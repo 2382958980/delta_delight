@@ -1,0 +1,82 @@
+{
+  "parent": "delta_delight:bartending_shaker",
+  "display": {
+    "icon": {
+      "item": "delta_delight:juniper_spirit"
+    },
+    "title": {
+      "translate": "advancement.delta_delight.bartending_bases.title"
+    },
+    "description": {
+      "translate": "advancement.delta_delight.bartending_bases.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "obtain_juniper_spirit": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delta_delight:juniper_spirit"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_herbal_tea": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delta_delight:herbal_tea"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_amber_essence": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delta_delight:amber_essence"
+            ]
+          }
+        ]
+      }
+    },
+    "obtain_molasses": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "delta_delight:molasses"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "obtain_juniper_spirit"
+    ],
+    [
+      "obtain_herbal_tea"
+    ],
+    [
+      "obtain_amber_essence"
+    ],
+    [
+      "obtain_molasses"
+    ]
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "name": "音乐唱片",
+  "name": "三角洲唱片收藏",
   "icon": "delta_delight:dawn_music_disc",
   "category": "delta_delight:delta_exploration",
   "sortnum": 40,
@@ -7,14 +7,56 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "title": "收藏列表",
-      "text": "$(li)Dawn$(li)In the Summer$(li)King of the Ring$(li)Making Legends$(li)Menu 1$(li)Menu 2$(li)Play with Fire$(li)Spotlight Hunter"
+      "title": "战地留声机",
+      "text": "$(o)音乐是战场上最好的慰藉。在炮火暂歇的夜晚，一张唱片、一台留声机，就足以让整个哨所安静下来。$(br2)三角洲部队的战士们从世界各地收集了 $(6)8 张$() 经典唱片，每一张都承载着一段战地回忆。$(br2)全部为 $(d)稀有品质$()，放入唱片机即可播放。"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:dawn_music_disc",
+      "title": "Dawn · 破晓",
+      "text": "$(o)「黎明前的第一缕光——哨声响起，新的一天开始了。」$(br2)$(bold)时长$()：2 分 43 秒$(br)$(bold)红石信号$()：强度 8"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:in_the_summer_music_disc",
+      "title": "In the Summer · 盛夏",
+      "text": "$(o)「蝉鸣、烈日和军靴踩过干裂土地的声响。」$(br2)$(bold)时长$()：1 分 41 秒$(br)$(bold)红石信号$()：强度 14"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:king_of_the_ring_music_disc",
+      "title": "King of the Ring · 擂台之王",
+      "text": "$(o)「钢铁与钢铁的碰撞——角斗场上没有第二名。」$(br2)$(bold)时长$()：2 分 43 秒$(br)$(bold)红石信号$()：强度 9"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:making_legends_music_disc",
+      "title": "Making Legends · 铸就传奇",
+      "text": "$(o)「每一个士兵的故事，终将成为传奇。」$(br2)$(bold)时长$()：1 分 46 秒$(br)$(bold)红石信号$()：强度 10"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:menu1_music_disc",
+      "title": "Menu 1 · 待机界面",
+      "text": "$(o)「主菜单的经典旋律——百听不厌的战地序曲。」$(br2)$(bold)时长$()：1 分 31 秒$(br)$(bold)红石信号$()：强度 11"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:menu2_music_disc",
+      "title": "Menu 2 · 待机界面 II",
+      "text": "$(o)「另一种风格的主菜单旋律——有人说比 Menu 1 更好听。」$(br2)$(bold)时长$()：1 分 51 秒$(br)$(bold)红石信号$()：强度 12"
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "delta_delight:play_with_fire_music_disc",
+      "title": "Play with Fire · 玩火",
+      "text": "$(o)「危险而迷人——就像在交火线上跳舞。」$(br2)$(bold)时长$()：2 分 45 秒$(br)$(bold)红石信号$()：强度 13"
     },
     {
       "type": "patchouli:spotlight",
       "item": "delta_delight:spotlight_hunter_music_disc",
-      "title": "唱片机",
-      "text": "$(bold)用途$()：放入唱片机播放。"
+      "title": "Spotlight Hunter · 聚光灯下的猎人",
+      "text": "$(o)「聚光灯亮起的那一刻——谁是猎人，谁是猎物？」$(br2)$(bold)时长$()：2 分 54 秒$(br)$(bold)红石信号$()：强度 15"
     }
   ]
 }
