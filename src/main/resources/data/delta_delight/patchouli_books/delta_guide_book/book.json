@@ -1,7 +1,7 @@
 {
   "name": "三角洲乐事指南",
-  "landing_text": "$(bold)欢迎翻开这本战地美食手册！$(br2)本书将引领你掌握三角洲战区三大生存技能：$(br)$(li)$(l:delta_food)$(bold)炊事$()——从奢华珍馐到便捷军粮，了解每一种食品的配方、效果与背后的故事。$(li)$(l:delta_bartending)$(bold)调酒$()——掌握摇酒壶的使用、四大基底的奥秘、十六种配料的本领，以及从普通到极品的品质之道。$(li)$(l:delta_exploration)$(bold)探索$()——寻找林间鸟窝、海底三角蚌，发掘传说中的非洲之心与海洋之泪，学会使用侦察箭，收集三角洲部队经典唱片。$(br2)$(o)祝你好运，士兵。记住——吃饱了才有力气战斗。",
-  "version": 4,
+  "landing_text": "$(bold)欢迎游玩三角洲乐事！$(br2)在Minecraft世界中享用来自三角洲行动的美食：$(br)$(li)$(l:delta_food)$(bold)食物$()——享用来自三角洲行动的食物并了解它们的相关故事。$(li)$(l:delta_bartending)$(bold)调酒$()——使用调酒壶，加入不同的基底和配料，调配出不同品质的特色饮品！$(li)$(l:delta_exploration)$(bold)探索$()——在丛林中寻找鸟窝，在海底摸索三角蚌，去寻找属于自己的非洲之心和海洋之泪！现已加入更多三角洲行动相关彩蛋如唱片！$(br2)$(o)祝您游玩愉快！",
+  "version": 5,
   "creative_tab": "delta_delight:delta_delight",
   "use_resource_pack": true,
   "model": "delta_delight:book",

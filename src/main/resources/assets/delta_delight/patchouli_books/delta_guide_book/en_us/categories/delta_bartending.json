@@ -1,6 +1,6 @@
 {
-  "name": "调酒艺术",
-  "description": "从摇酒壶到极品鸡尾酒——掌握四大基底、十六种配料与品质判定，成为战地调酒大师。按学习路径编排：入门工具→基底→配料→品质→配方图鉴。",
+  "name": "调酒",
+  "description": "使用摇酒壶来制作出不同品质的佳酿！",
   "icon": "delta_delight:shaker",
   "sortnum": 10,
   "secret": false

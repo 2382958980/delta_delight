@@ -1,5 +1,5 @@
 {
-  "name": "优质配方图鉴",
+  "name": "金色品质配方图鉴",
   "icon": "delta_delight:mixed_cocktail",
   "category": "delta_delight:delta_bartending",
   "sortnum": 50,
@@ -7,8 +7,8 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "title": "优质鸡尾酒 · 总览",
-      "text": "$(o)以下是全部 $(e)16 种优质鸡尾酒配方$()。优质鸡尾酒有 $(6)60% 概率$() 从匹配配方中获得——无需精确时间，只需基底与配料正确即可。$(br2)$(bold)提示$()：优质鸡尾酒将基底负面效果缩短至 30 秒，配料正面效果延长至 2 分钟。$(br2)配方格式：$(6)酒名 —— 配料 A + 配料 B$()"
+      "title": "优质鸡尾酒",
+      "text": "$(o)以下是全部 $(6)16 种优质鸡尾酒配方$()。优质鸡尾酒有 $(6)60% 概率$() 使用优质鸡尾酒配方调酒获得——无需精确的摇晃时间，只需基底与配料正确即可。$(br2)$(bold)提示$()：优质鸡尾酒将基底负面效果缩短至 30 秒，配料增益效果延长至 2 分钟。$(br2)配方格式：$(6)酒名 —— 配料 A + 配料 B$()"
     },
     {
       "type": "patchouli:text",
@@ -28,7 +28,7 @@
     {
       "type": "patchouli:text",
       "title": "糖蜜汁系（4种）",
-      "text": "$(li)$(bold)柔情岁月 · Tender Years$()$(br)$(7)红石粉 + 苹果酒$()$(li)$(bold)经典交响 · Classic Symphony$()$(br)$(7)可乐 + 发光浆果$()$(li)$(bold)活力四溢 · Bursting Vitality$()$(br)$(7)烈焰粉 + 蜂蜜瓶$()$(li)$(bold)夏韵 · Summer Rhyme$()$(br)$(7)海泡菜 + 紫颂果$()$(br2)$(o)每种基底恰好有 4 种优质配方——总共 16 种。多尝试不同的配料组合！"
+      "text": "$(li)$(bold)柔情岁月 · Tender Years$()$(br)$(7)红石粉 + 苹果酒$()$(li)$(bold)经典交响 · Classic Symphony$()$(br)$(7)可乐 + 发光浆果$()$(li)$(bold)活力四溢 · Bursting Vitality$()$(br)$(7)烈焰粉 + 蜂蜜瓶$()$(li)$(bold)夏韵 · Summer Rhyme$()$(br)$(7)海泡菜 + 紫颂果$()"
     }
   ]
 }
